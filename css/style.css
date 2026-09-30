@@ -239,3 +239,4 @@ details ul{margin:0 0 12px!important}
 section.blk .hand{margin-bottom:.3em;line-height:1.15}
 section.blk .btn{white-space:nowrap}
 @media(min-width:821px){header .wrap{max-width:1320px}}
+@media(min-width:821px) and (max-width:1200px){.logo{font-size:1.55rem} header .bar{gap:14px} nav{margin-left:4px;gap:5px} nav a{padding-left:8px;padding-right:8px;font-size:.88rem}}
