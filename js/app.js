@@ -112,15 +112,19 @@ $("#directForm").addEventListener("submit",function(e){
   var button=form.querySelector("button[type=submit]");
   button.disabled=true;
   button.textContent="Wird übermittelt …";
+  var waWindow=null;
+  try{waWindow=window.open("about:blank","_blank");}catch(_){waWindow=null}
   fetch(form.action,{
     method:"POST",
     body:new FormData(form),
     headers:{Accept:"application/json"}
   }).then(function(res){
     if(!res.ok) throw new Error("submit");
+    var waUrl=openWhatsAppConfirmation(o,contact,method);
+    if(waWindow && !waWindow.closed) waWindow.location.href=waUrl;
     showSuccess(o,contact,method);
-    openWhatsAppConfirmation(o,contact,method);
   }).catch(function(){
+    if(waWindow && !waWindow.closed) waWindow.close();
     button.disabled=false;
     button.textContent="Bestellung verbindlich senden";
     $("#directConfirm").hidden=false;
@@ -136,7 +140,7 @@ function openWhatsAppConfirmation(o,contact,method){
     "📞 Kontakt: "+contact+"\n\n"+
     "Danke!";
   var url="https://wa.me/"+NR+"?text="+encodeURIComponent(msg);
-  window.open(url,"_blank","noopener");
+  return url;
 }
 function showSuccess(o,contact,method){
   $("#directForm").hidden=true;
@@ -149,6 +153,8 @@ function showSuccess(o,contact,method){
   $("#successPickup").textContent=st.d+", "+st.t+" Uhr";
   $("#successQty").textContent=st.n+" ×";
   $("#successContact").textContent=contact;
+  var waLink=document.getElementById("successWhatsApp");
+  if(waLink) waLink.href="https://wa.me/"+NR+"?text="+encodeURIComponent("Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+fmt(o.p*st.n)+")\n📅 Abholung: "+st.d+", "+st.t+" Uhr\n👤 Name: "+$("#customerName").value.trim()+"\n📞 Kontakt: "+contact+"\n\nDanke!");
   var scene=$("#successScene");
   scene.hidden=false;
   scene.classList.remove("play");
