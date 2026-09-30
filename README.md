@@ -13,7 +13,7 @@ Statische Website (nur HTML, CSS, JavaScript), kein Build-Schritt, keine Abhäng
 |---|---|
 | Texte, **Preise**, Inhalte der Körbe, Impressum, Datenschutz | `index.html` |
 | Farben, Schriften, Abstände | `css/style.css` (Farben oben als Variablen) |
-| Bestellzettel: Abholzeiten, WhatsApp-Nummer | `js/app.js` (`ZEITEN`, `NR`) |
+| Bestellzettel: Öffnungs-/Abholzeiten pro Wochentag, Zeitraster, WhatsApp-Nummer | `js/app.js` (`OEFFNUNG`, `SCHRITT`, `NR`) |
 | Fotos | `img/` (gleiche Dateinamen ersetzen, Hochformat 3:4) |
 
 Preise und Korbnamen stehen nur noch an **einem** Ort: im `index.html` am Element `.preis` (Attribute `data-korb`, `data-name`, `data-price`). Der Bestellzettel in `js/app.js` liest sie von dort aus. Bei einer Preisänderung `data-price` **und** den angezeigten Text im selben Element anpassen – `js/app.js` muss nicht angefasst werden.

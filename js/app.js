@@ -1,26 +1,31 @@
 (function(){
 var NR="41762552256",$=function(x){return document.querySelector(x)};
 var K=[].map.call(document.querySelectorAll(".korb .preis"),function(el){return{id:el.dataset.korb,n:el.dataset.name,p:parseFloat(el.dataset.price)}});
-var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
-function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
-var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
+// Abholzeiten pro Wochentag (0=So, 1=Mo … 6=Sa). null = geschlossen.
+// Mehrere Zeitfenster möglich, z.B. [["08:00","12:00"],["13:30","18:00"]]
+var OEFFNUNG={0:null,1:[["08:00","18:00"]],2:[["08:00","18:00"]],3:[["08:00","18:00"]],4:[["08:00","18:00"]],5:[["08:00","18:00"]],6:[["08:00","18:00"]]};
+var SCHRITT=30; // Minuten zwischen den Abholzeiten
+function hm(z){var a=z.split(":");return +a[0]*60+ +a[1]}
+function pad(m){return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
+function zeiten(wd){var out=[];(OEFFNUNG[wd]||[]).forEach(function(f){for(var m=hm(f[0]);m<=hm(f[1]);m+=SCHRITT)out.push(pad(m))});return out}
+var st={k:K[0].id,n:1,nOk:false,d:"",wd:null,t:"",step:"k",week:0};
 var views=["start","koerbe","traubensaft","suessmost","ueber-uns","abholung","kontakt"];
 function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
 window.addEventListener("hashchange",show);show();
 function fmt(x){return "CHF "+x.toFixed(2)}
 function chips(el,name,items,cur){el.innerHTML=items.map(function(i){return '<label><input type="radio" name="'+name+'" value="'+i.v+'"'+(String(i.v)===String(cur)?" checked":"")+'><span>'+i.l+"</span></label>"}).join("")}
 var days=[];
-(function(){var b=new Date(),end=new Date(b.getFullYear(),b.getMonth()+3,b.getDate());for(var i=1;;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i);if(x>end)break;if(x.getDay()!==0){var dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";days.push({date:x,v:["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+"<br>")+dd})}}})();
+(function(){var b=new Date(),end=new Date(b.getFullYear(),b.getMonth()+3,b.getDate());for(var i=1;;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i);if(x>end)break;if(OEFFNUNG[x.getDay()]){var dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";days.push({date:x,wd:x.getDay(),v:["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+"<br>")+dd})}}})();
 var dWeek=0,weekBuckets=[];
 (function(){var map={};days.forEach(function(x){var dt=x.date,mon=new Date(dt.getFullYear(),dt.getMonth(),dt.getDate()-(dt.getDay()||7)+1),key=mon.getFullYear()+"-"+mon.getMonth()+"-"+mon.getDate();if(!map[key]){map[key]=[];weekBuckets.push(map[key])}map[key].push(x)})})();
 function weekItems(){return weekBuckets[dWeek]||[]}
 function setStep(s){st.step=s;render()}
 function render(){
 chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:"<b style='font-weight:600'>"+o.n.replace("&","&amp;")+"</b><b style='font-weight:600;color:inherit'>"+fmt(o.p)+"</b>"}}),st.k);
-chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.n);
+chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.nOk?st.n:null);
 var wi=weekItems();
 chips($("#cD"),"d",wi,st.d);
-$("#cT").innerHTML=ZEITEN.map(function(z){return "<option"+(z===st.t?" selected":"")+">"+z+"</option>"}).join("");
+$("#cT").innerHTML='<option value=""'+(st.t?"":" selected")+' disabled>Bitte Uhrzeit wählen</option>'+zeiten(st.wd).map(function(z){return "<option"+(z===st.t?" selected":"")+">"+z+"</option>"}).join("");
 document.querySelectorAll(".order-step").forEach(function(el){el.classList.toggle("active",el.dataset.step===st.step)});
 var title=$("#orderTitle"),sub=$("#orderSub");
 var titles={k:"Welchen Korb möchten Sie?",d:"Wann möchten Sie ihn abholen?",t:"Um welche Uhrzeit?",n:"Wie viele möchten Sie?"};
@@ -37,7 +42,8 @@ var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
 $("#tot").textContent=fmt(tot);
 var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp").src=im.src;$("#sp").alt=im.alt}
 $("#sn").textContent=st.n+" × "+o.n;
-var ok=st.d&&st.t;
+var ok=!!(st.d&&st.t&&st.nOk);
+var sum=$("#sum");if(sum)sum.textContent=ok?st.n+" × "+o.n+" – "+fmt(tot)+" · Abholung "+st.d+", "+st.t+" Uhr":"";
 var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
 $("#go").href=ok?"https://wa.me/"+NR+"?text="+encodeURIComponent(text):"#";
 $("#go").style.opacity=ok?1:.55;
@@ -47,12 +53,12 @@ $("#ov").addEventListener("change",function(e){
 var n=e.target.name;if(!n)return;
 st[n]=e.target.value;
 if(n==="k"){st.step="d";dWeek=0}
-else if(n==="d"){st.step="t"}
+else if(n==="d"){var dy=days.filter(function(x){return x.v===st.d})[0];st.wd=dy?dy.wd:null;if(zeiten(st.wd).indexOf(st.t)<0)st.t="";st.step="t"}
 else if(n==="t"){st.step="n"}
-else if(n==="n"){st.step="done"}
+else if(n==="n"){st.n=+st.n;st.nOk=true;st.step="done"}
 render();
 });
-$("#go").addEventListener("click",function(e){if(!(st.d&&st.t))e.preventDefault()});
+$("#go").addEventListener("click",function(e){if(!(st.d&&st.t&&st.nOk))e.preventDefault()});
 document.addEventListener("click",function(e){
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
 var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();return}
