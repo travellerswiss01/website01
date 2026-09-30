@@ -180,6 +180,7 @@ $("#successClose").addEventListener("click",function(){
   button.disabled=false;
   button.textContent="Bestellung verbindlich senden";
 });
+document.addEventListener("keydown",function(e){var card=e.target.closest(".korb-card");if(card&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(card.dataset.open)}});
 document.addEventListener("click",function(e){
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
 var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();return}
