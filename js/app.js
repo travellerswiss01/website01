@@ -55,7 +55,17 @@ render();
 });
 $("#directOrder").addEventListener("click",function(){
   if(!(st.d&&st.t)) return;
+  $("#directForm").hidden=false;
+  $("#directConfirm").hidden=true;
+  $("#customerName").focus();
+});
+$("#directForm").addEventListener("submit",function(){
+  var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
+  $("#orderDetails").value=""+
+    st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\n"+
+    "Abholung: "+st.d+", "+st.t+" Uhr";
   $("#directConfirm").hidden=false;
+  $("#directConfirm").innerHTML="<strong>Bestellung wird übermittelt.</strong><p>Bitte warten Sie einen Moment.</p>";
 });
 document.addEventListener("click",function(e){
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
