@@ -131,10 +131,18 @@
 <a class="method" id="waOrder" href="#" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>Bestellung ist bereits vorbereitet</span></a>
 <a class="method" id="emailOrder" href="#"><strong>E-Mail</strong><span>Bestellung ist bereits vorbereitet</span></a>
 </div>
-<div class="order-confirm" id="directConfirm" hidden>
-<strong>Bestellung vorbereitet.</strong>
-<p>Ihre Angaben sind vollständig. Für den direkten Abschluss braucht die Website noch eine E-Mail-Adresse bzw. ein Bestellformular.</p>
-</div>
+<form class="direct-form" id="directForm" hidden>
+<label for="customerName">Ihr Name</label>
+<input id="customerName" name="name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
+<label for="customerEmail">Ihre E-Mail-Adresse</label>
+<input id="customerEmail" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.ch">
+<label for="customerPhone">Telefon (optional)</label>
+<input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="+41 ...">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp">
+<button type="submit" class="btn">Bestellung verbindlich senden</button>
+<p class="form-note">Sie erhalten nach dem Absenden eine Bestätigung auf Ihre E-Mail-Adresse.</p>
+</form>
+<div class="order-confirm" id="directConfirm" hidden></div>
 <button type="button" class="back-link" data-step-back="n">← Anzahl ändern</button>
 </div>
 <div class="total"><span>Total</span><span id="tot"></span></div>
