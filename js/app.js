@@ -11,8 +11,9 @@ function fmt(x){return "CHF "+x.toFixed(2)}
 function chips(el,name,items,cur){el.innerHTML=items.map(function(i){return '<label><input type="radio" name="'+name+'" value="'+i.v+'"'+(String(i.v)===String(cur)?" checked":"")+'><span>'+i.l+"</span></label>"}).join("")}
 var days=[];
 (function(){var b=new Date(),end=new Date(b.getFullYear(),b.getMonth()+3,b.getDate());for(var i=1;;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i);if(x>end)break;if(x.getDay()!==0){var dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";days.push({date:x,v:["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+"<br>")+dd})}}})();
-var dWeek=0;
-function weekItems(){return days.slice(dWeek*7,dWeek*7+7)}
+var dWeek=0,weekBuckets=[];
+(function(){var map={};days.forEach(function(x){var dt=x.date,mon=new Date(dt.getFullYear(),dt.getMonth(),dt.getDate()-(dt.getDay()||7)+1),key=mon.getFullYear()+"-"+mon.getMonth()+"-"+mon.getDate();if(!map[key]){map[key]=[];weekBuckets.push(map[key])}map[key].push(x)})})();
+function weekItems(){return weekBuckets[dWeek]||[]}
 function setStep(s){st.step=s;render()}
 function render(){
 chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:"<b style='font-weight:600'>"+o.n.replace("&","&amp;")+"</b><b style='font-weight:600;color:inherit'>"+fmt(o.p)+"</b>"}}),st.k);
@@ -27,7 +28,7 @@ if(title)title.textContent=titles[st.step]||"Ihre Bestellung";
 if(sub)sub.textContent=st.step==="d"?"Nur die nächsten Tage werden angezeigt. Sie können zur nächsten Woche blättern.":"";
 var prev=$("#weekPrev"),next=$("#weekNext"),weekLabel=$("#weekLabel");
 if(prev)prev.hidden=dWeek===0;
-if(next)next.hidden=(dWeek+1)*7>=days.length;
+if(next)next.hidden=dWeek>=weekBuckets.length-1;
 if(weekLabel){var first=wi[0],last=wi[wi.length-1];weekLabel.textContent=first&&last?first.l.split("<br>")[0]+" – "+last.l.replace("<br>"," "):""}
 upd()
 }
