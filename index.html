@@ -40,7 +40,7 @@
 <p class="hand" style="margin-bottom:.6em">Zusammengestellt bei Biottos Lädeli in Guntershausen.</p>
 <p>Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.</p>
 <p>Wir machen daraus Sirup, Essig, Saucen und Dörrfrüchte und packen sie in drei verschiedene Geschenkskörbe.</p>
-<p>Sie bestellen per WhatsApp und holen den Korb bei uns im Laden ab.</p>
+<p>Sie bestellen online in wenigen Schritten und holen den Korb bei uns im Laden ab.</p>
 <a class="btn" href="#kontakt" data-open="gross">Jetzt bestellen</a> <a class="btn line" href="#koerbe">Geschenkskörbe ansehen</a>
 </div>
 </div></div></section>
@@ -82,18 +82,37 @@
 
 </div>
 
-<section class="blk view" id="traubensaft"><div class="wrap two">
-<div class="foto tape"><img src="img/trauben.jpg" width="1100" height="1467" alt="Reife blaue Trauben an der Rebe in unserem Garten in Maischhausen" loading="lazy"></div>
-<div>
-<div class="hand">aus unserem Garten in Maischhausen</div>
-<h2>Traubensaft</h2>
-<p>Die blauen Trauben wachsen bei uns im Garten in Maischhausen, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.</p>
-<p>Otto, der Familienvater, hat daraus zusammen mit Bernadette mit einer Handpresse einen köstlichen Traubensaft gemacht.</p>
-<p>Fein zum Zmorge, zum Znüni oder als alkoholfreie Alternative am Tisch.</p>
-<p>Fragen Sie uns einfach per WhatsApp, ob gerade Traubensaft im Lädeli bereitsteht.</p>
-<a class="btn line" target="_blank" rel="noopener" href="https://wa.me/41762552256?text=Hallo%20Biottos%20L%C3%A4deli%2C%20habt%20ihr%20gerade%20Traubensaft%3F">Nach Traubensaft fragen</a>
+<section class="korb-story view" id="korb-geschichte">
+<div class="wrap">
+  <div class="story-head">
+    <div class="hand">ein Korb entsteht</div>
+    <h2>Die Geschichte hinter dem Korb</h2>
+    <p>Vom feinen Produkt bis zum fertigen Geschenk – blättern Sie durch die kleinen Schritte, die aus unseren Sachen einen Biottos-Korb machen.</p>
+  </div>
+  <div class="story-stage">
+    <div class="story-photo-wrap">
+      <img id="storyPhoto" src="img/gross-oben.jpg" width="1100" height="1467" alt="Ausgewählte Produkte aus dem Gross &amp; Guet Geschenkskorb" loading="lazy">
+      <div class="story-note" id="storyNote">Was bei uns wächst, kommt bei uns in die Küche.</div>
+    </div>
+    <div class="story-copy">
+      <div class="story-number" id="storyNumber">01</div>
+      <h3 id="storyTitle">Aus unserem Garten</h3>
+      <p id="storyText">Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.</p>
+    </div>
+  </div>
+  <div class="story-controls" aria-label="Geschichte des Korbs">
+    <button type="button" class="story-dot active" data-story="0"><span>01</span>Aus unserem Garten</button>
+    <button type="button" class="story-dot" data-story="1"><span>02</span>Mit Liebe gemacht</button>
+    <button type="button" class="story-dot" data-story="2"><span>03</span>Schön zusammengestellt</button>
+    <button type="button" class="story-dot" data-story="3"><span>04</span>Fertig zum Verschenken</button>
+    <button type="button" class="story-dot" data-story="4"><span>05</span>Bei uns im Lädeli</button>
+  </div>
+  <div class="story-progress"><div id="storyProgress"></div></div>
+  <div class="story-swipe" aria-hidden="true">← Wischen oder Schritt auswählen →</div>
 </div>
-</div></section>
+</section>
+
+<section class="blk view" id="traubensaft"><div class="wrap"><h2>Traubensaft</h2><p>Unser Traubensaft aus regionalen Trauben.</p></div></section>
 
 <section class="blk view" id="suessmost"><div class="wrap"><h2>Süssmost</h2><p>Feiner Süssmost aus der Region.</p></div></section>
 
@@ -135,10 +154,59 @@
 <div class="order-step" data-step="d"><div class="q" id="orderTitleDay">Wann möchten Sie ihn abholen?</div><div class="week-nav"><button type="button" class="week-btn" id="weekPrev" hidden>←</button><span id="weekLabel"></span><button type="button" class="week-btn" id="weekNext">Nächste Woche →</button></div><div class="chips" id="cD"></div><button type="button" class="back-link" data-step-back="k">← Korb ändern</button></div>
 <div class="order-step" data-step="t"><div class="q">Um welche Uhrzeit?</div><select id="cT" name="t" class="tsel" aria-label="Abholzeit in Stunden und Minuten"></select><button type="button" class="back-link" data-step-back="d">← Tag ändern</button></div>
 <div class="order-step" data-step="n"><div class="q">Wie viele?</div><div class="chips qty" id="cN"></div><button type="button" class="back-link" data-step-back="t">← Zeit ändern</button></div>
-<div class="order-step" data-step="done"><div class="q">Bestellung prüfen</div><p class="summary" id="sum"></p><button type="button" class="back-link" data-step-back="n">← Menge ändern</button></div>
+<div class="order-step" data-step="done">
+<div class="q">Fast geschafft.</div>
+<p class="checkout-intro">Ihre Auswahl steht. Sagen Sie uns nur noch, wie wir Sie erreichen dürfen.</p>
+<button type="button" class="method primary" id="directOrder"><strong>Bestellung abschliessen</strong></button>
+<form class="direct-form" id="directForm" action="https://formspree.io/f/xvkgydoe" method="POST" hidden>
+<label for="customerName">Ihr Name</label>
+<input id="customerName" name="name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
+<div class="contact-choice">
+  <div class="contact-question">Wie können wir dich erreichen?</div>
+  <div class="contact-tabs" role="radiogroup" aria-label="Bevorzugte Kontaktart">
+    <label><input type="radio" name="contactMethod" value="email" checked><span>E-Mail</span></label>
+    <label><input type="radio" name="contactMethod" value="phone"><span>Telefon / WhatsApp</span></label>
+  </div>
+</div>
+<div class="contact-field" id="emailField">
+  <label for="customerEmail">Ihre E-Mail-Adresse</label>
+  <input id="customerEmail" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.ch">
+</div>
+<div class="contact-field" id="phoneField" hidden>
+  <label for="customerPhone">Ihre Nummer</label>
+  <input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="+41 76 255 22 56">
+</div>
+<input type="hidden" name="bestellung" id="orderDetails">
+<input type="hidden" name="_subject" value="Neue Bestellung – Biottos Lädeli">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp">
+<button type="submit" class="btn">Bestellung verbindlich senden</button>
+<p class="form-note">Die Bestellung wird direkt an Biottos Lädeli übermittelt.</p>
+</form>
+<div class="order-confirm" id="directConfirm" hidden></div>
+<div class="success-scene" id="successScene" hidden aria-live="polite">
+  <div class="success-confetti" id="successConfetti" aria-hidden="true"></div>
+  <div class="success-stamp" aria-hidden="true"><span>✓</span></div>
+  <div class="hand success-hand">ist angekommen!</div>
+  <h3 class="success-title">Bestellung angekommen.</h3>
+  <p class="success-lead">Danke – wir bereiten Ihren Korb mit Sorgfalt für Sie vor.</p>
+  <div class="success-receipt">
+    <div class="receipt-head"><span>Biottos Lädeli</span><small>Bestellzettel</small></div>
+    <div class="receipt-line"></div>
+    <div class="receipt-row"><span>Korb</span><strong id="successBasket"></strong></div>
+    <div class="receipt-row"><span>Abholung</span><strong id="successPickup"></strong></div>
+    <div class="receipt-row"><span>Anzahl</span><strong id="successQty"></strong></div>
+    <div class="receipt-row"><span>Kontakt</span><strong id="successContact"></strong></div>
+    <div class="receipt-line"></div>
+    <div class="receipt-thanks">Danke für Ihre Bestellung.</div>
+    <div class="receipt-edge"></div>
+  </div>
+  <p class="success-note">Wir legen Ihren Korb für Sie bereit – bis bald im Lädeli.</p>
+  <button type="button" class="btn success-close" id="successClose">Zurück zum Lädeli</button>
+</div>
+<button type="button" class="back-link" data-step-back="n">← Anzahl ändern</button>
+</div>
 <div class="total"><span>Total</span><span id="tot"></span></div>
-<a class="btn" id="go" href="#" target="_blank" rel="noopener">Per WhatsApp senden</a>
-<p class="note" id="msg">Die Nachricht ist fertig geschrieben, Sie schicken sie nur noch ab.</p>
+<p class="note" id="msg">Wählen Sie Ihre bevorzugte Bestellart.</p>
 </div></div>
 <div class="ov" id="lg" aria-hidden="true"><div class="sheet" role="dialog" aria-modal="true" aria-label="Rechtliches">
 <button class="x" id="lgx" aria-label="Schliessen">×</button>
