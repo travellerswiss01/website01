@@ -112,10 +112,53 @@ details ul{margin:0 0 12px!important}
   .wrap{max-width:1180px;padding-left:34px;padding-right:34px}
   .bar{min-height:76px;gap:28px}
   .logo{font-size:1.38rem}
-  nav{gap:8px}
-  nav a{font-size:1.08rem;font-weight:600;padding:15px 16px;border:1px solid var(--line);border-radius:4px;background:var(--white);box-shadow:0 1px 0 var(--line)}
-  nav a:hover{color:var(--red);text-decoration:none;border-color:var(--red)}
-  nav a.on{color:var(--red);border-color:var(--red);box-shadow:inset 0 -3px 0 var(--red),0 1px 0 var(--line)}
+  nav{gap:5px;align-items:stretch;margin-left:auto}
+  nav a{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:10px 14px;
+    color:var(--ink);
+    font-size:1rem;
+    font-weight:600;
+    text-decoration:none;
+    border:1px solid transparent;
+    border-bottom:3px solid var(--line);
+    background:var(--paper2);
+    border-radius:6px 6px 0 0;
+    transition:transform .15s ease,background .15s ease,border-color .15s ease,color .15s ease;
+  }
+  nav a::after{
+    content:"";
+    position:absolute;
+    left:12px;
+    right:12px;
+    bottom:-3px;
+    height:3px;
+    background:var(--red);
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform .15s ease;
+  }
+  nav a:hover{
+    color:var(--red);
+    text-decoration:none;
+    background:var(--white);
+    border-color:var(--line);
+    border-bottom-color:var(--red);
+    transform:translateY(-2px);
+  }
+  nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+  nav a.on{
+    color:#fff;
+    background:var(--red);
+    border-color:var(--red);
+    border-bottom-color:var(--red);
+    box-shadow:0 3px 0 rgba(0,0,0,.08);
+  }
+  nav a.on::after{background:#fff}
   .hero{padding:68px 0 84px}
   .hero .wrap{grid-template-columns:minmax(330px,430px) minmax(460px,650px);gap:72px;justify-content:center;align-items:center}
   .hero .foto{max-width:430px}
