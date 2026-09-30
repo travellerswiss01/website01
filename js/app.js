@@ -44,7 +44,7 @@ chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:"<b style='font-weight:600'
 chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.n);
 var wi=weekItems();
 chips($("#cD"),"d",wi,st.d);
-$("#cT").innerHTML=ZEITEN.map(function(z){return "<option"+(z===st.t?" selected":"")+">"+z+"</option>"}).join("");
+$("#cT").innerHTML=ZEITEN.map(function(z){return "<button type=\"button\" class=\"time-chip"+(z===st.t?" selected":"")+"\" data-time=\""+z+"\">"+z+"</button>"}).join("");
 document.querySelectorAll(".order-step").forEach(function(el){el.classList.toggle("active",el.dataset.step===st.step)});
 var title=$("#orderTitle"),sub=$("#orderSub");
 var titles={k:"Welchen Korb möchten Sie?",d:"Wann möchten Sie ihn abholen?",t:"Um welche Uhrzeit?",n:"Wie viele möchten Sie?"};
@@ -73,6 +73,8 @@ function showPickConfirmation(label){
   requestAnimationFrame(function(){toast.classList.add("show")});
   setTimeout(function(){toast.classList.remove("show");setTimeout(function(){toast.remove()},220)},850);
 }
+$("#cT").addEventListener("click",function(e){var b=e.target.closest(".time-chip");if(!b)return;e.preventDefault();st.t=b.dataset.time;st.step="n";render()});
+$("#cN").addEventListener("click",function(e){var label=e.target.closest("label"),input=label&&label.querySelector("input[name='n']");if(!input)return;e.preventDefault();st.n=Number(input.value);st.step="done";render()});
 $("#cK").addEventListener("click",function(e){
   var label=e.target.closest("label"),input=label&&label.querySelector("input[name='k']");
   if(!input)return;
