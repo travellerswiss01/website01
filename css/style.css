@@ -393,3 +393,22 @@ details ul{margin:0 0 12px!important}
   .produce{max-width:1000px;margin:0 auto}
   .produce-label{min-height:360px}
 }
+
+
+/* Ruhigere Korbpräsentation: ein starkes Hauptbild, zweite Ansicht erst bei Bedarf */
+.korb-main-photo{max-width:760px;margin:0 auto 16px}
+.korb-main-photo .foto{max-width:760px;margin:0 auto}
+.korb-more{max-width:760px;margin:0 auto 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.korb-more summary{padding:12px 2px;cursor:pointer;list-style:none;text-align:center;font-size:.88rem;color:var(--red);font-weight:600}
+.korb-more summary::-webkit-details-marker{display:none}
+.korb-more summary::after{content:" +";font-size:1rem}
+.korb-more[open] summary::after{content:" −"}
+.korb-more-inner{display:grid;grid-template-columns:minmax(0,.9fr) minmax(180px,.65fr);gap:22px;align-items:center;padding:4px 0 18px}
+.korb-more-inner .foto{margin:0}
+.korb-more-title{margin:0 0 8px;font-family:"Young Serif",Georgia,serif;font-size:1.2rem;color:var(--ink)}
+.korb-more-inner ul{margin:0;padding-left:1.1em;color:var(--mute)}
+@media(max-width:600px){
+  .korb-main-photo{margin-bottom:12px}
+  .korb-more-inner{grid-template-columns:1fr;gap:14px}
+  .korb-more-inner .foto{max-width:360px}
+}
