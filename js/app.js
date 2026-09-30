@@ -1,31 +1,26 @@
 (function(){
 var NR="41762552256",$=function(x){return document.querySelector(x)};
 var K=[].map.call(document.querySelectorAll(".korb .preis"),function(el){return{id:el.dataset.korb,n:el.dataset.name,p:parseFloat(el.dataset.price)}});
-// Abholzeiten pro Wochentag (0=So, 1=Mo … 6=Sa). null = geschlossen.
-// Mehrere Zeitfenster möglich, z.B. [["08:00","12:00"],["13:30","18:00"]]
-var OEFFNUNG={0:null,1:[["08:00","18:00"]],2:[["08:00","18:00"]],3:[["08:00","18:00"]],4:[["08:00","18:00"]],5:[["08:00","18:00"]],6:[["08:00","18:00"]]};
-var SCHRITT=30; // Minuten zwischen den Abholzeiten
-function hm(z){var a=z.split(":");return +a[0]*60+ +a[1]}
-function pad(m){return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
-function zeiten(wd){var out=[];(OEFFNUNG[wd]||[]).forEach(function(f){for(var m=hm(f[0]);m<=hm(f[1]);m+=SCHRITT)out.push(pad(m))});return out}
-var st={k:K[0].id,n:1,nOk:false,d:"",wd:null,t:"",step:"k",week:0};
+var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
+function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
+var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
 var views=["start","koerbe","traubensaft","suessmost","ueber-uns","abholung","kontakt"];
 function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
 window.addEventListener("hashchange",show);show();
 function fmt(x){return "CHF "+x.toFixed(2)}
 function chips(el,name,items,cur){el.innerHTML=items.map(function(i){return '<label><input type="radio" name="'+name+'" value="'+i.v+'"'+(String(i.v)===String(cur)?" checked":"")+'><span>'+i.l+"</span></label>"}).join("")}
 var days=[];
-(function(){var b=new Date(),end=new Date(b.getFullYear(),b.getMonth()+3,b.getDate());for(var i=1;;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i);if(x>end)break;if(OEFFNUNG[x.getDay()]){var dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";days.push({date:x,wd:x.getDay(),v:["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+"<br>")+dd})}}})();
+(function(){var b=new Date(),end=new Date(b.getFullYear(),b.getMonth()+3,b.getDate());for(var i=1;;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i);if(x>end)break;if(x.getDay()!==0){var dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";days.push({date:x,v:["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":["So","Mo","Di","Mi","Do","Fr","Sa"][x.getDay()]+"<br>")+dd})}}})();
 var dWeek=0,weekBuckets=[];
 (function(){var map={};days.forEach(function(x){var dt=x.date,mon=new Date(dt.getFullYear(),dt.getMonth(),dt.getDate()-(dt.getDay()||7)+1),key=mon.getFullYear()+"-"+mon.getMonth()+"-"+mon.getDate();if(!map[key]){map[key]=[];weekBuckets.push(map[key])}map[key].push(x)})})();
 function weekItems(){return weekBuckets[dWeek]||[]}
 function setStep(s){st.step=s;render()}
 function render(){
 chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:"<b style='font-weight:600'>"+o.n.replace("&","&amp;")+"</b><b style='font-weight:600;color:inherit'>"+fmt(o.p)+"</b>"}}),st.k);
-chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.nOk?st.n:null);
+chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.n);
 var wi=weekItems();
 chips($("#cD"),"d",wi,st.d);
-$("#cT").innerHTML='<option value=""'+(st.t?"":" selected")+' disabled>Bitte Uhrzeit wählen</option>'+zeiten(st.wd).map(function(z){return "<option"+(z===st.t?" selected":"")+">"+z+"</option>"}).join("");
+$("#cT").innerHTML=ZEITEN.map(function(z){return "<option"+(z===st.t?" selected":"")+">"+z+"</option>"}).join("");
 document.querySelectorAll(".order-step").forEach(function(el){el.classList.toggle("active",el.dataset.step===st.step)});
 var title=$("#orderTitle"),sub=$("#orderSub");
 var titles={k:"Welchen Korb möchten Sie?",d:"Wann möchten Sie ihn abholen?",t:"Um welche Uhrzeit?",n:"Wie viele möchten Sie?"};
@@ -42,23 +37,125 @@ var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
 $("#tot").textContent=fmt(tot);
 var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp").src=im.src;$("#sp").alt=im.alt}
 $("#sn").textContent=st.n+" × "+o.n;
-var ok=!!(st.d&&st.t&&st.nOk);
-var sum=$("#sum");if(sum)sum.textContent=ok?st.n+" × "+o.n+" – "+fmt(tot)+" · Abholung "+st.d+", "+st.t+" Uhr":"";
+var ok=st.d&&st.t;
 var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
-$("#go").href=ok?"https://wa.me/"+NR+"?text="+encodeURIComponent(text):"#";
-$("#go").style.opacity=ok?1:.55;
-$("#msg").textContent=ok?"Bestellung bereit – per WhatsApp senden.":"Bitte Auswahl abschliessen.";
+$("#msg").textContent=ok?"Ihre Auswahl ist bereit.":"Bitte Auswahl abschliessen.";
 }
 $("#ov").addEventListener("change",function(e){
 var n=e.target.name;if(!n)return;
 st[n]=e.target.value;
 if(n==="k"){st.step="d";dWeek=0}
-else if(n==="d"){var dy=days.filter(function(x){return x.v===st.d})[0];st.wd=dy?dy.wd:null;if(zeiten(st.wd).indexOf(st.t)<0)st.t="";st.step="t"}
+else if(n==="d"){st.step="t"}
 else if(n==="t"){st.step="n"}
-else if(n==="n"){st.n=+st.n;st.nOk=true;st.step="done"}
+else if(n==="n"){st.step="done"}
 render();
 });
-$("#go").addEventListener("click",function(e){if(!(st.d&&st.t&&st.nOk))e.preventDefault()});
+$("#directOrder").addEventListener("click",function(){
+  if(!(st.d&&st.t)) return;
+  $("#directForm").hidden=false;
+  $("#directOrder").hidden=true;
+  $("#directConfirm").hidden=true;
+  $("#customerName").focus();
+});
+function syncContactMethod(){
+  var method=document.querySelector('input[name="contactMethod"]:checked');
+  var email=method&&method.value==="email";
+  $("#emailField").hidden=!email;
+  $("#phoneField").hidden=email;
+  $("#customerEmail").required=email;
+  $("#customerPhone").required=!email;
+}
+document.querySelectorAll('input[name="contactMethod"]').forEach(function(input){
+  input.addEventListener("change",syncContactMethod);
+});
+syncContactMethod();
+
+$("#directForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var form=this;
+  var method=document.querySelector('input[name="contactMethod"]:checked').value;
+  var contact=method==="email"?$("#customerEmail").value.trim():$("#customerPhone").value.trim();
+  if(!contact){
+    (method==="email"?$("#customerEmail"):$("#customerPhone")).focus();
+    return;
+  }
+  var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
+  $("#orderDetails").value=""+
+    st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\n"+
+    "Abholung: "+st.d+", "+st.t+" Uhr\n"+
+    "Kontaktart: "+(method==="email"?"E-Mail":"Telefon / WhatsApp")+"\n"+
+    "Kontakt: "+contact;
+  var button=form.querySelector("button[type=submit]");
+  button.disabled=true;
+  button.textContent="Wird übermittelt …";
+  fetch(form.action,{
+    method:"POST",
+    body:new FormData(form),
+    headers:{Accept:"application/json"}
+  }).then(function(res){
+    if(!res.ok) throw new Error("submit");
+    showSuccess(o,contact,method);
+    openWhatsAppConfirmation(o,contact,method);
+  }).catch(function(){
+    button.disabled=false;
+    button.textContent="Bestellung verbindlich senden";
+    $("#directConfirm").hidden=false;
+    $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";
+  });
+});
+function openWhatsAppConfirmation(o,contact,method){
+  var total=fmt(o.p*st.n);
+  var msg="Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n"+
+    "🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+total+")\n"+
+    "📅 Abholung: "+st.d+", "+st.t+" Uhr\n"+
+    "👤 Name: "+$("#customerName").value.trim()+"\n"+
+    "📞 Kontakt: "+contact+"\n\n"+
+    "Danke!";
+  var url="https://wa.me/"+NR+"?text="+encodeURIComponent(msg);
+  window.open(url,"_blank","noopener");
+}
+function showSuccess(o,contact,method){
+  $("#directForm").hidden=true;
+  $("#directConfirm").hidden=true;
+  $("#directOrder").hidden=true;
+  document.querySelector("[data-step-back='n']").hidden=true;
+  $("#tot").parentElement.hidden=true;
+  $("#msg").hidden=true;
+  $("#successBasket").textContent=o.n+" · "+fmt(o.p*st.n);
+  $("#successPickup").textContent=st.d+", "+st.t+" Uhr";
+  $("#successQty").textContent=st.n+" ×";
+  $("#successContact").textContent=contact;
+  var scene=$("#successScene");
+  scene.hidden=false;
+  scene.classList.remove("play");
+  void scene.offsetWidth;
+  scene.classList.add("play");
+  var conf=$("#successConfetti");
+  conf.innerHTML="";
+  for(var i=0;i<22;i++){
+    var piece=document.createElement("i");
+    piece.style.setProperty("--x",((i%11)*10-50)+"px");
+    piece.style.setProperty("--r",(i*37)+"deg");
+    piece.style.setProperty("--d",(i%5)*.06+"s");
+    piece.textContent=i%3===0?"✦":"";
+    conf.appendChild(piece);
+  }
+}
+$("#successClose").addEventListener("click",function(){
+  location.hash="#start";
+  close();
+  document.querySelector("[data-step-back='n']").hidden=false;
+  $("#tot").parentElement.hidden=false;
+  $("#msg").hidden=false;
+  $("#successScene").hidden=true;
+  var form=$("#directForm");
+  form.reset();
+  form.hidden=true;
+  $("#directOrder").hidden=false;
+  var button=form.querySelector("button[type=submit]");
+  button.disabled=false;
+  button.textContent="Bestellung verbindlich senden";
+});
 document.addEventListener("click",function(e){
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
 var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();return}
@@ -70,6 +167,40 @@ function close(){$("#ov").classList.remove("on");$("#ov").setAttribute("aria-hid
 $("#x").addEventListener("click",close);
 $("#ov").addEventListener("click",function(e){if(e.target.id==="ov")close()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
+(function(){
+var storyData=[
+ {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Geschenkskorb",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
+ {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenkskorb",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
+ {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenkskorb Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenkskorb wird.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+ {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
+ {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Guntershausen.",note:"Bis bald bei uns im Lädeli."}
+];
+var storyIndex=0,storyTouchX=null;
+function renderStory(i){
+ storyIndex=Math.max(0,Math.min(storyData.length-1,i));
+ var d=storyData[storyIndex],img=document.getElementById("storyPhoto");
+ if(!img)return;
+ img.src=d.img;img.alt=d.alt;
+ document.getElementById("storyNumber").textContent=("0"+(storyIndex+1)).slice(-2);
+ document.getElementById("storyTitle").textContent=d.title;
+ document.getElementById("storyText").textContent=d.text;
+ document.getElementById("storyNote").textContent=d.note;
+ document.querySelectorAll(".story-dot").forEach(function(b,n){b.classList.toggle("active",n===storyIndex);b.setAttribute("aria-current",n===storyIndex?"step":"false")});
+ document.getElementById("storyProgress").style.width=((storyIndex+1)/storyData.length*100)+"%";
+}
+document.querySelectorAll(".story-dot").forEach(function(b){b.addEventListener("click",function(){renderStory(Number(b.dataset.story))})});
+var stage=document.querySelector(".story-stage");
+if(stage){
+ stage.addEventListener("touchstart",function(e){storyTouchX=e.changedTouches[0].clientX},{passive:true});
+ stage.addEventListener("touchend",function(e){
+  if(storyTouchX===null)return;
+  var dx=e.changedTouches[0].clientX-storyTouchX;
+  if(Math.abs(dx)>45)renderStory(storyIndex+(dx<0?1:-1));
+  storyTouchX=null;
+ },{passive:true});
+}
+renderStory(0);
 })();
 (function(){var lb=document.getElementById("lb"),li=document.getElementById("li");
 function close(){lb.classList.remove("on","z");lb.setAttribute("aria-hidden","true");document.body.style.overflow=""}
