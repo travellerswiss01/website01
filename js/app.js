@@ -39,9 +39,10 @@ var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp"
 $("#sn").textContent=st.n+" × "+o.n;
 var ok=st.d&&st.t;
 var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
-$("#go").href=ok?"https://wa.me/"+NR+"?text="+encodeURIComponent(text):"#";
-$("#go").style.opacity=ok?1:.55;
-$("#msg").textContent=ok?"Bestellung bereit – per WhatsApp senden.":"Bitte Auswahl abschliessen.";
+var wa=$("#waOrder"),em=$("#emailOrder");
+if(wa)wa.href=ok?"https://wa.me/"+NR+"?text="+encodeURIComponent(text):"#";
+if(em)em.href=ok?"mailto:?subject="+encodeURIComponent("Bestellung Biottos Lädeli – "+o.n)+"&body="+encodeURIComponent(text):"#";
+$("#msg").textContent=ok?"Wählen Sie Ihre bevorzugte Bestellart.":"Bitte Auswahl abschliessen.";
 }
 $("#ov").addEventListener("change",function(e){
 var n=e.target.name;if(!n)return;
@@ -52,7 +53,10 @@ else if(n==="t"){st.step="n"}
 else if(n==="n"){st.step="done"}
 render();
 });
-$("#go").addEventListener("click",function(e){if(!(st.d&&st.t))e.preventDefault()});
+$("#directOrder").addEventListener("click",function(){
+  if(!(st.d&&st.t)) return;
+  $("#directConfirm").hidden=false;
+});
 document.addEventListener("click",function(e){
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
 var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();return}
