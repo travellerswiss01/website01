@@ -40,7 +40,7 @@
 <p class="hand" style="margin-bottom:.6em">Zusammengestellt bei Biottos Lädeli in Guntershausen.</p>
 <p>Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.</p>
 <p>Wir machen daraus Sirup, Essig, Saucen und Dörrfrüchte und packen sie in drei verschiedene Geschenkskörbe.</p>
-<p>Sie bestellen per WhatsApp und holen den Korb bei uns im Laden ab.</p>
+<p>Sie bestellen online in wenigen Schritten und holen den Korb bei uns im Laden ab.</p>
 <a class="btn" href="#kontakt" data-open="gross">Jetzt bestellen</a> <a class="btn line" href="#koerbe">Geschenkskörbe ansehen</a>
 </div>
 </div></div></section>
@@ -125,12 +125,9 @@
 <div class="order-step" data-step="t"><div class="q">Um welche Uhrzeit?</div><select id="cT" name="t" class="tsel" aria-label="Abholzeit in Stunden und Minuten"></select><button type="button" class="back-link" data-step-back="d">← Tag ändern</button></div>
 <div class="order-step" data-step="n"><div class="q">Wie viele?</div><div class="chips qty" id="cN"></div><button type="button" class="back-link" data-step-back="t">← Zeit ändern</button></div>
 <div class="order-step" data-step="done">
-<div class="q">Wie möchten Sie bestellen?</div>
-<div class="order-methods">
-<button type="button" class="method primary" id="directOrder"><strong>Direkt bestellen</strong><span>Ohne Telefon – Bestellung online abschliessen</span></button>
-<a class="method" id="waOrder" href="#" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>Bestellung ist bereits vorbereitet</span></a>
-<a class="method" id="emailOrder" href="#"><strong>E-Mail</strong><span>Bestellung ist bereits vorbereitet</span></a>
-</div>
+<div class="q">Fast geschafft.</div>
+<p class="checkout-intro">Ihre Auswahl steht. Tragen Sie nur noch Ihren Namen und Ihre E-Mail-Adresse ein – die Bestellung wird direkt an uns übermittelt.</p>
+<button type="button" class="method primary" id="directOrder"><strong>Bestellung abschliessen</strong><span>Ohne Mail-App – direkt auf dieser Website</span></button>
 <form class="direct-form" id="directForm" action="https://formspree.io/f/xvkgydoe" method="POST" hidden>
 <label for="customerName">Ihr Name</label>
 <input id="customerName" name="name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
@@ -151,12 +148,17 @@
   <div class="hand success-hand">ist angekommen!</div>
   <h3 class="success-title">Bestellung angekommen.</h3>
   <p class="success-lead">Danke – wir bereiten Ihren Korb mit Sorgfalt für Sie vor.</p>
-  <div class="success-card">
-    <div><span>Korb</span><strong id="successBasket"></strong></div>
-    <div><span>Abholung</span><strong id="successPickup"></strong></div>
-    <div><span>Anzahl</span><strong id="successQty"></strong></div>
+  <div class="success-receipt">
+    <div class="receipt-head"><span>Biottos Lädeli</span><small>Bestellzettel</small></div>
+    <div class="receipt-line"></div>
+    <div class="receipt-row"><span>Korb</span><strong id="successBasket"></strong></div>
+    <div class="receipt-row"><span>Abholung</span><strong id="successPickup"></strong></div>
+    <div class="receipt-row"><span>Anzahl</span><strong id="successQty"></strong></div>
+    <div class="receipt-line"></div>
+    <div class="receipt-thanks">Danke für Ihre Bestellung.</div>
+    <div class="receipt-edge"></div>
   </div>
-  <p class="success-note">Wir freuen uns auf Ihren Besuch im Biottos Lädeli in Guntershausen.</p>
+  <p class="success-note">Wir legen Ihren Korb für Sie bereit – bis bald im Lädeli.</p>
   <button type="button" class="btn success-close" id="successClose">Zurück zum Lädeli</button>
 </div>
 <button type="button" class="back-link" data-step-back="n">← Anzahl ändern</button>
