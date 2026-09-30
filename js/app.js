@@ -57,13 +57,34 @@ $("#directOrder").addEventListener("click",function(){
   $("#directConfirm").hidden=true;
   $("#customerName").focus();
 });
+function syncContactMethod(){
+  var method=document.querySelector('input[name="contactMethod"]:checked');
+  var email=method&&method.value==="email";
+  $("#emailField").hidden=!email;
+  $("#phoneField").hidden=email;
+  $("#customerEmail").required=email;
+  $("#customerPhone").required=!email;
+}
+document.querySelectorAll('input[name="contactMethod"]').forEach(function(input){
+  input.addEventListener("change",syncContactMethod);
+});
+syncContactMethod();
+
 $("#directForm").addEventListener("submit",function(e){
   e.preventDefault();
   var form=this;
+  var method=document.querySelector('input[name="contactMethod"]:checked').value;
+  var contact=method==="email"?$("#customerEmail").value.trim():$("#customerPhone").value.trim();
+  if(!contact){
+    (method==="email"?$("#customerEmail"):$("#customerPhone")).focus();
+    return;
+  }
   var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
   $("#orderDetails").value=""+
     st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\n"+
-    "Abholung: "+st.d+", "+st.t+" Uhr";
+    "Abholung: "+st.d+", "+st.t+" Uhr\n"+
+    "Kontaktart: "+(method==="email"?"E-Mail":"Telefon / WhatsApp")+"\n"+
+    "Kontakt: "+contact;
   var button=form.querySelector("button[type=submit]");
   button.disabled=true;
   button.textContent="Wird übermittelt …";
@@ -73,7 +94,7 @@ $("#directForm").addEventListener("submit",function(e){
     headers:{Accept:"application/json"}
   }).then(function(res){
     if(!res.ok) throw new Error("submit");
-    showSuccess(o);
+    showSuccess(o,contact,method);
   }).catch(function(){
     button.disabled=false;
     button.textContent="Bestellung verbindlich senden";
@@ -81,7 +102,7 @@ $("#directForm").addEventListener("submit",function(e){
     $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";
   });
 });
-function showSuccess(o){
+function showSuccess(o,contact,method){
   $("#directForm").hidden=true;
   $("#directConfirm").hidden=true;
   $("#directOrder").hidden=true;
@@ -91,6 +112,7 @@ function showSuccess(o){
   $("#successBasket").textContent=o.n+" · "+fmt(o.p*st.n);
   $("#successPickup").textContent=st.d+", "+st.t+" Uhr";
   $("#successQty").textContent=st.n+" ×";
+  $("#successContact").textContent=contact;
   var scene=$("#successScene");
   scene.hidden=false;
   scene.classList.remove("play");
