@@ -522,3 +522,25 @@ details ul{margin:0 0 12px!important}
   .korb-card-detail{grid-template-columns:92px 1fr}
   .korb-card-detail ul{font-size:.72rem}
 }
+
+
+/* Kurze, nicht-blockierende Bestellbestätigung */
+.pick-confirm{
+  position:fixed;left:50%;bottom:28px;z-index:9999;
+  transform:translate(-50%,14px) scale(.96);
+  opacity:0;pointer-events:none;
+  display:flex;align-items:center;gap:8px;
+  padding:10px 15px;border:1px solid var(--line);border-radius:999px;
+  background:var(--paper);box-shadow:0 10px 30px rgba(0,0,0,.14);
+  color:var(--ink);font-size:.86rem;font-weight:600;
+  transition:opacity .18s ease,transform .18s ease;
+}
+.pick-confirm span{color:var(--red);font-size:1rem}
+.pick-confirm.show{opacity:1;transform:translate(-50%,0) scale(1)}
+@keyframes stepArrive{
+  0%{opacity:.55;transform:translateY(8px)}
+  65%{opacity:1;transform:translateY(-2px)}
+  100%{transform:translateY(0)}
+}
+.order-step.step-arrive{animation:stepArrive .42s ease both}
+@media(max-width:600px){.pick-confirm{bottom:18px;font-size:.8rem}}
