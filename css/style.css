@@ -447,3 +447,19 @@ details ul{margin:0 0 12px!important}
 .hero-story-step:hover{transform:translateY(-2px)}
 .hero-story-step.active{transform:translateY(-2px)}
 @media(max-width:700px){.hero-story-steps{grid-template-columns:1fr 1fr}.hero-story-step:last-child{grid-column:1/-1}}
+
+
+/* Geschenkskörbe: grosse Fotos, aber mit einer ruhigen, magazinartigen Proportion */
+.korb-main-photo{max-width:680px;margin:28px auto 18px}
+.korb-main-photo .foto{padding:12px;box-shadow:0 4px 0 var(--line)}
+.korb-main-photo img{max-height:720px;object-fit:contain}
+@media(min-width:821px){
+  .korb-main-photo{max-width:700px}
+  .korb-main-photo .foto{padding:14px}
+  .korb-main-photo img{max-height:760px}
+}
+@media(max-width:600px){
+  .korb-main-photo{max-width:100%;margin:22px auto 14px}
+  .korb-main-photo .foto{padding:8px}
+  .korb-main-photo img{max-height:none}
+}
