@@ -98,3 +98,11 @@ summary::after{content:"+";font-size:1.6rem;line-height:1;font-weight:400}
 details[open] summary::after{content:"–"}
 details ul{margin:0 0 12px!important}
 .tsel{width:100%;min-height:54px;font:inherit;font-size:1.15rem;padding:0 12px;background:var(--white);color:var(--ink);border:2px solid var(--line);border-radius:3px}
+
+/* Bestellvorgang: ein Schritt nach dem anderen */
+.order-step{display:none}
+.order-step.active{display:block}
+.week-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0 12px;font-size:.92rem}
+.week-btn,.back-link{font:inherit;border:0;background:none;color:var(--red);cursor:pointer;padding:6px 0}
+.week-btn{font-weight:600}
+.back-link{margin-top:14px;text-decoration:underline;text-underline-offset:3px}
