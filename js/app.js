@@ -4,7 +4,7 @@ var K=[].map.call(document.querySelectorAll(".korb .preis"),function(el){return{
 var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
 function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
-var views=["start","koerbe","ueber-uns","abholung","kontakt"];
+var views=["start","koerbe","traubensaft","suessmost","ueber-uns","abholung","kontakt"];
 function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
 window.addEventListener("hashchange",show);show();
 function fmt(x){return "CHF "+x.toFixed(2)}
