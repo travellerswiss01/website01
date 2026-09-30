@@ -13,7 +13,8 @@ function fmt(x){return "CHF "+x.toFixed(2)}
 function chips(el,name,items,cur){el.innerHTML=items.map(function(i){return '<label><input type="radio" name="'+name+'" value="'+i.v+'"'+(String(i.v)===String(cur)?" checked":"")+'><span>'+i.l+'</span></label>'}).join("")}
 var days=[];
 (function(){var w=["So","Mo","Di","Mi","Do","Fr","Sa"],b=new Date();
-for(var i=1;i<=7;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i),dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";
+var end=new Date(b.getFullYear(),b.getMonth()+3,b.getDate());
+for(var i=1;i<=120;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i);if(x>end)break;if(x.getDay()===0)continue;var dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";
 days.push({v:w[x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":w[x.getDay()]+"<br>")+dd})}})();
 function render(){
 chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:'<b style="font-weight:600">'+o.n.replace("&","&amp;")+'</b><b style="font-weight:600;color:inherit">'+fmt(o.p)+'</b>'}}),st.k);
