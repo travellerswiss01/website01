@@ -112,47 +112,76 @@ details ul{margin:0 0 12px!important}
   .wrap{max-width:1180px;padding-left:34px;padding-right:34px}
   .bar{min-height:76px;gap:28px}
   .logo{font-size:1.38rem}
-  nav{gap:4px;align-items:center;margin-left:auto}
+  nav{
+    flex:1;
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    gap:4px;
+    margin-left:24px;
+  }
   nav a{
     position:relative;
+    flex:1 1 0;
     display:flex;
     align-items:center;
     justify-content:center;
-    min-height:44px;
-    padding:9px 13px;
+    min-height:54px;
+    padding:10px 12px;
     color:var(--ink);
-    font-size:1.02rem;
-    font-weight:600;
+    font-size:1.06rem;
+    font-weight:650;
     text-decoration:none;
     border:0;
     background:transparent;
     border-radius:0;
-    transition:color .15s ease;
+    transition:color .2s ease, transform .2s ease;
+    white-space:nowrap;
   }
   nav a::after{
     content:"";
     position:absolute;
-    left:12px;
-    right:12px;
-    bottom:3px;
-    height:2px;
+    left:8%;
+    right:8%;
+    bottom:4px;
+    height:3px;
     background:var(--red);
     transform:scaleX(0);
-    transform-origin:center;
-    transition:transform .15s ease;
+    transform-origin:left center;
+    transition:transform .28s cubic-bezier(.22,.61,.36,1);
+  }
+  nav a::before{
+    content:"";
+    position:absolute;
+    inset:8px 0;
+    background:var(--paper2);
+    z-index:-1;
+    opacity:0;
+    transform:scaleX(.82);
+    transition:opacity .2s ease,transform .25s cubic-bezier(.22,.61,.36,1);
   }
   nav a:hover{
     color:var(--red);
     text-decoration:none;
     background:transparent;
-    transform:none;
+    transform:translateY(-1px);
   }
-  nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+  nav a:hover::before{
+    opacity:.7;
+    transform:scaleX(1);
+  }
+  nav a:hover::after,nav a.on::after{
+    transform:scaleX(1);
+  }
   nav a.on{
     color:var(--red);
     background:transparent;
     border:0;
     box-shadow:none;
+  }
+  nav a.on::before{
+    opacity:.55;
+    transform:scaleX(1);
   }
   .hero{padding:68px 0 84px}
   .hero .wrap{grid-template-columns:minmax(330px,430px) minmax(460px,650px);gap:72px;justify-content:center;align-items:center}
