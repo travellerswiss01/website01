@@ -244,3 +244,12 @@ details ul{margin:0 0 12px!important}
 .method span{font-size:.84rem;line-height:1.35;opacity:.9}
 .order-confirm{margin:14px 0;padding:13px 14px;border-left:3px solid var(--red);background:var(--paper2);font-size:.9rem}
 .order-confirm p{margin:.35em 0 0}
+
+.direct-form{margin:14px 0 4px;padding:16px;border:1px solid var(--line);background:var(--paper2)}
+.direct-form label{display:block;font-size:.9rem;font-weight:600;margin:10px 0 5px}
+.direct-form label:first-child{margin-top:0}
+.direct-form input:not(.hp){display:block;width:100%;min-height:50px;padding:10px 12px;border:2px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink);font:inherit}
+.direct-form input:not(.hp):focus{outline:3px solid color-mix(in srgb,var(--red) 25%,transparent);border-color:var(--red)}
+.direct-form .btn{margin-top:14px}
+.form-note{font-size:.78rem;color:var(--mute);margin:9px 0 0;line-height:1.4}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
