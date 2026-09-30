@@ -253,3 +253,33 @@ details ul{margin:0 0 12px!important}
 .direct-form .btn{margin-top:14px}
 .form-note{font-size:.78rem;color:var(--mute);margin:9px 0 0;line-height:1.4}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+
+/* Kreative Bestellbestätigung */
+.success-scene{position:relative;text-align:center;padding:22px 4px 6px;overflow:hidden}
+.success-scene[hidden]{display:none}
+.success-hand{font-size:1.55rem;margin-top:4px}
+.success-title{font-size:2rem!important;margin:.05em 0 .25em!important}
+.success-lead{max-width:31em;margin:0 auto 18px;font-size:.95rem}
+.success-stamp{width:82px;height:82px;margin:0 auto 7px;border:3px solid var(--red);border-radius:50%;display:grid;place-items:center;background:var(--white);position:relative;z-index:2;transform:scale(.3) rotate(-18deg);opacity:0}
+.success-stamp span{font:600 3.2rem/1 "Young Serif",Georgia,serif;color:var(--red);transform:scale(.7)}
+.success-card{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px auto;padding:12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left}
+.success-card div{min-width:0}
+.success-card span{display:block;font-size:.72rem;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.success-card strong{display:block;font-size:.82rem;line-height:1.35;margin-top:2px}
+.success-note{font-family:Caveat,"Segoe Script",cursive;color:var(--red);font-size:1.35rem;line-height:1.15;margin:16px auto 20px;max-width:30em}
+.success-close{max-width:300px;margin:0 auto!important}
+.success-confetti{position:absolute;inset:0 0 auto;height:145px;pointer-events:none;overflow:hidden}
+.success-confetti i{position:absolute;left:50%;top:44px;color:var(--red);font-style:normal;font-size:12px;opacity:0;transform:translateX(var(--x)) translateY(0) rotate(var(--r));}
+.success-confetti i:nth-child(3n){width:7px;height:13px;background:var(--red);font-size:0}
+.success-confetti i:nth-child(3n+1){width:6px;height:6px;border:2px solid var(--red);border-radius:50%;font-size:0}
+.success-scene.play .success-stamp{animation:successStamp .65s cubic-bezier(.2,1.5,.4,1) .05s forwards}
+.success-scene.play .success-stamp span{animation:successTick .45s ease .32s both}
+.success-scene.play .success-confetti i{animation:successConfetti .9s cubic-bezier(.15,.8,.25,1) var(--d) forwards}
+.success-scene.play .success-hand,.success-scene.play .success-title,.success-scene.play .success-lead,.success-scene.play .success-card,.success-scene.play .success-note,.success-scene.play .success-close{animation:successRise .5s ease .2s both}
+@keyframes successStamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
+@keyframes successTick{from{transform:scale(.2) rotate(-25deg)}to{transform:scale(1) rotate(0)}}
+@keyframes successConfetti{0%{opacity:0;transform:translateX(var(--x)) translateY(0) rotate(var(--r))}15%{opacity:1}100%{opacity:0;transform:translateX(calc(var(--x) * 2.2)) translateY(105px) rotate(calc(var(--r) + 220deg))}}
+@keyframes successRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:430px){.success-card{grid-template-columns:1fr;gap:8px;text-align:center}.success-title{font-size:1.7rem!important}}
+@media(prefers-reduced-motion:reduce){.success-scene *{animation:none!important}.success-stamp{opacity:1;transform:rotate(-6deg) scale(1)}}
