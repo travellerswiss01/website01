@@ -112,8 +112,10 @@ details ul{margin:0 0 12px!important}
   .wrap{max-width:1180px;padding-left:34px;padding-right:34px}
   .bar{min-height:76px;gap:28px}
   .logo{font-size:1.38rem}
-  nav{gap:6px}
-  nav a{font-size:1.02rem;padding:18px 14px}
+  nav{gap:8px}
+  nav a{font-size:1.08rem;font-weight:600;padding:15px 16px;border:1px solid var(--line);border-radius:4px;background:var(--white);box-shadow:0 1px 0 var(--line)}
+  nav a:hover{color:var(--red);text-decoration:none;border-color:var(--red)}
+  nav a.on{color:var(--red);border-color:var(--red);box-shadow:inset 0 -3px 0 var(--red),0 1px 0 var(--line)}
   .hero{padding:68px 0 84px}
   .hero .wrap{grid-template-columns:minmax(330px,430px) minmax(460px,650px);gap:72px;justify-content:center;align-items:center}
   .hero .foto{max-width:430px}
