@@ -131,16 +131,18 @@
 <a class="method" id="waOrder" href="#" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>Bestellung ist bereits vorbereitet</span></a>
 <a class="method" id="emailOrder" href="#"><strong>E-Mail</strong><span>Bestellung ist bereits vorbereitet</span></a>
 </div>
-<form class="direct-form" id="directForm" hidden>
+<form class="direct-form" id="directForm" action="https://formspree.io/f/xvkgydoe" method="POST" hidden>
 <label for="customerName">Ihr Name</label>
 <input id="customerName" name="name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
 <label for="customerEmail">Ihre E-Mail-Adresse</label>
 <input id="customerEmail" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.ch">
 <label for="customerPhone">Telefon (optional)</label>
 <input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="+41 ...">
+<input type="hidden" name="bestellung" id="orderDetails">
+<input type="hidden" name="_subject" value="Neue Bestellung – Biottos Lädeli">
 <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp">
 <button type="submit" class="btn">Bestellung verbindlich senden</button>
-<p class="form-note">Sie erhalten nach dem Absenden eine Bestätigung auf Ihre E-Mail-Adresse.</p>
+<p class="form-note">Die Bestellung wird direkt an Biottos Lädeli übermittelt.</p>
 </form>
 <div class="order-confirm" id="directConfirm" hidden></div>
 <button type="button" class="back-link" data-step-back="n">← Anzahl ändern</button>
