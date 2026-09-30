@@ -315,3 +315,14 @@ details ul{margin:0 0 12px!important}
 .receipt-edge{position:absolute;left:0;right:0;bottom:0;height:9px;background:repeating-linear-gradient(135deg,transparent 0 8px,var(--paper) 8px 16px)}
 .success-receipt,.success-hand,.success-title,.success-lead,.success-note,.success-close{will-change:transform,opacity}
 @media(max-width:430px){.success-receipt{margin-left:4px;margin-right:4px}.receipt-row{font-size:.8rem}}
+
+/* Kontaktwahl im Abschluss: eine einzige Angabe, keine unnötige Hürde */
+.contact-choice{margin:15px 0 8px}
+.contact-question{font-size:.9rem;font-weight:600;margin-bottom:7px}
+.contact-tabs{display:grid;grid-template-columns:1fr 1.25fr;gap:8px}
+.contact-tabs label{cursor:pointer}
+.contact-tabs input{position:absolute;opacity:0;pointer-events:none}
+.contact-tabs span{display:flex;align-items:center;justify-content:center;min-height:50px;padding:10px 9px;border:2px solid var(--line);border-radius:3px;background:var(--white);font-size:.9rem;text-align:center}
+.contact-tabs input:checked+span{border-color:var(--red);background:var(--red);color:#fff}
+.contact-tabs input:focus-visible+span{outline:3px solid color-mix(in srgb,var(--red) 25%,transparent)}
+.contact-field[hidden]{display:none}
