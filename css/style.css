@@ -504,3 +504,21 @@ details ul{margin:0 0 12px!important}
   .korb-card-number{top:-7px;left:6px;font-size:.7rem}
   .korb-card-link{font-size:.82rem}
 }
+
+
+/* Korbinhalt und zweite Ansicht im interaktiven Schaufenster */
+.korb-card-more{margin:14px 0 0;text-align:left;border-top:1px dashed var(--line)}
+.korb-card-more summary{padding:9px 0 3px;color:var(--red);font-size:.82rem;font-weight:600;cursor:pointer;list-style:none}
+.korb-card-more summary::-webkit-details-marker{display:none}
+.korb-card-more summary::after{content:" +";font-size:1rem}
+.korb-card-more[open] summary::after{content:" −"}
+.korb-card-detail{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:start;padding:8px 0 4px}
+.korb-card-second-foto{margin:0!important;padding:4px!important}
+.korb-card-second-foto img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.korb-card-detail ul{margin:0;padding:2px 0 0 1.05em;color:var(--mute);font-size:.76rem;line-height:1.45}
+.korb-card-detail li{margin:1px 0}
+@media(max-width:600px){
+  .korb-card-more{grid-column:1/-1;margin-top:4px}
+  .korb-card-detail{grid-template-columns:92px 1fr}
+  .korb-card-detail ul{font-size:.72rem}
+}
