@@ -1,171 +1,52 @@
-[Biottos Lädeli](#start)
-
-[Startseite](#start)[Geschenkskörbe](#koerbe)[Über uns](#ueber-uns)[Abholung](#abholung)[Kontakt](#kontakt)
-
-Geschenkskorb Gross & Guet in Holzkiste mit Cellophan
-
-# Geschenke aus dem Thurgau.
-
-Zusammengestellt bei Biottos Lädeli in Guntershausen.
-
-Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.
-
-Wir machen daraus Sirup, Essig, Saucen und Dörrfrüchte und packen sie in drei verschiedene Geschenkskörbe.
-
-Sie bestellen per WhatsApp und holen den Korb bei uns im Laden ab.
-
-[Jetzt bestellen](#) [Geschenkskörbe ansehen](#koerbe)
-
-der grosse
-
-### Gross & Guet
-
-Geschenkskorb Gross & Guet in Holzkiste mit karierter Schleife
-
-Geschenkskorb Gross & Guet mit Himbeeressig, Tomatensauce, Goldmelissensirup und Dörrzwetschgen
-
-CHF 49.95
-
-Eine feine Auswahl aus unserer Küche: Goldmelissensirup, Tomatensauce, Birnenweggen, Birnel, Dörrzwetschgen und Himbeeressig.
-
-Sechs hausgemachte Sachen, schön verpackt in einer Holzkiste – zum Verschenken oder selber Geniessen.
-
-Was ist drin?
-
-- Biottos Goldmelissensirup
-- Biottos Tomatensauce
-- Biottos Birnenweggen
-- Biottos Birnel
-- Biottos Dörrzwetschgen
-- Biottos Himbeeressig
-
-[Bestellen](#)
-
-der mittlere
-
-### Fein & Guet
-
-Geschenkskorb Fein & Guet in Holzkiste mit roter Schleife
-
-Geschenkskorb Fein & Guet von oben
-
-CHF 29.95
-
-Eine feine Auswahl aus unserer Küche: Tomatensauce, Birnenessig, Kirschenbalsamico, Dessertzwetschgen und Dörrbirnen.
-
-Fünf hausgemachte Sachen, schön verpackt in einer Holzkiste – zum Verschenken oder selber Geniessen.
-
-Was ist drin?
-
-- Biottos Tomatensauce
-- Biottos Birnenessig
-- Biottos Kirschenbalsamico
-- Biottos Dessertzwetschgen
-- Biottos Dörrbirnen
-
-[Bestellen](#)
-
-der kleine
-
-### Chili & Fii
-
-Geschenkskorb Chili & Fii im Spankorb mit Himbeeressig, gedörrten Zwetschgen und Birnen Balsamico
-
-Geschenkskorb Chili & Fii von oben
-
-CHF 19.95
-
-Drei hausgemachte Sachen für ein kleines Dankeschön – fein zusammengestellt und schön verpackt.
-
-Was ist drin?
-
-- Biottos Himbeeressig
-- Biottos gedörrte Zwetschgen
-- Biottos Birnen-Balsamico
-
-[Bestellen](#)
-
-Die Familie in roten T-Shirts mit Schweizerkreuz auf einem Berggipfel
-
-## Über uns
-
-Was bei uns im Garten wächst, kommt bei uns in die Küche. Daraus machen wir Goldmelissensirup, Tomatensauce, feine Essige und Balsamicos sowie verschiedene Dörrfrüchte.
-
-Daraus entstehen unsere drei Geschenkskörbe – mit hausgemachten Sachen und einem kleinen Stück von unserem Zuhause.
-
-## Abholung im Lädeli
-
-**Wo?**
-
-Biottos Lädeli\
-Hauptstrasse 90\
-8357 Guntershausen
-
-**Was?**Der Korb, den Sie per WhatsApp bestellt haben.
-
-**Wann?**Zu dem Datum und der Uhrzeit, die Sie auf dem Bestellzettel angeben.
-
-Bezahlt wird bei der Abholung, mit TWINT oder bar. Versand gibt es nicht.
-
-[Route in Google Maps](https://www.google.com/maps/search/?api=1&query=Biottos+L%C3%A4deli+Hauptstrasse+90+8357+Guntershausen)
-
-## Kontakt
-
-Fragen zu den Körben? Am einfachsten schreiben Sie uns auf WhatsApp.
-
-[WhatsApp +41 76 255 22 56](https://wa.me/41762552256)
-
-### Biottos Lädeli
-
-Hauptstrasse 90, 8357 Guntershausen TG
-
-### Rechtliches
-
-[Impressum](#) · [Datenschutz](#)
-
-### Bestellzettel
-
-Welcher Korb?
-
-Wie viele?
-
-An welchem Tag holen Sie ab?
-
-Abholzeit
-
-Total
-
-[Per WhatsApp senden](#)
-
-Die Nachricht ist fertig geschrieben, Sie schicken sie nur noch ab.
-
-### Impressum
-
-**Biottos Lädeli**\
-Hauptstrasse 90\
-8357 Guntershausen\
-Schweiz
-
-**Kontakt**\
-Telefon / WhatsApp: 041 76 255 22 56
-
-**Verantwortlich für den Inhalt**\
-Biottos Lädeli
-
-### Datenschutz
-
-Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir behandeln Ihre Daten vertraulich und geben sie nicht an Dritte weiter, soweit dies nicht für die Abwicklung Ihrer Bestellung notwendig ist.
-
-**Bestellungen per WhatsApp**\
-Wenn Sie über WhatsApp bestellen, werden die von Ihnen übermittelten Angaben zur Bearbeitung und Vorbereitung Ihrer Bestellung verwendet. Die Kommunikation erfolgt über WhatsApp und unterliegt zusätzlich den Datenschutzbestimmungen von WhatsApp.
-
-**Website**\
-Beim Besuch unserer Website können technische Daten wie IP-Adresse, Browsertyp oder Zugriffszeit automatisch erfasst werden. Diese Daten dienen der sicheren und störungsfreien Bereitstellung der Website.
-
-Wir speichern persönliche Daten nur so lange, wie dies für die Bearbeitung der Bestellung oder aufgrund gesetzlicher Pflichten erforderlich ist.
-
-Bei Fragen zum Datenschutz können Sie uns über die angegebene Telefonnummer kontaktieren.
-
-[Bestellen](#)
-
-Tippen zum Vergrössern
+(function(){
+var NR="41762552256",$=function(x){return document.querySelector(x)};
+var K=[{id:"gross",n:"Gross & Guet",p:49.95},{id:"fein",n:"Fein & Guet",p:29.95},{id:"chili",n:"Chili & Fii",p:19.95}];
+var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
+function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
+var st={k:"gross",n:1,d:"",t:nextT()};
+var views=["start","koerbe","ueber-uns","abholung","kontakt"];
+function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";
+views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});
+document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
+window.addEventListener("hashchange",show);show();
+function fmt(x){return "CHF "+x.toFixed(2)}
+function chips(el,name,items,cur){el.innerHTML=items.map(function(i){return '<label><input type="radio" name="'+name+'" value="'+i.v+'"'+(String(i.v)===String(cur)?" checked":"")+'><span>'+i.l+'</span></label>'}).join("")}
+var days=[];
+(function(){var w=["So","Mo","Di","Mi","Do","Fr","Sa"],b=new Date();
+for(var i=1;i<=7;i++){var x=new Date(b.getFullYear(),b.getMonth(),b.getDate()+i),dd=("0"+x.getDate()).slice(-2)+"."+("0"+(x.getMonth()+1)).slice(-2)+".";
+days.push({v:w[x.getDay()]+", "+dd+x.getFullYear(),l:(i===1?"Morgen<br>":w[x.getDay()]+"<br>")+dd})}})();
+function render(){
+chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:'<b style="font-weight:600">'+o.n.replace("&","&amp;")+'</b><b style="font-weight:600;color:inherit">'+fmt(o.p)+'</b>'}}),st.k);
+chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.n);
+chips($("#cD"),"d",days,st.d);
+$("#cT").innerHTML=ZEITEN.map(function(z){return "<option"+(z===st.t?" selected":"")+">"+z+"</option>"}).join("");
+upd()}
+function upd(){var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;$("#tot").textContent=fmt(tot);var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp").src=im.src;$("#sp").alt=im.alt}$("#sn").textContent=o.n;
+var ok=st.d&&st.t,go=$("#go");
+var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
+go.href=ok?"https://wa.me/"+NR+"?text="+encodeURIComponent(text):"#";go.style.opacity=ok?1:.55;
+$("#msg").textContent=ok?"Die Nachricht ist fertig geschrieben, Sie schicken sie nur noch ab.":"Bitte noch den Tag wählen."}
+$("#ov").addEventListener("change",function(e){var n=e.target.name;if(!n)return;st[n]=e.target.value;upd()});
+$("#go").addEventListener("click",function(e){if(!(st.d&&st.t))e.preventDefault()});
+function open(k){st.k=k||st.k;render();$("#ov").classList.add("on");$("#ov").setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function close(){$("#ov").classList.remove("on");$("#ov").setAttribute("aria-hidden","true");document.body.style.overflow=""}
+document.addEventListener("click",function(e){var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open)}});
+$("#x").addEventListener("click",close);
+$("#ov").addEventListener("click",function(e){if(e.target.id==="ov")close()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
+(function(){var lb=document.getElementById("lb"),li=document.getElementById("li");
+function close(){lb.classList.remove("on","z");lb.setAttribute("aria-hidden","true");document.body.style.overflow=""}
+document.addEventListener("click",function(e){var i=e.target.closest(".foto img");if(i){li.src=i.src;li.alt=i.alt;lb.scrollTop=0;lb.scrollLeft=0;lb.classList.add("on");lb.classList.remove("z");lb.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}});
+li.addEventListener("click",function(e){e.stopPropagation();var z=lb.classList.toggle("z");if(z){var r=li.getBoundingClientRect();lb.scrollLeft=(lb.scrollWidth-lb.clientWidth)/2;lb.scrollTop=Math.max(0,(e.clientY-r.top)/Math.max(r.height,1)*lb.scrollHeight-lb.clientHeight/2)}else{lb.scrollTop=0;lb.scrollLeft=0}});
+lb.addEventListener("click",function(e){if(e.target===lb)close()});
+document.getElementById("lx").addEventListener("click",close);
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
+(function(){var lg=document.getElementById("lg");
+function close(){lg.classList.remove("on");lg.setAttribute("aria-hidden","true");document.body.style.overflow=""}
+document.addEventListener("click",function(e){var a=e.target.closest("[data-legal]");if(a){e.preventDefault();["impressum","datenschutz"].forEach(function(k){document.getElementById("l-"+k).hidden=(k!==a.dataset.legal)});lg.classList.add("on");lg.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}});
+document.getElementById("lgx").addEventListener("click",close);
+lg.addEventListener("click",function(e){if(e.target===lg)close()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
