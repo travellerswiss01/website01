@@ -59,13 +59,70 @@ $("#directOrder").addEventListener("click",function(){
   $("#directConfirm").hidden=true;
   $("#customerName").focus();
 });
-$("#directForm").addEventListener("submit",function(){
+$("#directForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var form=this;
   var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
   $("#orderDetails").value=""+
     st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\n"+
     "Abholung: "+st.d+", "+st.t+" Uhr";
-  $("#directConfirm").hidden=false;
-  $("#directConfirm").innerHTML="<strong>Bestellung wird übermittelt.</strong><p>Bitte warten Sie einen Moment.</p>";
+  var button=form.querySelector("button[type=submit]");
+  button.disabled=true;
+  button.textContent="Wird übermittelt …";
+  fetch(form.action,{
+    method:"POST",
+    body:new FormData(form),
+    headers:{Accept:"application/json"}
+  }).then(function(res){
+    if(!res.ok) throw new Error("submit");
+    showSuccess(o);
+  }).catch(function(){
+    button.disabled=false;
+    button.textContent="Bestellung verbindlich senden";
+    $("#directConfirm").hidden=false;
+    $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals oder bestellen Sie direkt per WhatsApp.</p>";
+  });
+});
+function showSuccess(o){
+  $("#directForm").hidden=true;
+  $("#directConfirm").hidden=true;
+  document.querySelector(".order-methods").hidden=true;
+  document.querySelector("[data-step-back='n']").hidden=true;
+  $("#tot").parentElement.hidden=true;
+  $("#msg").hidden=true;
+  $("#successBasket").textContent=o.n+" · "+fmt(o.p*st.n);
+  $("#successPickup").textContent=st.d+", "+st.t+" Uhr";
+  $("#successQty").textContent=st.n+" ×";
+  var scene=$("#successScene");
+  scene.hidden=false;
+  scene.classList.remove("play");
+  void scene.offsetWidth;
+  scene.classList.add("play");
+  var conf=$("#successConfetti");
+  conf.innerHTML="";
+  for(var i=0;i<22;i++){
+    var piece=document.createElement("i");
+    piece.style.setProperty("--x",((i%11)*10-50)+"px");
+    piece.style.setProperty("--r",(i*37)+"deg");
+    piece.style.setProperty("--d",(i%5)*.06+"s");
+    piece.textContent=i%3===0?"✦":"";
+    conf.appendChild(piece);
+  }
+}
+$("#successClose").addEventListener("click",function(){
+  location.hash="#start";
+  close();
+  document.querySelector(".order-methods").hidden=false;
+  document.querySelector("[data-step-back='n']").hidden=false;
+  $("#tot").parentElement.hidden=false;
+  $("#msg").hidden=false;
+  $("#successScene").hidden=true;
+  var form=$("#directForm");
+  form.reset();
+  form.hidden=true;
+  var button=form.querySelector("button[type=submit]");
+  button.disabled=false;
+  button.textContent="Bestellung verbindlich senden";
 });
 document.addEventListener("click",function(e){
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
