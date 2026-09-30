@@ -3,7 +3,7 @@ var heroStoryData=[
 {img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhausen und im Garten.",note:"Ein kleines Stück Zuhause."},
 {img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:"Vom Baum. Aus dem Garten. Von hier."},
 {img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:"Aus guten Zutaten wird etwas Eigenes."},
-{img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenkskörbe – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+{img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Gschänksharrass – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
 {img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhausen abholen.",note:"Bis bald bei uns im Lädeli."}
 ];
 var heroStoryIndex=0;
@@ -62,7 +62,7 @@ $("#tot").textContent=fmt(tot);
 var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp").src=im.src;$("#sp").alt=im.alt}
 $("#sn").textContent=st.n+" × "+o.n;
 var ok=st.d&&st.t;
-var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
+var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Gschänksharrass "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
 $("#msg").textContent=ok?"Ihre Auswahl ist bereit.":"Bitte Auswahl abschliessen.";
 }
 function showPickConfirmation(label){
@@ -128,7 +128,7 @@ $("#directForm").addEventListener("submit",function(e){
   }
   var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
   $("#orderDetails").value=""+
-    st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\n"+
+    st.n+" x Gschänksharrass "+o.n+" ("+fmt(tot)+")\n"+
     "Abholung: "+st.d+", "+st.t+" Uhr\n"+
     "Kontaktart: "+(method==="email"?"E-Mail":"Telefon / WhatsApp")+"\n"+
     "Kontakt: "+contact;
@@ -157,7 +157,7 @@ $("#directForm").addEventListener("submit",function(e){
 function openWhatsAppConfirmation(o,contact,method){
   var total=fmt(o.p*st.n);
   var msg="Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n"+
-    "🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+total+")\n"+
+    "🧺 "+st.n+" x Gschänksharrass "+o.n+" ("+total+")\n"+
     "📅 Abholung: "+st.d+", "+st.t+" Uhr\n"+
     "👤 Name: "+$("#customerName").value.trim()+"\n"+
     "📞 Kontakt: "+contact+"\n\n"+
@@ -177,7 +177,7 @@ function showSuccess(o,contact,method){
   $("#successQty").textContent=st.n+" ×";
   $("#successContact").textContent=contact;
   var waLink=document.getElementById("successWhatsApp");
-  if(waLink) waLink.href="https://wa.me/"+NR+"?text="+encodeURIComponent("Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+fmt(o.p*st.n)+")\n📅 Abholung: "+st.d+", "+st.t+" Uhr\n👤 Name: "+$("#customerName").value.trim()+"\n📞 Kontakt: "+contact+"\n\nDanke!");
+  if(waLink) waLink.href="https://wa.me/"+NR+"?text="+encodeURIComponent("Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n🧺 "+st.n+" x Gschänksharrass "+o.n+" ("+fmt(o.p*st.n)+")\n📅 Abholung: "+st.d+", "+st.t+" Uhr\n👤 Name: "+$("#customerName").value.trim()+"\n📞 Kontakt: "+contact+"\n\nDanke!");
   var scene=$("#successScene");
   scene.hidden=false;
   scene.classList.remove("play");
@@ -225,10 +225,10 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 })();
 (function(){
 var storyData=[
- {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Geschenkskorb",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
- {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenkskorb",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
- {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenkskorb Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenkskorb wird.",note:"Nicht einfach hineingelegt. Schön gemacht."},
- {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
+ {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Gschänksharrass",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
+ {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Gschänksharrass",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
+ {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Gschänksharrass Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Gschänksharrass wird.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+ {img:"img/chili-vorne.jpg",alt:"Fertiger Gschänksharrass Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
  {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhausen.",note:"Bis bald bei uns im Lädeli."}
 ];
 var storyIndex=0,storyTouchX=null;
