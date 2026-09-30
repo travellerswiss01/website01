@@ -364,3 +364,32 @@ details ul{margin:0 0 12px!important}
 @media(prefers-reduced-motion:reduce){
   .story-progress div{transition:none}
 }
+
+.produce{align-items:center}
+.produce-label{
+  flex-direction:column;
+  gap:8px;
+  min-height:280px;
+  padding:36px 28px;
+  text-align:center;
+}
+.produce-label img{display:none}
+.produce-label .hand{font-size:1.7rem}
+.produce-label strong{
+  display:block;
+  font-family:"Young Serif",Georgia,serif;
+  font-size:clamp(2rem,5vw,2.8rem);
+  font-weight:400;
+  line-height:1.05;
+  color:var(--ink);
+}
+.produce-label p{
+  margin:0;
+  max-width:16em;
+  color:var(--mute);
+}
+.produce .btn{margin-top:.35em}
+@media(min-width:821px){
+  .produce{max-width:1000px;margin:0 auto}
+  .produce-label{min-height:360px}
+}
