@@ -124,10 +124,21 @@
 <div class="order-step" data-step="d"><div class="q" id="orderTitleDay">Wann möchten Sie ihn abholen?</div><div class="week-nav"><button type="button" class="week-btn" id="weekPrev" hidden>←</button><span id="weekLabel"></span><button type="button" class="week-btn" id="weekNext">Nächste Woche →</button></div><div class="chips" id="cD"></div><button type="button" class="back-link" data-step-back="k">← Korb ändern</button></div>
 <div class="order-step" data-step="t"><div class="q">Um welche Uhrzeit?</div><select id="cT" name="t" class="tsel" aria-label="Abholzeit in Stunden und Minuten"></select><button type="button" class="back-link" data-step-back="d">← Tag ändern</button></div>
 <div class="order-step" data-step="n"><div class="q">Wie viele?</div><div class="chips qty" id="cN"></div><button type="button" class="back-link" data-step-back="t">← Zeit ändern</button></div>
-<div class="order-step" data-step="done"><div class="q">Bestellung prüfen</div></div>
+<div class="order-step" data-step="done">
+<div class="q">Wie möchten Sie bestellen?</div>
+<div class="order-methods">
+<button type="button" class="method primary" id="directOrder"><strong>Direkt bestellen</strong><span>Ohne Telefon – Bestellung online abschliessen</span></button>
+<a class="method" id="waOrder" href="#" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>Bestellung ist bereits vorbereitet</span></a>
+<a class="method" id="emailOrder" href="#"><strong>E-Mail</strong><span>Bestellung ist bereits vorbereitet</span></a>
+</div>
+<div class="order-confirm" id="directConfirm" hidden>
+<strong>Bestellung vorbereitet.</strong>
+<p>Ihre Angaben sind vollständig. Für den direkten Abschluss braucht die Website noch eine E-Mail-Adresse bzw. ein Bestellformular.</p>
+</div>
+<button type="button" class="back-link" data-step-back="n">← Anzahl ändern</button>
+</div>
 <div class="total"><span>Total</span><span id="tot"></span></div>
-<a class="btn" id="go" href="#" target="_blank" rel="noopener">Per WhatsApp senden</a>
-<p class="note" id="msg">Die Nachricht ist fertig geschrieben, Sie schicken sie nur noch ab.</p>
+<p class="note" id="msg">Wählen Sie Ihre bevorzugte Bestellart.</p>
 </div></div>
 <div class="ov" id="lg" aria-hidden="true"><div class="sheet" role="dialog" aria-modal="true" aria-label="Rechtliches">
 <button class="x" id="lgx" aria-label="Schliessen">×</button>
