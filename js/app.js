@@ -65,6 +65,27 @@ var ok=st.d&&st.t;
 var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
 $("#msg").textContent=ok?"Ihre Auswahl ist bereit.":"Bitte Auswahl abschliessen.";
 }
+function showPickConfirmation(label){
+  var toast=document.createElement("div");
+  toast.className="pick-confirm";
+  toast.innerHTML="<span>✓</span> "+label+" ausgewählt";
+  document.body.appendChild(toast);
+  requestAnimationFrame(function(){toast.classList.add("show")});
+  setTimeout(function(){toast.classList.remove("show");setTimeout(function(){toast.remove()},220)},850);
+}
+$("#cK").addEventListener("click",function(e){
+  var label=e.target.closest("label"),input=label&&label.querySelector("input[name='k']");
+  if(!input)return;
+  e.preventDefault();
+  st.k=input.value;
+  st.step="d";
+  dWeek=0;
+  var picked=K.filter(function(x){return x.id===st.k})[0];
+  showPickConfirmation(picked.n);
+  render();
+  var active=document.querySelector('.order-step[data-step="d"]');
+  if(active){active.classList.remove("step-arrive");void active.offsetWidth;active.classList.add("step-arrive");setTimeout(function(){active.classList.remove("step-arrive")},500)}
+});
 $("#ov").addEventListener("change",function(e){
 var n=e.target.name;if(!n)return;
 st[n]=e.target.value;
