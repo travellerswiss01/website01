@@ -1,9 +1,10 @@
 (function(){
 var heroStoryData=[
-{img:"img/trauben.jpg",alt:"Reife Trauben aus dem Garten",kicker:"Wo fängt ein Geschenkskorb an?",title:"Bei uns ziemlich oft im Garten.",text:"Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
-{img:"img/gross-oben.jpg",alt:"Ausgewählte hausgemachte Produkte im Geschenkskorb",kicker:"Und dann geht es in die Küche.",title:"Aus guten Sachen wird etwas Eigenes.",text:"Wir machen daraus Sirup, Essig, Saucen und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Feines."},
-{img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",kicker:"Dann kommt alles zu uns.",title:"Zusammengestellt bei Biottos Lädeli.",text:"In Guntershausen wählen wir aus, kombinieren und packen daraus unsere drei Geschenkskörbe.",note:"Nicht einfach hineingelegt. Schön gemacht."},
-{img:"img/gross-vorne.jpg",alt:"Fertiger Geschenkskorb Gross & Guet",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Online bestellen. Bei uns abholen.",text:"Korb aussuchen, Termin wählen – und fertig. Der Korb wartet bei uns im Lädeli auf Sie.",note:"Bis bald bei uns in Guntershausen."}
+{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Guntershausen und im Garten.",note:"Ein kleines Stück Zuhause."},
+{img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:"Vom Baum. Aus dem Garten. Von hier."},
+{img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:"Aus guten Zutaten wird etwas Eigenes."},
+{img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenkskörbe – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+{img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Guntershausen abholen.",note:"Bis bald bei uns im Lädeli."}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
