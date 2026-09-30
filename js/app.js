@@ -1,4 +1,27 @@
 (function(){
+var heroStoryData=[
+{img:"img/trauben.jpg",alt:"Reife Trauben aus dem Garten",kicker:"Wo fängt ein Geschenkskorb an?",title:"Bei uns ziemlich oft im Garten.",text:"Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
+{img:"img/gross-oben.jpg",alt:"Ausgewählte hausgemachte Produkte im Geschenkskorb",kicker:"Und dann geht es in die Küche.",title:"Aus guten Sachen wird etwas Eigenes.",text:"Wir machen daraus Sirup, Essig, Saucen und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Feines."},
+{img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",kicker:"Dann kommt alles zu uns.",title:"Zusammengestellt bei Biottos Lädeli.",text:"In Guntershausen wählen wir aus, kombinieren und packen daraus unsere drei Geschenkskörbe.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+{img:"img/gross-vorne.jpg",alt:"Fertiger Geschenkskorb Gross & Guet",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Online bestellen. Bei uns abholen.",text:"Korb aussuchen, Termin wählen – und fertig. Der Korb wartet bei uns im Lädeli auf Sie.",note:"Bis bald bei uns in Guntershausen."}
+];
+var heroStoryIndex=0;
+function renderHeroStory(i){
+var root=document.getElementById("heroStory");if(!root)return;
+heroStoryIndex=Math.max(0,Math.min(heroStoryData.length-1,i));
+var d=heroStoryData[heroStoryIndex],img=document.querySelector(".hero-grid .hero-photo-target");
+if(img){img.src=d.img;img.alt=d.alt}
+document.getElementById("heroStoryKicker").textContent=d.kicker;
+document.getElementById("heroStoryTitle").textContent=d.title;
+document.getElementById("heroStoryText").textContent=d.text;
+document.getElementById("heroStoryNote").textContent=d.note;
+document.querySelectorAll(".hero-story-step").forEach(function(b,n){b.classList.toggle("active",n===heroStoryIndex);b.setAttribute("aria-current",n===heroStoryIndex?"step":"false")});
+var mark=root.querySelector(".hero-story-mark");if(mark)mark.textContent=("0"+(heroStoryIndex+1)).slice(-2)+" / 04";
+}
+document.querySelectorAll(".hero-story-step").forEach(function(b){b.addEventListener("click",function(){renderHeroStory(Number(b.dataset.heroStory))})});
+renderHeroStory(0);
+})();
+(function(){
 var NR="41762552256",$=function(x){return document.querySelector(x)};
 var K=[].map.call(document.querySelectorAll(".korb .preis"),function(el){return{id:el.dataset.korb,n:el.dataset.name,p:parseFloat(el.dataset.price)}});
 var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
