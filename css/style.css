@@ -234,3 +234,13 @@ details ul{margin:0 0 12px!important}
   .hero-grid{grid-template-columns:minmax(330px,430px) minmax(460px,650px);gap:72px;justify-content:center;align-items:center}
 }
 @media(max-width:820px){.hero-title{font-size:clamp(2.6rem,10vw,4rem);line-height:1.02}}
+
+.order-methods{display:grid;gap:10px;margin:12px 0 4px}
+.method{display:block;width:100%;padding:15px 16px;border:2px solid var(--line);border-radius:4px;background:var(--white);color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;font:inherit}
+.method:hover{border-color:var(--red);transform:translateY(-1px)}
+.method.primary{background:var(--red);border-color:var(--red);color:#fff}
+.method strong,.method span{display:block}
+.method strong{font-size:1.05rem;margin-bottom:2px}
+.method span{font-size:.84rem;line-height:1.35;opacity:.9}
+.order-confirm{margin:14px 0;padding:13px 14px;border-left:3px solid var(--red);background:var(--paper2);font-size:.9rem}
+.order-confirm p{margin:.35em 0 0}
