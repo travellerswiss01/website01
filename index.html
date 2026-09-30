@@ -126,15 +126,26 @@
 <div class="order-step" data-step="n"><div class="q">Wie viele?</div><div class="chips qty" id="cN"></div><button type="button" class="back-link" data-step-back="t">← Zeit ändern</button></div>
 <div class="order-step" data-step="done">
 <div class="q">Fast geschafft.</div>
-<p class="checkout-intro">Ihre Auswahl steht. Tragen Sie nur noch Ihren Namen und Ihre E-Mail-Adresse ein – die Bestellung wird direkt an uns übermittelt.</p>
+<p class="checkout-intro">Ihre Auswahl steht. Sagen Sie uns nur noch, wie wir Sie erreichen dürfen.</p>
 <button type="button" class="method primary" id="directOrder"><strong>Bestellung abschliessen</strong><span>Ohne Mail-App – direkt auf dieser Website</span></button>
 <form class="direct-form" id="directForm" action="https://formspree.io/f/xvkgydoe" method="POST" hidden>
 <label for="customerName">Ihr Name</label>
 <input id="customerName" name="name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
-<label for="customerEmail">Ihre E-Mail-Adresse</label>
-<input id="customerEmail" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.ch">
-<label for="customerPhone">Telefon (optional)</label>
-<input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="+41 ...">
+<div class="contact-choice">
+  <div class="contact-question">Wie können wir dich erreichen?</div>
+  <div class="contact-tabs" role="radiogroup" aria-label="Bevorzugte Kontaktart">
+    <label><input type="radio" name="contactMethod" value="email" checked><span>E-Mail</span></label>
+    <label><input type="radio" name="contactMethod" value="phone"><span>Telefon / WhatsApp</span></label>
+  </div>
+</div>
+<div class="contact-field" id="emailField">
+  <label for="customerEmail">Ihre E-Mail-Adresse</label>
+  <input id="customerEmail" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.ch">
+</div>
+<div class="contact-field" id="phoneField" hidden>
+  <label for="customerPhone">Ihre Nummer</label>
+  <input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="+41 76 255 22 56">
+</div>
 <input type="hidden" name="bestellung" id="orderDetails">
 <input type="hidden" name="_subject" value="Neue Bestellung – Biottos Lädeli">
 <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp">
@@ -154,6 +165,7 @@
     <div class="receipt-row"><span>Korb</span><strong id="successBasket"></strong></div>
     <div class="receipt-row"><span>Abholung</span><strong id="successPickup"></strong></div>
     <div class="receipt-row"><span>Anzahl</span><strong id="successQty"></strong></div>
+    <div class="receipt-row"><span>Kontakt</span><strong id="successContact"></strong></div>
     <div class="receipt-line"></div>
     <div class="receipt-thanks">Danke für Ihre Bestellung.</div>
     <div class="receipt-edge"></div>
