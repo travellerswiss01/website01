@@ -39,10 +39,7 @@ var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp"
 $("#sn").textContent=st.n+" × "+o.n;
 var ok=st.d&&st.t;
 var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
-var wa=$("#waOrder"),em=$("#emailOrder");
-if(wa)wa.href=ok?"https://wa.me/"+NR+"?text="+encodeURIComponent(text):"#";
-if(em)em.href=ok?"mailto:?subject="+encodeURIComponent("Bestellung Biottos Lädeli – "+o.n)+"&body="+encodeURIComponent(text):"#";
-$("#msg").textContent=ok?"Wählen Sie Ihre bevorzugte Bestellart.":"Bitte Auswahl abschliessen.";
+$("#msg").textContent=ok?"Ihre Auswahl ist bereit.":"Bitte Auswahl abschliessen.";
 }
 $("#ov").addEventListener("change",function(e){
 var n=e.target.name;if(!n)return;
@@ -56,6 +53,7 @@ render();
 $("#directOrder").addEventListener("click",function(){
   if(!(st.d&&st.t)) return;
   $("#directForm").hidden=false;
+  $("#directOrder").hidden=true;
   $("#directConfirm").hidden=true;
   $("#customerName").focus();
 });
@@ -80,13 +78,13 @@ $("#directForm").addEventListener("submit",function(e){
     button.disabled=false;
     button.textContent="Bestellung verbindlich senden";
     $("#directConfirm").hidden=false;
-    $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals oder bestellen Sie direkt per WhatsApp.</p>";
+    $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";
   });
 });
 function showSuccess(o){
   $("#directForm").hidden=true;
   $("#directConfirm").hidden=true;
-  document.querySelector(".order-methods").hidden=true;
+  $("#directOrder").hidden=true;
   document.querySelector("[data-step-back='n']").hidden=true;
   $("#tot").parentElement.hidden=true;
   $("#msg").hidden=true;
@@ -112,7 +110,6 @@ function showSuccess(o){
 $("#successClose").addEventListener("click",function(){
   location.hash="#start";
   close();
-  document.querySelector(".order-methods").hidden=false;
   document.querySelector("[data-step-back='n']").hidden=false;
   $("#tot").parentElement.hidden=false;
   $("#msg").hidden=false;
@@ -120,6 +117,7 @@ $("#successClose").addEventListener("click",function(){
   var form=$("#directForm");
   form.reset();
   form.hidden=true;
+  $("#directOrder").hidden=false;
   var button=form.querySelector("button[type=submit]");
   button.disabled=false;
   button.textContent="Bestellung verbindlich senden";
