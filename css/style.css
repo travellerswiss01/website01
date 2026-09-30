@@ -128,9 +128,9 @@ details ul{margin:0 0 12px!important}
     justify-content:center;
     min-height:68px;
     min-width:max-content;
-    padding:12px 20px;
+    padding:12px clamp(9px,1vw,18px);
     color:var(--ink);
-    font-size:1.08rem;
+    font-size:clamp(.9rem,1vw,1.05rem);
     font-weight:700;
     letter-spacing:0;
     line-height:1.15;
@@ -238,3 +238,4 @@ details ul{margin:0 0 12px!important}
 /* Sektionen: Handschrift-Zeile nicht in Überschrift laufen lassen */
 section.blk .hand{margin-bottom:.3em;line-height:1.15}
 section.blk .btn{white-space:nowrap}
+@media(min-width:821px){header .wrap{max-width:1320px}}
