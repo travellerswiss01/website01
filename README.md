@@ -11,13 +11,14 @@ Statische Website (nur HTML, CSS, JavaScript), kein Build-Schritt, keine Abhäng
 ## Wo ändere ich was?
 | Was | Wo |
 |---|---|
-| Texte, Preise, Inhalte der Körbe, Impressum, Datenschutz | `index.html` |
+| Texte, **Preise**, Inhalte der Körbe, Impressum, Datenschutz | `index.html` |
 | Farben, Schriften, Abstände | `css/style.css` (Farben oben als Variablen) |
-| Bestellzettel: Körbe/Preise, Abholzeiten, WhatsApp-Nummer | `js/app.js` (`K`, `ZEITEN`, `NR`) |
+| Bestellzettel: Abholzeiten, WhatsApp-Nummer | `js/app.js` (`ZEITEN`, `NR`) |
 | Fotos | `img/` (gleiche Dateinamen ersetzen, Hochformat 3:4) |
 
-Preise stehen an zwei Orten: in `index.html` (Anzeige) und in `js/app.js` (Bestellzettel). Bei einer Preisänderung beide anpassen.
+Preise und Korbnamen stehen nur noch an **einem** Ort: im `index.html` am Element `.preis` (Attribute `data-korb`, `data-name`, `data-price`). Der Bestellzettel in `js/app.js` liest sie von dort aus. Bei einer Preisänderung `data-price` **und** den angezeigten Text im selben Element anpassen – `js/app.js` muss nicht angefasst werden.
 
 ## Hinweise
+- Die Seite funktioniert auch ohne JavaScript: Alle Sektionen sind dann sichtbar und die Navigation funktioniert als normale Sprunglinks. Das Ein-/Ausblenden der Ansichten wird erst aktiviert, wenn JavaScript läuft (Klasse `js` auf `<html>`).
 - Die Schriften (Young Serif, Literata, Caveat) werden von Google Fonts geladen. Dafür sollte der Datenschutztext ergänzt werden, oder die Schriften werden lokal eingebunden.
 - Für die Suchmaschinen nach dem Veröffentlichen zusätzlich `<link rel="canonical" href="https://IHRE-DOMAIN/">` in `index.html` einfügen und die Seite in der Google Search Console anmelden.

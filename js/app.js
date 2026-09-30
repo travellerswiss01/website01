@@ -1,9 +1,9 @@
 (function(){
 var NR="41762552256",$=function(x){return document.querySelector(x)};
-var K=[{id:"gross",n:"Gross & Guet",p:49.95},{id:"fein",n:"Fein & Guet",p:29.95},{id:"chili",n:"Chili & Fii",p:19.95}];
+var K=[].map.call(document.querySelectorAll(".korb .preis"),function(el){return{id:el.dataset.korb,n:el.dataset.name,p:parseFloat(el.dataset.price)}});
 var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
 function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
-var st={k:"gross",n:1,d:"",t:nextT()};
+var st={k:K[0].id,n:1,d:"",t:nextT()};
 var views=["start","koerbe","ueber-uns","abholung","kontakt"];
 function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";
 views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});
