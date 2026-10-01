@@ -15,7 +15,7 @@ var dict={
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
 "Drei Geschenkskörbe. Drei Grössen. Einer passt bestimmt.":"Drei Gschänksharrass. Drei Grössene. Eine passt bestimmt.",
-"Welcher darf's sein?":"Welene derf's sii?",
+"Welcher darf's sein?":"Welene derf's sii?","Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
 "ausgewählt & hausgemacht":"uusglese & hausgmacht",
 "der grosse":"de grosse","der mittlere":"de mittlere","der kleine":"de chliine",
 "Wenn's etwas Besonderes sein darf.":"Wenn's öppis Bsunders derf sii.",
