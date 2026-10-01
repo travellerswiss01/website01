@@ -855,3 +855,27 @@ nav a.basket-tab.on{
 @media(prefers-reduced-motion:reduce){
   nav a.basket-tab,nav a.basket-tab::before,nav a.basket-tab .nav-badge{animation:none}
 }
+
+
+/* Kleines gezeichnetes Geschenk macht den Korb-Reiter sofort verständlich */
+nav a.basket-tab .basket-gift{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  flex:0 0 23px;
+  align-items:center;
+  justify-content:center;
+  width:23px;
+  height:23px;
+  margin-right:2px;
+  transition:transform .28s cubic-bezier(.2,.9,.3,1.4);
+}
+nav a.basket-tab .basket-gift svg{display:block;width:100%;height:100%;filter:drop-shadow(0 1px 0 rgba(75,24,12,.2))}
+nav a.basket-tab:hover .basket-gift{transform:translateY(-2px) rotate(-9deg) scale(1.16)}
+nav a.basket-tab .nav-badge{min-width:48px;min-height:37px;font-size:.68rem}
+nav a.basket-tab .nav-badge::before{font-size:.66rem}
+@media(max-width:720px){
+  nav a.basket-tab .basket-gift{flex-basis:20px;width:20px;height:20px}
+  nav a.basket-tab .nav-badge{min-width:40px;min-height:32px;font-size:.56rem}
+}
+@media(prefers-reduced-motion:reduce){nav a.basket-tab .basket-gift{transition:none}}
