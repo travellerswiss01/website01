@@ -75,6 +75,29 @@ window.applyBiottosLanguage=applyLang;
 setTimeout(applyLang,0);
 })();
 (function(){
+var heroStoryData=[
+{img:"img/aepfel-ernte.jpg",alt:"Von Hand aufgelesene Äpfel bei Biottos",kicker:"Apfelbaum",title:"Wo alles beginnt.",text:"Im Herbst beginnt unsere Süssmost-Geschichte im Obstgarten – mit reifen Äpfeln, die wir von Hand auflesen."},
+{img:"img/aepfel-ernte.jpg",alt:"Geerntete Äpfel bei Biottos",kicker:"Ernte",title:"Von Hand aufgelesen.",text:"Wir sammeln die Äpfel sorgfältig ein und achten darauf, dass nur schöne, reife Früchte in die Ernte kommen."},
+{img:"img/aepfel-ernte.jpg",alt:"Äpfel aus dem Obstgarten",kicker:"33 Sorten",title:"Jede Sorte bringt ihren Charakter mit.",text:"Süsse, milde, säuerliche und würzige Äpfel kommen zusammen – diese Mischung macht unseren Süssmost besonders."},
+{img:"img/aepfel-ernte.jpg",alt:"Äpfel für den Süssmost",kicker:"Pressen",title:"Aus Äpfeln wird Süssmost.",text:"Wir pressen die Äpfel naturtrüb und ohne Zusätze. So bleibt der Geschmack der Ernte direkt im Saft erhalten."},
+{img:"img/aepfel-ernte.jpg",alt:"Äpfel als Grundlage für Süssmost",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
+];
+var heroStoryIndex=0;
+function renderHeroStory(i){
+var root=document.getElementById("heroStory");if(!root)return;
+heroStoryIndex=Math.max(0,Math.min(heroStoryData.length-1,i));
+var d=heroStoryData[heroStoryIndex],img=root.querySelector(".hero-photo-target");
+if(img){img.src=d.img;img.alt=d.alt}
+root.querySelector("#heroStoryKicker").textContent=d.kicker;
+root.querySelector("#heroStoryTitle").textContent=d.title;
+root.querySelector("#heroStoryText").textContent=d.text;
+root.querySelectorAll(".hero-story-step").forEach(function(b,n){b.classList.toggle("active",n===heroStoryIndex);b.setAttribute("aria-current",n===heroStoryIndex?"step":"false")});
+var mark=root.querySelector(".hero-story-mark");if(mark)mark.textContent=("0"+(heroStoryIndex+1)).slice(-2)+" / 05";
+}
+document.querySelectorAll(".hero-story-step").forEach(function(b){b.addEventListener("click",function(){renderHeroStory(Number(b.dataset.heroStory))})});
+renderHeroStory(0);
+})();
+(function(){
 var NR="41762552256",$=function(x){return document.querySelector(x)};
 var K=[{id:"gross",n:"Gross & Guet",p:49.95},{id:"fein",n:"Fein & Guet",p:29.95},{id:"chili",n:"Chli & Fii",p:19.95}];
 var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
