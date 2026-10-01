@@ -8,6 +8,7 @@ var dict={
 "eine kleine Geschichte aus Maischhuuse":"ä chlini Gschicht vo Maischhuse",
 "Wo fängt ein Geschenkskorb an?":"Wo fangt es Gschänksharrass aa?",
 "Bei uns daheim.":"Bi üs dehai.",
+"Wo fängt das alles an?":"Wo fangt das alles ah?",
 "Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.":"Biottos Lädeli fangt nöd irgenwo - sondern bi üs dehai im Garte ah.",
 "Bei uns ziemlich oft im Garten.":"Bi üs ziemlich oft im Garte.",
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
