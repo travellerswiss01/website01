@@ -2195,3 +2195,8 @@ footer .two{
     width:100%;
   }
 }
+
+
+/* Die interaktive Süssmost-Geschichte erscheint nur im aktiven Süssmost-Reiter */
+.korb-story{display:none}
+.js body[data-current-view="suessmost"] .korb-story{display:block}
