@@ -6,7 +6,7 @@ var dict={
 "Geschenkskörbe":"Gschänksharass","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt","Garten":"Garte","was bei uns wächst":"wo bi üs wachst","Küche":"Chuchi","was daraus entsteht":"was drus entstoht","Geschenk":"Gschänk","fertig zum Abholen":"fertig zum Abhole",
 "Traubensaft":"Truubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus Maischhausen.":"Maischhuser Gschänk",
-"eine kleine Geschichte aus Maischhuuse":"ä chlini Gschicht vo Maischhuse",
+
 "Wo fängt ein Geschenkskorb an?":"Wo fangt es Gschänksharass aa?",
 "Bei uns daheim.":"Bi üs dehai.",
 "Wo fängt das alles an?":"Wo fangt das alles ah?",
