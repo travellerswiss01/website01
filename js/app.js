@@ -16,7 +16,7 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
 "Drei Grössen, sorgfältig zusammengestellt mit Hausgemachtem und Feinem aus der Region.":"Drü Grössene, sorgfälig zämegstellt mit Huusgmachtem und Feinem vo do.",
-"Drei Geschenkkörbe – von den Zehnders für dich.":"Drü Harass – vos Zehnders für dich.",
+"Drei Geschenkkörbe – von den Zehnders für dich.":"Drü Harass – vo de Zehnders für dich.",
 "Wir stellen jeden Geschenkkorb mit viel Sorgfalt zusammen – mit Selbstgemachtem, feinen Sachen von uns und allem, was uns selbst Freude macht.":"Mir stelled jedi Harass mit viel Sorgfalt zäme – mit Huusgmachtem, feine Sache vo üs und allem, was üs selber Freude macht.",
 "Welcher darf es sein?":"Welä dörfs sii?",
 "Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
@@ -74,7 +74,7 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Morgen abholbereit":"Morn abholbereit",
 "im Lädeli":"im Lädeli",
 "Mo–Sa · 8–18 Uhr":"Mo–Sa · 8–18 Uhr",
-"Abholung":"Abholig",
+,
 "Bar oder TWINT":"Bar oder TWINT",
 "bei Abholung":"bi de Abholig",
 "Drei Grössen · drei Budgets":"Drü Grössene · drü Budgets",
@@ -364,7 +364,7 @@ function close(){
 }
 $("#x").addEventListener("click",close);
 $("#ov").addEventListener("click",function(e){if(e.target.id==="ov")close()});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+document.addEventListener("keydown",function(e){\n  if(e.key==="Escape"){close();return}\n  if(e.key!=="Tab"||!$("#ov").classList.contains("on"))return;\n  var dialog=$("#ov .sheet");if(!dialog)return;\n  var focusable=dialog.querySelectorAll("button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])");\n  if(!focusable.length)return;\n  var first=focusable[0],last=focusable[focusable.length-1];\n  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}\n  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}\n});
 })();
 (function(){
 var storyData=[
