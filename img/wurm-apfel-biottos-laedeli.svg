@@ -77,7 +77,7 @@
     <path d="M352 216c3-2 7-4 11-4" fill="none" stroke="#ffad98" stroke-width="1.2" stroke-linecap="round" opacity=".65"/>
 
     <!-- Kleiner Wurm: schlanker Körper, sanfte Segmentringe, dezente Kopfkapsel -->
-    <g transform="translate(-535.5 -324) scale(2.5)">
+    <g transform="translate(-785.4 -475.2) scale(3.2)">
     <g class="worm">
       <path d="M357 216c-4-8-7-15-5-21 2-7 8-11 11-16 3-5 3-9 1-13" fill="none" stroke="#76834e" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M357 216c-4-8-7-15-5-21 2-7 8-11 11-16 3-5 3-9 1-13" fill="none" stroke="url(#wormColor)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
