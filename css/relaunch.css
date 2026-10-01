@@ -34,3 +34,12 @@
 .pickup-promise{margin-top:18px;padding:16px 18px;border:1px solid var(--red,#8f1116);border-radius:12px;background:var(--paper);display:flex;justify-content:space-between;gap:18px;align-items:center}.pickup-promise strong{font-family:Young Serif,serif;font-size:1.1rem}.pickup-promise span{opacity:.8;font-size:.9rem}
 .pickup-map iframe{min-height:310px}.pickup-cta{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:32px;padding-top:22px;border-top:1px solid var(--line);font-family:Young Serif,serif;font-size:1.2rem}
 @media(max-width:700px){.pickup-detail{gap:11px;padding:14px 0}.pickup-promise{display:block}.pickup-promise span{display:block;margin-top:5px}.pickup-map iframe{min-height:250px}.pickup-cta{display:block;text-align:center}.pickup-cta .btn{display:inline-flex;margin-top:12px}}
+
+
+/* Order flow */
+.order-progress{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.order-progress span{font-size:.68rem;text-align:center;padding:6px 3px;border-bottom:2px solid var(--line);opacity:.5}
+.order-progress span.active{opacity:1;border-bottom-color:var(--red,#8f1116);font-weight:700}
+.order-selection{min-height:20px;margin:0 0 12px;padding:7px 10px;border-radius:8px;background:var(--paper2);font-size:.76rem;opacity:.78}
+.order-step .q{margin-top:4px}
+@media(max-width:700px){.order-progress span{font-size:.62rem}.order-selection{font-size:.72rem}}
