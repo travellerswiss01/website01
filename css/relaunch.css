@@ -136,3 +136,9 @@
 @media(max-width:600px){
   #koerbe .korb-highlights{font-size:.7rem}
 }
+
+
+/* Pickup week navigation clarity */
+.week-nav{padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+.week-btn{min-height:40px;padding:7px 9px}
+@media(max-width:700px){.week-nav{margin:7px 0 10px;font-size:.82rem}.week-btn{min-height:44px;padding:8px 7px}}
