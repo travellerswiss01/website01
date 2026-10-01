@@ -12,17 +12,15 @@
   </defs>
   <style>
     .scene{transform:translate(45px 17px) scale(.82)}
-    .worm{opacity:0;clip-path:inset(100% 0 0 0);transform-box:fill-box;transform-origin:50% 100%;animation:peek 7.2s cubic-bezier(.34,.02,.2,1) infinite}
+    .worm{opacity:1;clip-path:none;transform-box:fill-box;transform-origin:50% 100%;animation:peek 7.2s ease-in-out infinite}
     .leaf{transform-box:fill-box;transform-origin:100% 100%;animation:leafSway 6s ease-in-out infinite}
     .shine{transform-box:fill-box;transform-origin:center;animation:shine 3.6s ease-in-out infinite}
     .apple-body{transform-box:fill-box;transform-origin:50% 55%}
     .eyes{transform-box:fill-box;transform-origin:center;animation:look 7.2s ease-in-out infinite}
     .tongue{transform-box:fill-box;transform-origin:top center;animation:raspberry 7.2s ease-in-out infinite}
     @keyframes peek{
-      0%,8%{opacity:1;clip-path:inset(0 0 42% 0);transform:translateY(3px) scale(.97)}
-      20%,68%{opacity:1;clip-path:inset(0);transform:translateY(0) scale(1)}
-      78%{opacity:1;clip-path:inset(0 0 42% 0);transform:translateY(2px) scale(.98)}
-      88%,100%{opacity:1;clip-path:inset(0 0 42% 0);transform:translateY(0) scale(.97)}
+      0%,100%{transform:translateY(1.5px) scale(.97)}
+      50%{transform:translateY(0) scale(1)}
     }
     @keyframes look{0%,49%{transform:translateX(0)}54%,61%{transform:translateX(3px)}68%,74%{transform:translateX(-2px)}100%{transform:translateX(0)}}
     @keyframes raspberry{0%,73%,100%{transform:scaleY(.1);opacity:0}77%,82%{transform:scaleY(1);opacity:1}86%{transform:scaleY(.1);opacity:0}}
