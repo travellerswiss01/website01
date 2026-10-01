@@ -125,7 +125,8 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "anrufen →":"aalüte →",
 "Öffnungszeiten":"Öffnigsziite",
 "Für grössere Mengen":"Für grössere Menge",
-"Bis 10 Körbe online · grössere Bestellungen gern direkt anfragen":"Bis 10 Gschänksharass online · grössere Bestellige gern direkt aafrage";
+"Bis 10 Körbe online · grössere Bestellungen gern direkt anfragen":"Bis 10 Gschänksharass online · grössere Bestellige gern direkt aafrage"
+};
 var reverse={};Object.keys(dict).forEach(function(k){reverse[dict[k]]=k});
 function translateTextNode(n,on){var v=n.nodeValue;if(!v||!v.trim())return;var map=on?dict:reverse;if(map[v.trim()])n.nodeValue=v.replace(v.trim(),map[v.trim()])}
 function applyLang(){var on=lang==="ch";document.documentElement.lang=on?"gsw-CH":"de";document.querySelectorAll("*").forEach(function(el){if(el.id==="langSwitch")return;el.childNodes.forEach(function(n){if(n.nodeType===3)translateTextNode(n,on)});["aria-label","placeholder","alt","title"].forEach(function(a){if(el.hasAttribute(a)){var v=el.getAttribute(a);var map=on?dict:reverse;if(map[v])el.setAttribute(a,map[v])}})});var b=document.getElementById("langSwitch");if(b){b.classList.toggle("is-ch",on);b.setAttribute("aria-pressed",String(on));b.setAttribute("aria-label",on?"Sproch wechsle – aktuell Schwiizerdütsch, Deutsch aazeige":"Sprache wechseln – aktuell Deutsch, Schwiizerdütsch anzeigen")}}
