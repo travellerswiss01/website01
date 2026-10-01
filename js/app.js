@@ -3,25 +3,25 @@
 var LANG_KEY="biottos-lang";
 var lang="de";
 var dict={
-"Startseite":"Start","Geschenksharras":"Geschenksharras","Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
+"Startseite":"Start","Geschenkskörbe":"Gschänksharrass","Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus dem Thurgau.":"Gschänk us em Thurgau.",
 "eine kleine Geschichte aus Maischhuuse":"e chliini Gschicht us Maischhuuse",
-"Wo fängt ein Geschenksharras an?":"Wo fangt es Geschenksharras aa?",
+"Wo fängt ein Geschenkskorb an?":"Wo fangt es Gschänksharrass aa?",
 "Bei uns daheim.":"Bi üs dehai.",
 "Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.":"Biottos Lädeli fangt nöd irgenwo - sondern bi üs dehai im Garte ah.",
 "Bei uns ziemlich oft im Garten.":"Bi üs ziemlich oft im Garte.",
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
 "Ein kleines Stück Zuhause.":"Es chliises Stück Dihei.",
-"Drei Geschenksharras. Drei Grössen. Einer passt bestimmt.":"Drei Geschenksharras. Drei Grössene. Eine passt bestimmt.",
+"Drei Geschenkskörbe. Drei Grössen. Einer passt bestimmt.":"Drei Gschänksharrass. Drei Grössene. Eine passt bestimmt.",
 "Welcher darf's sein?":"Welene derf's sii?",
 "ausgewählt & hausgemacht":"uusglese & hausgmacht",
 "der grosse":"de grosse","der mittlere":"de mittlere","der kleine":"de chliine",
 "Wenn's etwas Besonderes sein darf.":"Wenn's öppis Bsunders derf sii.",
 "Für ein kleines Dankeschön.":"Für es chliises Dankeschön.",
 "Für Menschen mit Geschmack.":"Für Lüüt mit Gschmack.",
-"Korb anschauen":"Geschenksharras aluege","Was ist drin?":"Was isch dinne?",
-"Tippen":"Antippe","Sie auf einen Korb – dann geht's direkt zum Bestellzettel.":"en Geschenksharras – denn gaht's grad zum Bestellzettel.",
+"Korb anschauen":"Gschänksharrass aluege","Was ist drin?":"Was isch dinne?",
+"Tippen":"Antippe","Sie auf einen Korb – dann geht's direkt zum Bestellzettel.":"en Gschänksharrass – denn gaht's grad zum Bestellzettel.",
 "aus unserem Garten in Maischhuuse":"us üsere Garte i Maischhuuse",
 "Die blauen Trauben wachsen bei uns im Garten in Maischhuuse, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.":"D blaue Traube wachsed bi üs im Garte i Maischhuuse, wo mir wohne. Mir hend sie sälber pflückt, won sie schön riif gsi sind.",
 "Otto, der Familienvater, hat daraus zusammen mit Bernadette mit einer Handpresse einen köstlichen Traubensaft gemacht.":"De Otto, de Familienvater, het zäme mit de Bernadette mit ere Handpresse en feine Traubesaft gmacht.",
@@ -36,23 +36,23 @@ var dict={
 "Nach Süssmost fragen":"Nach Süessmost fröge",
 "Über uns":"Über üs",
 "Was bei uns im Garten wächst, kommt bei uns in die Küche. Daraus machen wir Goldmelissensirup, Tomatensauce, feine Essige und Balsamicos sowie verschiedene Dörrfrüchte.":"Was bi üs im Garte wachst, chunnt bi üs i d Chuchi. Dusse mache mir Goldmelissensirup, Tomatesauce, feini Essig und Balsamicos sowie verschideni Dörrfrücht.",
-"Daraus entstehen unsere drei Geschenksharras – mit hausgemachten Sachen und einem kleinen Stück von unserem Zuhause.":"Daraus entstönd üsi drei Geschenksharras – mit hausgmachte Sache und eme chliine Stück vo üsere Dihei.",
+"Daraus entstehen unsere drei Geschenkskörbe – mit hausgemachten Sachen und einem kleinen Stück von unserem Zuhause.":"Daraus entstönd üsi drei Gschänksharrass – mit hausgmachte Sache und eme chliine Stück vo üsere Dihei.",
 "Abholung im Lädeli":"Abholig im Lädeli","Wo?":"Wo?","Was?":"Was?","Wann?":"Wänn?",
-"Der Korb, den Sie online bestellt haben.":"De Geschenksharras, wo Sie online bstellt hend.",
+"Der Korb, den Sie online bestellt haben.":"De Gschänksharrass, wo Sie online bstellt hend.",
 "Zu dem Datum und der Uhrzeit, die Sie auf dem Bestellzettel angeben.":"Am Datum und zu de Ziit, wo Sie uf em Bestellzettel ageh.",
 "Bezahlt wird bei der Abholung, mit TWINT oder bar. Versand gibt es nicht.":"Bezahlt wird bi de Abholig, mit TWINT oder bar. Versand git's nöd.",
 "Route in Google Maps":"Route i Google Maps",
-"Fragen zu den Körben? Am einfachsten schreiben Sie uns auf WhatsApp.":"Frage zu de Geschenksharras? Am eifachschte schriibed Sie üs uf WhatsApp.",
+"Fragen zu den Körben? Am einfachsten schreiben Sie uns auf WhatsApp.":"Frage zu de Gschänksharrass? Am eifachschte schriibed Sie üs uf WhatsApp.",
 "Rechtliches":"Rechtlichs","Impressum":"Impressum","Datenschutz":"Datenschutz",
-"Bestellzettel":"Bestellzettel","Welchen Korb möchten Sie?":"Welene Geschenksharras möchted Sie?","Wann möchten Sie ihn abholen?":"Wänn möchted Sie en abhole?","Um welche Uhrzeit?":"Um weli Ziit?","Wie viele?":"Wie vieli?",
-"Nächste Woche →":"Nächsti Wuche →","← Korb ändern":"← Geschenksharras ändere","← Tag ändern":"← Tag ändere","← Zeit ändern":"← Ziit ändere","Fast geschafft.":"Fast gschafft.",
+"Bestellzettel":"Bestellzettel","Welchen Korb möchten Sie?":"Welene Gschänksharrass möchted Sie?","Wann möchten Sie ihn abholen?":"Wänn möchted Sie en abhole?","Um welche Uhrzeit?":"Um weli Ziit?","Wie viele?":"Wie vieli?",
+"Nächste Woche →":"Nächsti Wuche →","← Korb ändern":"← Gschänksharrass ändere","← Tag ändern":"← Tag ändere","← Zeit ändern":"← Ziit ändere","Fast geschafft.":"Fast gschafft.",
 "Ihre Auswahl steht. Sagen Sie uns nur noch, wie wir Sie erreichen dürfen.":"D Uuswahl isch parat. Säge Sie üs nur no, wie mir Sie erreiche dörfed.",
 "Bestellung abschliessen":"Bestellig abschliesse","Ihr Name":"De Name","Wie können wir dich erreichen?":"Wie chönd mir dich erreiche?",
 "Telefon / WhatsApp":"Telefon / WhatsApp","Ihre E-Mail-Adresse":"Eui E-Mail-Adresse","Ihre Nummer":"Eui Nummer",
 "Bestellung verbindlich senden":"Bestellig verbindlich absände","Die Bestellung wird direkt an Biottos Lädeli übermittelt.":"D Bestellig wird direkt a s Biottos Lädeli übermittelt.",
-"ist angekommen!":"isch acho!","Bestellung angekommen.":"Bestellig acho.","Danke – wir bereiten Ihren Korb mit Sorgfalt für Sie vor.":"Danke – mir bereited de Geschenksharras sorgfältig für Sie vor.",
-"Korb":"Geschenksharras","Abholung":"Abholig","Anzahl":"Aazahl","Danke für Ihre Bestellung.":"Danke für eui Bestellig.",
-"Wir legen Ihren Korb für Sie bereit – bis bald im Lädeli.":"Mir leged de Geschenksharras für Sie parat – bis bald im Lädeli.",
+"ist angekommen!":"isch acho!","Bestellung angekommen.":"Bestellig acho.","Danke – wir bereiten Ihren Korb mit Sorgfalt für Sie vor.":"Danke – mir bereited de Gschänksharrass sorgfältig für Sie vor.",
+"Korb":"Gschänksharrass","Abholung":"Abholig","Anzahl":"Aazahl","Danke für Ihre Bestellung.":"Danke für eui Bestellig.",
+"Wir legen Ihren Korb für Sie bereit – bis bald im Lädeli.":"Mir leged de Gschänksharrass für Sie parat – bis bald im Lädeli.",
 "Bestellung in WhatsApp öffnen":"Bestellig i WhatsApp öffne","Zurück zum Lädeli":"Zrugg zum Lädeli",
 "Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir behandeln Ihre Daten vertraulich und geben sie nicht an Dritte weiter, soweit dies nicht für die Abwicklung Ihrer Bestellung notwendig ist.":"De Schutz vo eune persönliche Date isch üs wichtig. Mir behandled eui Date vertraulich und gebed sie nöd a Dritti wiiter, usser wenn das für d Abwicklig vo eune Bestellig nötig isch.",
 "Bestellungen per WhatsApp":"Bestellig per WhatsApp","Website":"Website",
@@ -74,7 +74,7 @@ var heroStoryData=[
 {img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.",note:"Ein kleines Stück Zuhause."},
 {img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:"Vom Baum. Aus dem Garten. Von hier."},
 {img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:"Aus guten Zutaten wird etwas Eigenes."},
-{img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenksharras – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+{img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenkskörbe – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
 {img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhuuse abholen.",note:"Bis bald bei uns im Lädeli."}
 ];
 var heroStoryIndex=0;
@@ -134,7 +134,7 @@ $("#tot").textContent=fmt(tot);
 var im=document.querySelector(".k"+(K.indexOf(o)+1)+" .foto img");if(im){$("#sp").src=im.src;$("#sp").alt=im.alt}
 $("#sn").textContent=st.n+" × "+o.n;
 var ok=st.d&&st.t;
-var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenksharras "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
+var text="Hallo Biottos Lädeli, ich möchte gerne bestellen:\n\n"+st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\nAbholung: "+st.d+", "+st.t+" Uhr\n\nBesten Dank!";
 $("#msg").textContent=ok?"Ihre Auswahl ist bereit.":"Bitte Auswahl abschliessen.";
 }
 function showPickConfirmation(label){
@@ -200,7 +200,7 @@ $("#directForm").addEventListener("submit",function(e){
   }
   var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
   $("#orderDetails").value=""+
-    st.n+" x Geschenksharras "+o.n+" ("+fmt(tot)+")\n"+
+    st.n+" x Geschenkskorb "+o.n+" ("+fmt(tot)+")\n"+
     "Abholung: "+st.d+", "+st.t+" Uhr\n"+
     "Kontaktart: "+(method==="email"?"E-Mail":"Telefon / WhatsApp")+"\n"+
     "Kontakt: "+contact;
@@ -229,7 +229,7 @@ $("#directForm").addEventListener("submit",function(e){
 function openWhatsAppConfirmation(o,contact,method){
   var total=fmt(o.p*st.n);
   var msg="Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n"+
-    "🧺 "+st.n+" x Geschenksharras "+o.n+" ("+total+")\n"+
+    "🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+total+")\n"+
     "📅 Abholung: "+st.d+", "+st.t+" Uhr\n"+
     "👤 Name: "+$("#customerName").value.trim()+"\n"+
     "📞 Kontakt: "+contact+"\n\n"+
@@ -249,7 +249,7 @@ function showSuccess(o,contact,method){
   $("#successQty").textContent=st.n+" ×";
   $("#successContact").textContent=contact;
   var waLink=document.getElementById("successWhatsApp");
-  if(waLink) waLink.href="https://wa.me/"+NR+"?text="+encodeURIComponent("Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n🧺 "+st.n+" x Geschenksharras "+o.n+" ("+fmt(o.p*st.n)+")\n📅 Abholung: "+st.d+", "+st.t+" Uhr\n👤 Name: "+$("#customerName").value.trim()+"\n📞 Kontakt: "+contact+"\n\nDanke!");
+  if(waLink) waLink.href="https://wa.me/"+NR+"?text="+encodeURIComponent("Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+fmt(o.p*st.n)+")\n📅 Abholung: "+st.d+", "+st.t+" Uhr\n👤 Name: "+$("#customerName").value.trim()+"\n📞 Kontakt: "+contact+"\n\nDanke!");
   var scene=$("#successScene");
   scene.hidden=false;
   scene.classList.remove("play");
@@ -297,10 +297,10 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 })();
 (function(){
 var storyData=[
- {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Geschenksharras",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
- {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenksharras",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
- {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenksharras Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenksharras wird.",note:"Nicht einfach hineingelegt. Schön gemacht."},
- {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenksharras Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
+ {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Geschenkskorb",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
+ {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenkskorb",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
+ {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenkskorb Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenkskorb wird.",note:"Nicht einfach hineingelegt. Schön gemacht."},
+ {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
  {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhuuse.",note:"Bis bald bei uns im Lädeli."}
 ];
 var storyIndex=0,storyTouchX=null;
