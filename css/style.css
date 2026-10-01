@@ -934,3 +934,79 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
   .hero-seal-motto{font-size:.46rem;letter-spacing:.07em}
 }
 @media(prefers-reduced-motion:reduce){.hero-seal{transform:none}}
+
+
+/* Runder, leicht unregelmässiger Druckstempel */
+.hero-title{margin-bottom:12px}
+.hero-seal{
+  width:164px;
+  height:164px;
+  min-height:0;
+  margin:0 auto 30px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:none;
+  box-shadow:none;
+  transform:rotate(-2deg);
+}
+.hero-seal::before{display:none}
+.hero-seal-svg{
+  display:block;
+  width:100%;
+  height:100%;
+  overflow:visible;
+  filter:drop-shadow(0 2px 1px rgba(43,33,28,.13));
+}
+.hero-seal-svg .seal-ink{
+  fill:#9d1e24;
+  stroke:#9d1e24;
+  opacity:.9;
+  filter:url(#seal-print-texture);
+}
+.hero-seal-svg .seal-outer{fill:none;stroke-width:2.1}
+.hero-seal-svg .seal-inner{fill:none;stroke-width:.8}
+.hero-seal-svg .seal-gold{fill:none;stroke:#b38a49;stroke-width:.75;opacity:.9}
+.hero-seal-svg .seal-arc-text{
+  fill:#9d1e24;
+  stroke:none;
+  font-family:system-ui,sans-serif;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.hero-seal-svg .seal-center{
+  fill:#7f171d;
+  stroke:none;
+  font-family:"Young Serif",Georgia,serif;
+  font-size:23px;
+  font-weight:400;
+  letter-spacing:2px;
+}
+.hero-seal-svg .seal-small{
+  fill:#9d1e24;
+  stroke:none;
+  font-family:system-ui,sans-serif;
+  font-size:6px;
+  font-weight:700;
+  letter-spacing:.7px;
+}
+.seal-accessible{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+@media(max-width:720px){
+  .hero-title{margin-bottom:10px}
+  .hero-seal{width:152px;height:152px;margin-bottom:25px}
+  .hero-seal-svg .seal-arc-text{font-size:6.8px}
+  .hero-seal-svg .seal-center{font-size:22px}
+  .hero-seal-svg .seal-small{font-size:5.8px}
+}
+@media(prefers-reduced-motion:reduce){.hero-seal{transform:none}}
