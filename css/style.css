@@ -1226,3 +1226,29 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
 .lang-switch.is-ch .lang-ch{background:#b71320;color:#fff}
 .lang-switch:not(.is-ch) .lang-ch,
 .lang-switch.is-ch .lang-de{background:transparent;color:#51453b;box-shadow:none}
+
+
+/* Story-Zahlen: klar lesbar, einzeln umrandet und ohne Zierschrift */
+.hero-story-step span{
+  display:grid;
+  place-items:center;
+  width:2rem;
+  height:2rem;
+  margin:0 0 5px;
+  border:1.5px solid currentColor;
+  border-radius:50%;
+  color:var(--red);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:.82rem;
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:0;
+  line-height:1;
+}
+.hero-story-step.active span{color:#fff;border-color:rgba(255,255,255,.9)}
+.hero-story-mark{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.08em;
+}
