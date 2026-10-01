@@ -28,7 +28,7 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Korb anschauen":"Gschänksharass aluege","Was ist drin?":"Was isch dinne?",
 "Tippen":"Antippe","Sie auf einen Korb – dann geht's direkt zum Bestellzettel.":"en Gschänksharass – denn gaht's grad zum Bestellzettel.",
 "aus unserem Garten in Maischhausen":"us üsem Garte z Maischhuse",
-"Die blauen Trauben wachsen bei uns im Garten in Maischhuuse, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.":"Die blaue Truube wachsed bi üs im Garte z Maischhuse, wo mir wohned. Mir hend sie selber gärntet, wo sie schön rief gsi sind.",
+"Die blauen Trauben wachsen bei uns im Garten in Maischhausen, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.":"Die blaue Truube wachsed bi üs im Garte z Maischhuse. Mir hend sie selber gärntet, wo sie schön reif gsi sind.",
 "Otto, der Familienvater, hat daraus zusammen mit Bernadette mit einer Handpresse einen köstlichen Traubensaft gemacht.":"De Otto, üse Familievater, het zäme mit de Bernadette en feine Truubesaft presst.",
 "Fein zum Zmorge, zum Znüni oder als alkoholfreie Alternative am Tisch.":"Fein zum Zmorge, zum Znüni oder als alkoholfreii Alternative am Tisch.",
 "Fragen Sie uns einfach per WhatsApp, ob gerade Traubensaft im Lädeli bereitsteht.":"Fröged üs eifach per WhatsApp, öb grad Truubesaft im Lädeli parat isch.",
