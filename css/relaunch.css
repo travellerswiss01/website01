@@ -8,3 +8,10 @@
 .hero-trust span{padding:12px 20px;text-align:center}.hero-trust span+span{border-left:1px solid var(--line)}.hero-trust b,.hero-trust small{display:block}.hero-trust small{opacity:.7;margin-top:2px}
 .quick-shop-note{margin:.2rem 0 1rem;opacity:.78}.occasion-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1100px;margin:10px auto 0;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--paper2)}.occasion-strip span,.occasion-strip strong{display:block}.occasion-strip strong{margin-top:3px}.occasion-strip a{white-space:nowrap;font-weight:700}
 @media(max-width:700px){.hero-title{font-size:clamp(2.2rem,11vw,4rem)!important;line-height:1.02}.hero-lead{font-size:1rem}.hero-trust{display:grid;grid-template-columns:1fr 1fr}.hero-trust span{padding:10px 8px}.hero-trust span:nth-child(3){grid-column:1/-1;border-left:0;border-top:1px solid var(--line)}.hero-trust span+span{border-left:1px solid var(--line)}.hero-trust span:nth-child(3){border-left:0}.occasion-strip{display:block;text-align:center;padding:16px}.occasion-strip a{display:inline-block;margin-top:10px}}
+
+/* Basket conversion cards */
+.korb-badge{display:inline-block;margin:-2px 0 7px;padding:5px 9px;border-radius:999px;background:var(--red,#8f1116);color:#fff;font-size:.72rem;font-weight:700;line-height:1}
+.korb-highlights{margin:8px 0 13px;padding:0;list-style:none;text-align:left;font-size:.82rem;line-height:1.5;color:var(--ink,#30251d)}
+.korb-highlights li{position:relative;padding-left:15px}.korb-highlights li::before{content:"✓";position:absolute;left:0;color:var(--red,#8f1116);font-weight:700}.korb-highlights li:last-child{color:var(--mute,#756a61);font-style:italic}
+.korb-card.k2{border-color:var(--red,#8f1116);box-shadow:0 5px 18px rgba(55,36,22,.1)}
+@media(max-width:700px){.korb-highlights{font-size:.76rem;line-height:1.4;margin:5px 0 9px}.korb-badge{font-size:.65rem;padding:4px 7px}.korb-card-copy p{margin-bottom:4px}}
