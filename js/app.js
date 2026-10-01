@@ -15,7 +15,7 @@ var dict={"Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele da
 "Bei uns ziemlich oft im Garten.":"Bi üs ziemlich oft im Garte.",
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
-"Mit Hausgemachtem aus unserer Küche und Feinem aus der Region – in drei Grössen.":"Drü Gschänksharass mit Huusgmachtem und Feinem vo do – i drü Grössene.",
+"Drei Grössen, sorgfältig zusammengestellt mit Hausgemachtem und Feinem aus der Region.":"Drü Grössene, sorgfälig zämegstellt mit Huusgmachtem und Feinem vo do.",
 "Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele darfs sii?","Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
 "ausgewählt & hausgemacht":"uusglese & hausgmacht",
 "der grosse":"de grosse","der mittlere":"de mittlere","der kleine":"de chliine",
