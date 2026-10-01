@@ -32,11 +32,11 @@ Der Bestellzettel bietet aktuell Abholzeiten im 30-Minuten-Raster von 08:00 bis 
 
 ## Datenschutz und externe Dienste
 
-Die Website verwendet unter anderem Formspree für das Bestellformular, Google Fonts und Google Maps. Der Datenschutztext in `index.html` sollte diese tatsächlichen Dienste vollständig und rechtlich korrekt abbilden. Für die rechtliche Prüfung sollte eine geeignete Schweizer Fachstelle oder Beratung beigezogen werden.
+Die Website verwendet Formspree für das Bestellformular, Google Fonts, Google Maps sowie Vercel Web Analytics und Vercel Speed Insights. Der Datenschutztext in `index.html` beschreibt diese eingesetzten Dienste; die konkrete rechtliche Ausgestaltung sollte vor dem produktiven Einsatz fachlich geprüft werden.
 
 ## SEO
 
-Die Startseite enthält Meta-Description, Open-Graph-Grunddaten und strukturierte Store-Daten inklusive Adresse, Öffnungszeiten und Korb-Angeboten.
+Die Startseite enthält Meta-Description, Open-Graph-Daten, Twitter-/X-Metadaten sowie strukturierte Store- und FAQ-Daten inklusive Adresse, Öffnungszeiten, Korb-Angeboten und sichtbaren FAQ-Inhalten.
 
 Eine Canonical-URL und eine Sitemap sollten erst mit der **tatsächlich verwendeten öffentlichen Domain** ergänzt werden; bis dahin werden keine Domain-Platzhalter als echte URLs eingetragen.
 
