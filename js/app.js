@@ -374,40 +374,7 @@ document.addEventListener("keydown",function(e){
   else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
 });
 })();
-(function(){
-var storyData=[
- {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Geschenkskorb",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
- {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenkskorb",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
- {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenkskorb Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenkskorb wird.",note:""},
- {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chli & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
- {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhuuse.",note:""}
-];
-var storyIndex=0,storyTouchX=null;
-function renderStory(i){
- storyIndex=Math.max(0,Math.min(storyData.length-1,i));
- var d=storyData[storyIndex],img=document.getElementById("storyPhoto");
- if(!img)return;
- img.src=d.img;img.alt=d.alt;
- document.getElementById("storyNumber").textContent=("0"+(storyIndex+1)).slice(-2);
- document.getElementById("storyTitle").textContent=d.title;
- document.getElementById("storyText").textContent=d.text;
- document.getElementById("storyNote").textContent=d.note;
- document.querySelectorAll(".story-dot").forEach(function(b,n){b.classList.toggle("active",n===storyIndex);b.setAttribute("aria-current",n===storyIndex?"step":"false")});
- document.getElementById("storyProgress").style.width=((storyIndex+1)/storyData.length*100)+"%";
-}
-document.querySelectorAll(".story-dot").forEach(function(b){b.addEventListener("click",function(){renderStory(Number(b.dataset.story))})});
-var stage=document.querySelector(".story-stage");
-if(stage){
- stage.addEventListener("touchstart",function(e){storyTouchX=e.changedTouches[0].clientX},{passive:true});
- stage.addEventListener("touchend",function(e){
-  if(storyTouchX===null)return;
-  var dx=e.changedTouches[0].clientX-storyTouchX;
-  if(Math.abs(dx)>45)renderStory(storyIndex+(dx<0?1:-1));
-  storyTouchX=null;
- },{passive:true});
-}
-renderStory(0);
-})();
+
 (function(){var lb=document.getElementById("lb"),li=document.getElementById("li");
 function close(){lb.classList.remove("on","z");lb.setAttribute("aria-hidden","true");document.body.style.overflow=""}
 document.addEventListener("click",function(e){var i=e.target.closest(".foto img");if(i){li.src=i.src;li.alt=i.alt;lb.scrollTop=0;lb.scrollLeft=0;lb.classList.add("on");lb.classList.remove("z");lb.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}});
