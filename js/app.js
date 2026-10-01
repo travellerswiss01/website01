@@ -76,7 +76,7 @@ var heroStoryData=[
 {img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:""},
 {img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:""},
 {img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenkskörbe – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:""},
-{img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhuuse abholen.",note:"Bis bald bei uns im Lädeli."}
+{img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhuuse abholen.",note:""}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
@@ -302,7 +302,7 @@ var storyData=[
  {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenkskorb",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
  {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenkskorb Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenkskorb wird.",note:""},
  {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
- {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhuuse.",note:"Bis bald bei uns im Lädeli."}
+ {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhuuse.",note:""}
 ];
 var storyIndex=0,storyTouchX=null;
 function renderStory(i){
