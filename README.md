@@ -1,24 +1,45 @@
 # Biottos Lädeli – Website
 
-Statische Website (nur HTML, CSS, JavaScript), kein Build-Schritt, keine Abhängigkeiten.
+Statische Website (HTML, CSS, JavaScript), ohne Build-Schritt und ohne Framework.
 
-## Auf GitHub Pages veröffentlichen
-1. Neues Repository auf GitHub erstellen und alle Dateien dieses Ordners hochladen (`index.html` liegt im Hauptverzeichnis).
-2. Im Repository: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, Branch `main`, Ordner `/ (root)`.
-3. Nach ca. 1 Minute ist die Seite unter `https://<benutzername>.github.io/<repository>/` erreichbar. HTTPS ist automatisch aktiv.
-4. Eigene Domain: unter **Settings → Pages → Custom domain** eintragen und beim Domain-Anbieter einen CNAME auf `<benutzername>.github.io` setzen.
+## Branch für die aktuelle Überarbeitung
+
+Die aktuelle Überarbeitung liegt auf dem Branch `website02`.
 
 ## Wo ändere ich was?
+
 | Was | Wo |
 |---|---|
-| Texte, **Preise**, Inhalte der Körbe, Impressum, Datenschutz | `index.html` |
-| Farben, Schriften, Abstände | `css/style.css` (Farben oben als Variablen) |
-| Bestellzettel: Öffnungs-/Abholzeiten pro Wochentag, Zeitraster, WhatsApp-Nummer | `js/app.js` (`OEFFNUNG`, `SCHRITT`, `NR`) |
-| Fotos | `img/` (gleiche Dateinamen ersetzen, Hochformat 3:4) |
+| Texte, Korbinhalte, Preise, Impressum, Datenschutz | `index.html` |
+| Zusätzliche Conversion-/Responsive-Stile | `css/relaunch.css` |
+| Grundlayout, Farben, Schriften, bestehende Komponenten | `css/style.css` |
+| Bestellzettel, Korbauswahl, Abholzeiten, Formularversand | `js/app.js` |
+| Fotos und Grafiken | `img/` |
 
-Preise und Korbnamen stehen nur noch an **einem** Ort: im `index.html` am Element `.preis` (Attribute `data-korb`, `data-name`, `data-price`). Der Bestellzettel in `js/app.js` liest sie von dort aus. Bei einer Preisänderung `data-price` **und** den angezeigten Text im selben Element anpassen – `js/app.js` muss nicht angefasst werden.
+### Preise und Körbe
 
-## Hinweise
-- Die Seite funktioniert auch ohne JavaScript: Alle Sektionen sind dann sichtbar und die Navigation funktioniert als normale Sprunglinks. Das Ein-/Ausblenden der Ansichten wird erst aktiviert, wenn JavaScript läuft (Klasse `js` auf `<html>`).
-- Die Schriften (Young Serif, Literata, Caveat) werden von Google Fonts geladen. Dafür sollte der Datenschutztext ergänzt werden, oder die Schriften werden lokal eingebunden.
-- Für die Suchmaschinen nach dem Veröffentlichen zusätzlich `<link rel="canonical" href="https://IHRE-DOMAIN/">` in `index.html` einfügen und die Seite in der Google Search Console anmelden.
+Die Bestelllogik verwendet aktuell die drei Körbe direkt in `js/app.js`:
+
+- Gross & Guet – CHF 49.95
+- Fein & Guet – CHF 29.95
+- Chli & Fii – CHF 19.95
+
+Wenn Preise oder Korbnamen geändert werden, müssen deshalb **Anzeige in `index.html` und Bestelllogik in `js/app.js`** gemeinsam geprüft werden.
+
+### Bestellzeiten
+
+Der Bestellzettel bietet aktuell Abholzeiten im 30-Minuten-Raster von 08:00 bis 18:00 Uhr und Termine bis drei Monate im Voraus an. Die Bestellmenge wurde auf bis zu 10 Körbe erweitert.
+
+## Datenschutz und externe Dienste
+
+Die Website verwendet unter anderem Formspree für das Bestellformular, Google Fonts und Google Maps. Der Datenschutztext in `index.html` sollte diese tatsächlichen Dienste vollständig und rechtlich korrekt abbilden. Für die rechtliche Prüfung sollte eine geeignete Schweizer Fachstelle oder Beratung beigezogen werden.
+
+## SEO
+
+Die Startseite enthält Meta-Description, Open-Graph-Grunddaten und strukturierte Store-Daten inklusive Adresse, Öffnungszeiten und Korb-Angeboten.
+
+Eine Canonical-URL und eine Sitemap sollten erst mit der **tatsächlich verwendeten öffentlichen Domain** ergänzt werden; bis dahin werden keine Domain-Platzhalter als echte URLs eingetragen.
+
+## Ohne JavaScript
+
+Die Seite enthält weiterhin eine Noscript-Fallback-Struktur. Die zentrale Navigation funktioniert als normale Sprungnavigation; interaktive Bestell- und Overlay-Funktionen benötigen JavaScript.
