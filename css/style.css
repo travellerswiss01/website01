@@ -1754,3 +1754,12 @@ header{
   #langSwitch .lang-de,#langSwitch .lang-ch{gap:3px;padding-inline:4px}
   .brand-tab{font-size:.69rem!important;padding-inline:6px!important}
 }
+
+
+/* Produktfotos ganz anzeigen, ohne Seiten oder Körbe abzuschneiden */
+.quick-order-card>img,
+#koerbe .korb-card-photo img{
+  object-fit:contain;
+  object-position:center;
+  background:var(--white);
+}
