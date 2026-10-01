@@ -333,19 +333,10 @@ function showSuccess(o,contact,method){
 }
 $("#successClose").addEventListener("click",function(){
   location.hash="#start";
-  close();
-  document.querySelector("[data-step-back='n']").hidden=false;
-  $("#tot").parentElement.hidden=false;
-  $("#msg").hidden=false;
-  $("#successScene").hidden=true;
-  var form=$("#directForm");
-  form.reset();
-  syncContactMethod();
-  form.hidden=true;
+  resetOrderState();
   $("#directOrder").hidden=false;
-  var button=form.querySelector("button[type=submit]");
-  button.disabled=false;
-  button.textContent="Bestellung verbindlich senden";
+  render();
+  close();
 });
 
 document.addEventListener("click",function(e){
@@ -355,8 +346,22 @@ var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.da
 if(e.target.id==="weekNext"){dWeek++;render()}
 if(e.target.id==="weekPrev"){dWeek--;render()}
 });
-function open(k){st.k=k||st.k;var photoMap={gross:["img/gross-vorne.jpg","img/gross-oben.jpg"],fein:["img/fein-vorne.jpg","img/fein-oben.jpg"],chili:["img/chili-vorne.jpg","img/chili-oben.jpg"]};var pm=photoMap[st.k]||photoMap.gross;var sp=document.getElementById("sp"),sp2=document.getElementById("sp2");if(sp){sp.src=pm[0];sp.alt=K.find(function(o){return o.id===st.k}).n}if(sp2){sp2.src=pm[1];sp2.alt=K.find(function(o){return o.id===st.k}).n+" – zweite Ansicht";sp2.hidden=false}st.step="d";dWeek=0;render();$("#ov").classList.add("on");$("#ov").setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
-function close(){$("#ov").classList.remove("on");$("#ov").setAttribute("aria-hidden","true");document.body.style.overflow=""}
+function resetOrderState(){
+  st.d="";st.t="";st.n=1;st.step="k";dWeek=0;
+  $("#successScene").hidden=true;
+  $("#directConfirm").hidden=true;
+  $("#tot").parentElement.hidden=false;
+  $("#msg").hidden=false;
+  var form=$("#directForm");
+  if(form){form.reset();syncContactMethod();form.hidden=true;var button=form.querySelector("button[type=submit]");if(button){button.disabled=false;button.textContent="Bestellung verbindlich senden"}}
+  var back=document.querySelector("[data-step-back='n']");if(back)back.hidden=false;
+}
+function open(k){st.k=k||st.k;resetOrderState();var photoMap={gross:["img/gross-vorne.jpg","img/gross-oben.jpg"],fein:["img/fein-vorne.jpg","img/fein-oben.jpg"],chili:["img/chili-vorne.jpg","img/chili-oben.jpg"]};var pm=photoMap[st.k]||photoMap.gross;var sp=document.getElementById("sp"),sp2=document.getElementById("sp2");if(sp){sp.src=pm[0];sp.alt=K.find(function(o){return o.id===st.k}).n}if(sp2){sp2.src=pm[1];sp2.alt=K.find(function(o){return o.id===st.k}).n+" – zweite Ansicht";sp2.hidden=false}st.step="d";dWeek=0;render();$("#ov").classList.add("on");$("#ov").setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function close(){
+  $("#ov").classList.remove("on");$("#ov").setAttribute("aria-hidden","true");document.body.style.overflow="";
+  if(!$("#successScene").hidden) return;
+  resetOrderState();render();
+}
 $("#x").addEventListener("click",close);
 $("#ov").addEventListener("click",function(e){if(e.target.id==="ov")close()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
