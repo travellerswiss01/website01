@@ -639,3 +639,38 @@ nav a.brand-tab{
   nav a.brand-tab{padding-left:8px;padding-right:8px;font-size:.86rem}
   .lang-switch{font-size:.58rem;padding:4px 5px;gap:3px}
 }
+
+
+/* Sprachwahl mit gut lesbaren Landesflaggen */
+.lang-switch{
+  min-height:42px;
+  gap:7px;
+  padding:8px 11px;
+  border:1px solid var(--line);
+  border-bottom:3px solid var(--line);
+  border-radius:5px;
+  background:var(--paper2);
+  color:var(--ink);
+  font:700 .82rem/1 system-ui,sans-serif;
+  letter-spacing:0;
+}
+.lang-de,.lang-ch{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.lang-flag{font-size:1.12rem;line-height:1}
+.lang-name{display:inline}
+.lang-short{display:none}
+.lang-switch:not(.is-ch) .lang-de{color:var(--red)}
+.lang-switch:not(.is-ch) .lang-ch{color:var(--mute);opacity:.7}
+.lang-switch.is-ch{background:var(--red);border-color:var(--red);border-bottom-color:#971015;color:#fff}
+.lang-switch.is-ch .lang-de{color:#fff;opacity:.72}
+.lang-switch.is-ch .lang-ch{color:#fff;opacity:1}
+.lang-switch:hover{background:#fff;color:var(--red);border-color:var(--red)}
+.lang-switch.is-ch:hover{background:#aa1116;color:#fff}
+@media(max-width:720px){
+  .lang-switch{min-height:40px;padding:7px 8px;font-size:.7rem;gap:5px}
+  .lang-name{display:none}
+  .lang-short{display:inline}
+  .lang-flag{font-size:1.05rem}
+}
+@media(max-width:420px){
+  .lang-switch{min-height:38px;padding:6px 6px;font-size:.66rem;gap:4px}
+}
