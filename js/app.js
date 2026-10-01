@@ -52,7 +52,7 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Bestellzettel":"Bestellzettel","Welchen Korb möchten Sie?":"Welene Gschänksharass möchted Sie?","Wann möchten Sie ihn abholen?":"Wänn möchted Sie en abhole?","Um welche Uhrzeit?":"Um weli Ziit?","Wie viele?":"Wie vieli?",
 "Nächste Woche →":"Nächsti Wuche →","← Korb ändern":"← Gschänksharass ändere","← Tag ändern":"← Tag ändere","← Zeit ändern":"← Ziit ändere","Fast geschafft.":"Fast gschafft.",
 "Ihre Auswahl steht. Sagen Sie uns nur noch, wie wir Sie erreichen dürfen.":"D Uuswahl isch parat. Säge Sie üs nur no, wie mir Sie erreiche dörfed.",
-"Bestellung abschliessen":"Bestellig abschliesse","Ihr Name":"De Name","Wie können wir dich erreichen?":"Wie chönd mir dich erreiche?",
+"Bestellung abschliessen":"Bestellig abschliesse","Ihr Name":"De Name","Wie dürfen wir Sie erreichen?":"Wie dörfed mir Sie erreiche?",
 "Telefon / WhatsApp":"Telefon / WhatsApp","Ihre E-Mail-Adresse":"Eui E-Mail-Adresse","Ihre Nummer":"Eui Nummer",
 "Bestellung verbindlich senden":"Bestellig verbindlich absände","Die Bestellung wird direkt an Biottos Lädeli übermittelt.":"D Bestellig wird direkt a s Biottos Lädeli übermittelt.",
 "ist angekommen!":"isch acho!","Bestellung angekommen.":"Bestellig acho.","Danke – wir bereiten Ihren Korb mit Sorgfalt für Sie vor.":"Danke – mir bereited de Gschänksharass sorgfältig für Sie vor.",
@@ -135,14 +135,18 @@ function weekItems(){return weekBuckets[dWeek]||[]}
 function setStep(s){st.step=s;render()}
 function render(){
 chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:"<b style='font-weight:600'>"+o.n.replace("&","&amp;")+"</b><b style='font-weight:600;color:inherit'>"+fmt(o.p)+"</b>"}}),st.k);
-chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.n);
+chips($("#cN"),"n",Array.from({length:10},function(_,i){var n=i+1;return{v:n,l:n}}),st.n);
 var wi=weekItems();
 chips($("#cD"),"d",wi,st.d);
 $("#cT").innerHTML=ZEITEN.map(function(z){return "<button type=\"button\" class=\"time-chip"+(z===st.t?" selected":"")+"\" data-time=\""+z+"\">"+z+"</button>"}).join("");
 document.querySelectorAll(".order-step").forEach(function(el){el.classList.toggle("active",el.dataset.step===st.step)});
 var title=$("#orderTitle"),sub=$("#orderSub");
 var titles={k:"Welchen Korb möchten Sie?",d:"Wann möchten Sie ihn abholen?",t:"Um welche Uhrzeit?",n:"Wie viele möchten Sie?"};
+var progress={k:1,d:2,t:3,n:4,done:4};
+var progressLabels=["Korb","Termin","Zeit","Anzahl"];
 if(title)title.textContent=titles[st.step]||"Ihre Bestellung";
+var prog=document.querySelector(".order-progress");if(prog){prog.querySelectorAll("span").forEach(function(el,i){el.classList.toggle("active",i<=(progress[st.step]||1)-1);el.setAttribute("aria-current",i===(progress[st.step]||1)-1?"step":"false")})}
+var sel=document.getElementById("orderSelection");if(sel){var so=K.filter(function(x){return x.id===st.k})[0];var parts=[];if(so)parts.push(so.n);if(st.d)parts.push(st.d);if(st.t)parts.push(st.t+" Uhr");if(st.n)parts.push(st.n+" ×");sel.textContent=parts.join(" · ");}
 if(sub)sub.textContent=st.step==="d"?"Nur die nächsten Tage werden angezeigt. Sie können zur nächsten Woche blättern.":"";
 var prev=$("#weekPrev"),next=$("#weekNext"),weekLabel=$("#weekLabel");
 if(prev)prev.hidden=dWeek===0;
@@ -229,19 +233,14 @@ $("#directForm").addEventListener("submit",function(e){
   var button=form.querySelector("button[type=submit]");
   button.disabled=true;
   button.textContent="Wird übermittelt …";
-  var waWindow=null;
-  try{waWindow=window.open("about:blank","_blank");}catch(_){waWindow=null}
   fetch(form.action,{
     method:"POST",
     body:new FormData(form),
     headers:{Accept:"application/json"}
   }).then(function(res){
     if(!res.ok) throw new Error("submit");
-    var waUrl=openWhatsAppConfirmation(o,contact,method);
-    if(waWindow && !waWindow.closed) waWindow.location.href=waUrl;
     showSuccess(o,contact,method);
   }).catch(function(){
-    if(waWindow && !waWindow.closed) waWindow.close();
     button.disabled=false;
     button.textContent="Bestellung verbindlich senden";
     $("#directConfirm").hidden=false;
