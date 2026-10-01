@@ -15,3 +15,13 @@
 .korb-highlights li{position:relative;padding-left:15px}.korb-highlights li::before{content:"✓";position:absolute;left:0;color:var(--red,#8f1116);font-weight:700}.korb-highlights li:last-child{color:var(--mute,#756a61);font-style:italic}
 .korb-card.k2{border-color:var(--red,#8f1116);box-shadow:0 5px 18px rgba(55,36,22,.1)}
 @media(max-width:700px){.korb-highlights{font-size:.76rem;line-height:1.4;margin:5px 0 9px}.korb-badge{font-size:.65rem;padding:4px 7px}.korb-card-copy p{margin-bottom:4px}}
+
+
+/* Trust / people section */
+.trust-story .wrap{align-items:center;gap:clamp(36px,7vw,90px)}
+.trust-photo{max-width:520px}.trust-copy{max-width:620px}.trust-lead{font-size:clamp(1.08rem,2vw,1.28rem);line-height:1.65;margin-top:16px}
+.trust-points{display:grid;gap:0;margin:24px 0;border-top:1px solid var(--line)}
+.trust-points>div{display:grid;grid-template-columns:minmax(150px,.7fr) 1.3fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.trust-points strong{font-family:Young Serif,serif;font-size:1.02rem}.trust-points span{line-height:1.55;opacity:.82}
+.text-link{font-weight:700;text-decoration:none}.text-link:hover{text-decoration:underline}
+@media(max-width:700px){.trust-story .wrap{gap:24px}.trust-photo{max-width:100%}.trust-points>div{grid-template-columns:1fr;gap:4px;padding:13px 0}.trust-points strong{font-size:.98rem}.trust-points span{font-size:.92rem}}
