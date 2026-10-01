@@ -5,7 +5,7 @@ var lang="de";
 var dict={
 "Startseite":"Start","Gschänksharrass":"Gschänksharrass","Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus dem Thurgau.":"Gschänk us em Thurgau.",
-"eine kleine Geschichte aus Maischhausen":"e chliini Gschicht us Maischhausen",
+"eine kleine Geschichte aus Maischhuuse":"e chliini Gschicht us Maischhuuse",
 "Wo fängt ein Gschänksharrass an?":"Wo fangt es Gschänksharrass aa?",
 "Bei uns ziemlich oft im Garten.":"Bi üs ziemlich oft im Garte.",
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
@@ -20,8 +20,8 @@ var dict={
 "Für Menschen mit Geschmack.":"Für Lüüt mit Gschmack.",
 "Korb anschauen":"Gschänksharrass aluege","Was ist drin?":"Was isch dinne?",
 "Tippen":"Antippe","Sie auf einen Korb – dann geht's direkt zum Bestellzettel.":"en Gschänksharrass – denn gaht's grad zum Bestellzettel.",
-"aus unserem Garten in Maischhausen":"us üsere Garte i Maischhausen",
-"Die blauen Trauben wachsen bei uns im Garten in Maischhausen, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.":"D blaue Traube wachsed bi üs im Garte i Maischhausen, wo mir wohne. Mir hend sie sälber pflückt, won sie schön riif gsi sind.",
+"aus unserem Garten in Maischhuuse":"us üsere Garte i Maischhuuse",
+"Die blauen Trauben wachsen bei uns im Garten in Maischhuuse, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.":"D blaue Traube wachsed bi üs im Garte i Maischhuuse, wo mir wohne. Mir hend sie sälber pflückt, won sie schön riif gsi sind.",
 "Otto, der Familienvater, hat daraus zusammen mit Bernadette mit einer Handpresse einen köstlichen Traubensaft gemacht.":"De Otto, de Familienvater, het zäme mit de Bernadette mit ere Handpresse en feine Traubesaft gmacht.",
 "Fein zum Zmorge, zum Znüni oder als alkoholfreie Alternative am Tisch.":"Fein zum Zmorge, zum Znüni oder als alkoholfreii Alternative am Tisch.",
 "Fragen Sie uns einfach per WhatsApp, ob gerade Traubensaft im Lädeli bereitsteht.":"Fröged üs eifach per WhatsApp, öb grad Traubesaft im Lädeli parat isch.",
@@ -57,7 +57,7 @@ var dict={
 "Beim Besuch unserer Website können technische Daten wie IP-Adresse, Browsertyp oder Zugriffszeit automatisch erfasst werden. Diese Daten dienen der sicheren und störungsfreien Bereitstellung der Website.":"Bi em Bsuech vo üsere Website chönd technischi Date wie IP-Adresse, Browsertyp oder Zuegriffsziit automatisch erfasst werde. Die Date diened de sichere und störigsfreie Bereitstellig vo de Website.",
 "Wir speichern persönliche Daten nur so lange, wie dies für die Bearbeitung der Bestellung oder aufgrund gesetzlicher Pflichten erforderlich ist.":"Mir speichered persönligi Date nur so lang, wie das für d Bearbeitig vo de Bestellig oder us gesetzliche Pflicht nötig isch.",
 "Bei Fragen zum Datenschutz können Sie uns über die angegebene Telefonnummer kontaktieren.":"Bi Frage zum Datenschutz chönd Sie üs über d agäh Telefonnummer kontaktiere.",
-"Biottos Lädeli":"Biottos Lädeli","Hauptstrasse 90, 8357 Maischhausen TG":"Hauptstrasse 90, 8357 Maischhausen TG"
+"Biottos Lädeli":"Biottos Lädeli","Hauptstrasse 90, 8357 Maischhuuse TG":"Hauptstrasse 90, 8357 Maischhuuse TG"
 };
 var reverse={};Object.keys(dict).forEach(function(k){reverse[dict[k]]=k});
 function translateTextNode(n,on){var v=n.nodeValue;if(!v||!v.trim())return;var map=on?dict:reverse;if(map[v.trim()])n.nodeValue=v.replace(v.trim(),map[v.trim()])}
@@ -69,11 +69,11 @@ setTimeout(applyLang,0);
 })();
 (function(){
 var heroStoryData=[
-{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhausen und im Garten.",note:"Ein kleines Stück Zuhause."},
+{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.",note:"Ein kleines Stück Zuhause."},
 {img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:"Vom Baum. Aus dem Garten. Von hier."},
 {img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:"Aus guten Zutaten wird etwas Eigenes."},
 {img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Gschänksharrass – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
-{img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhausen abholen.",note:"Bis bald bei uns im Lädeli."}
+{img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhuuse abholen.",note:"Bis bald bei uns im Lädeli."}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
@@ -299,7 +299,7 @@ var storyData=[
  {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Gschänksharrass",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
  {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Gschänksharrass Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Gschänksharrass wird.",note:"Nicht einfach hineingelegt. Schön gemacht."},
  {img:"img/chili-vorne.jpg",alt:"Fertiger Gschänksharrass Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
- {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhausen.",note:"Bis bald bei uns im Lädeli."}
+ {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhuuse.",note:"Bis bald bei uns im Lädeli."}
 ];
 var storyIndex=0,storyTouchX=null;
 function renderStory(i){
