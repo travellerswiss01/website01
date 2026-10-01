@@ -247,17 +247,6 @@ $("#directForm").addEventListener("submit",function(e){
     $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";
   });
 });
-function openWhatsAppConfirmation(o,contact,method){
-  var total=fmt(o.p*st.n);
-  var msg="Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n"+
-    "🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+total+")\n"+
-    "📅 Abholung: "+st.d+", "+st.t+" Uhr\n"+
-    "👤 Name: "+$("#customerName").value.trim()+"\n"+
-    "📞 Kontakt: "+contact+"\n\n"+
-    "Danke!";
-  var url="https://wa.me/"+NR+"?text="+encodeURIComponent(msg);
-  return url;
-}
 function showSuccess(o,contact,method){
   $("#directForm").hidden=true;
   $("#directConfirm").hidden=true;
