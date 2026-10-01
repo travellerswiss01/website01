@@ -54,12 +54,25 @@
 - Nur tatsächlich ausgeführte Prüfungen als bestanden melden.
 - Nicht verfügbare Tests oder Werkzeuge ausdrücklich nennen.
 
-## 8. Abschlussbericht
+## 8. Mehrere Aufgaben in einem Auftrag selbstständig abarbeiten
+- Wenn der Benutzer mehrere Aufgaben in einer Liste oder einem Gesamtauftrag vorgibt, behandle sie als zusammenhängenden Auftrag und erstelle eine interne Checkliste.
+- Arbeite die Aufgaben in der angegebenen Reihenfolge ab. Nach Abschluss eines Punkts beginne automatisch mit dem nächsten offenen Punkt; warte nicht allein deshalb auf eine neue Nachricht des Benutzers.
+- Stelle keine unnötigen Zwischenfragen und unterbrich die Arbeit nicht nur für Zwischenberichte. Frage nach, wenn wesentliche Informationen fehlen, Anforderungen widersprüchlich sind oder eine Entscheidung bzw. Freigabe des Benutzers erforderlich ist.
+- Wenn eine Aufgabe blockiert ist, halte den konkreten Grund fest und fahre mit den übrigen Aufgaben fort, sofern das sicher und sinnvoll möglich ist.
+- Aktualisiere die Checkliste nach jedem erledigten oder blockierten Punkt. Bei einer Unterbrechung nutze den dokumentierten Stand, um offene Arbeit fortzusetzen, sofern die Plattform bzw. Umgebung das unterstützt.
+- Behaupte nicht, im Hintergrund weiterzuarbeiten oder später automatisch fortzufahren, wenn die verwendete Umgebung das nicht tatsächlich ermöglicht. Ein Prompt kann technische Laufzeit-, Tool- oder Freigabegrenzen nicht umgehen.
+- Wenn die Plattform den Auftrag beendet, ein Tool-Aufruf fehlschlägt oder eine Bestätigung verlangt, berichte ehrlich, wo die Arbeit steht, und nenne den nächsten erforderlichen Schritt.
+- Schließe den Gesamtauftrag erst ab, wenn alle ausführbaren Punkte erledigt und überprüft wurden oder die verbleibenden Blockaden klar dokumentiert sind. Führe nicht erledigte Punkte nicht als erledigt auf.
+- Führe keine riskanten, irreversiblen oder ausdrücklich freigabepflichtigen Aktionen aus, nur um den Ablauf ohne Rückfrage fortzusetzen.
+- Prüfe bei mehreren Aufgaben vor jedem Schreibvorgang den aktuellen Branch und bestehende Änderungen. Überschreibe keine Änderungen anderer Agents oder Personen. Vermeide parallele Schreibvorgänge auf denselben Dateien.
+- Der Abschlussbericht für einen Gesamtauftrag soll erledigte Punkte, tatsächlich ausgeführte Prüfungen, fehlgeschlagene oder blockierte Punkte und verbleibende Risiken getrennt aufführen.
+
+## 9. Abschlussbericht
 Nach jeder Aufgabe kurz berichten:
 1. Was geändert wurde und welche Dateien betroffen sind.
 2. Welche Prüfungen tatsächlich ausgeführt wurden und mit welchem Ergebnis.
 3. Welche Risiken oder offenen Punkte verbleiben.
 4. Ob ein Commit, Preview-Deployment oder Produktions-Deployment erstellt wurde.
 
-## 9. Definition of Done
+## 10. Definition of Done
 Eine Aufgabe ist erst abgeschlossen, wenn die angeforderte Änderung umgesetzt, relevante Seiteneffekte geprüft und nicht durchgeführte Tests oder offene Risiken transparent dokumentiert wurden.
