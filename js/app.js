@@ -299,7 +299,7 @@ $("#directForm").addEventListener("submit",function(e){
     button.disabled=false;
     button.textContent="Bestellung verbindlich senden";
     $("#directConfirm").hidden=false;
-    $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";
+    $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";\n    $("#directConfirm").focus();
   });
 });
 function showSuccess(o,contact,method){
