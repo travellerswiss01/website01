@@ -13,7 +13,6 @@ var dict={
 "Bei uns ziemlich oft im Garten.":"Bi üs ziemlich oft im Garte.",
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
-"Ein kleines Stück Zuhause.":"Es chliises Stück Dihei.",
 "Drei Geschenkskörbe. Drei Grössen. Einer passt bestimmt.":"Drei Gschänksharrass. Drei Grössene. Eine passt bestimmt.",
 "Welcher darf's sein?":"Welene derf's sii?",
 "ausgewählt & hausgemacht":"uusglese & hausgmacht",
@@ -72,7 +71,7 @@ setTimeout(applyLang,0);
 })();
 (function(){
 var heroStoryData=[
-{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.",note:"Ein kleines Stück Zuhause."},
+{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.",note:""},
 {img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:"Vom Baum. Aus dem Garten. Von hier."},
 {img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:"Aus guten Zutaten wird etwas Eigenes."},
 {img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenkskörbe – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:"Nicht einfach hineingelegt. Schön gemacht."},
@@ -87,7 +86,7 @@ if(img){img.src=d.img;img.alt=d.alt}
 document.getElementById("heroStoryKicker").textContent=d.kicker;
 document.getElementById("heroStoryTitle").textContent=d.title;
 document.getElementById("heroStoryText").textContent=d.text;
-document.getElementById("heroStoryNote").textContent=d.note;
+var note=document.getElementById("heroStoryNote");note.textContent=d.note||"";note.hidden=!d.note;
 document.querySelectorAll(".hero-story-step").forEach(function(b,n){b.classList.toggle("active",n===heroStoryIndex);b.setAttribute("aria-current",n===heroStoryIndex?"step":"false")});
 var mark=root.querySelector(".hero-story-mark");if(mark)mark.textContent=("0"+(heroStoryIndex+1)).slice(-2)+" / 05";
 if(window.applyBiottosLanguage)window.applyBiottosLanguage();
