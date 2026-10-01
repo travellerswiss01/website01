@@ -4,7 +4,7 @@ var LANG_KEY="biottos-lang";
 var lang="de";
 var dict={
 "Startseite":"Start","Geschenkskörbe":"Gschänksharass","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt","Garten":"Garte","was bei uns wächst":"wo bi üs wachst","Küche":"Chuchi","was daraus entsteht":"was drus entstoht","Geschenk":"Gschänk","fertig zum Abholen":"fertig zum Abhole",
-"Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
+"Traubensaft":"Truubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus dem Thurgau.":"Gschänk us em Thurgau.",
 "eine kleine Geschichte aus Maischhuuse":"ä chlini Gschicht vo Maischhuse",
 "Wo fängt ein Geschenkskorb an?":"Wo fangt es Gschänksharass aa?",
@@ -27,7 +27,7 @@ var dict={
 "Die blauen Trauben wachsen bei uns im Garten in Maischhuuse, wo wir wohnen. Wir haben sie selber gepflückt, als sie schön reif waren.":"Diä blaue Truube wachsed bi üs im Garte z Maischhuse, wo mir wohned. Mir ärnted sie immer, wenns schön rief sind.",
 "Otto, der Familienvater, hat daraus zusammen mit Bernadette mit einer Handpresse einen köstlichen Traubensaft gemacht.":"De Otto, üse Familievater, het zäme mit de Bernadette mit de Handpress en feine Truubesaft gmacht.",
 "Fein zum Zmorge, zum Znüni oder als alkoholfreie Alternative am Tisch.":"Fein zum Zmorge, zum Znüni oder als alkoholfreii Alternative am Tisch.",
-"Fragen Sie uns einfach per WhatsApp, ob gerade Traubensaft im Lädeli bereitsteht.":"Fröged üs eifach per WhatsApp, öb grad Trubesaft im Lädeli parat isch.",
+"Fragen Sie uns einfach per WhatsApp, ob gerade Traubensaft im Lädeli bereitsteht.":"Fröged üs eifach per WhatsApp, öb grad Truubesaft im Lädeli parat isch.",
 "Nach Traubensaft fragen":"Noch Truubesaft fröge",
 "von Hand aufgelesen":"vo Hand ufglese","Apfelernte bei Biottos – Anhänger voller reifer Äpfel, von Hand aufgelesen":"Öpfelernte bi Biottos – Anhänger voll riife Öpfel, vo Hand ufglese",
 "Die Äpfel haben wir von Hand aufgelesen – ganze 33 verschiedene Sorten aus unserem Obstgarten.":"D Öpfel hend mir vo Hand ufglese – grad 33 verschideni Sorte us üsere Obschtgarte.",
