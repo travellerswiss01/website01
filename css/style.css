@@ -683,3 +683,22 @@ nav a.brand-tab{
 .lang-switch.is-ch .lang-ch{display:inline-flex}
 
 .lang-sep{display:none}
+
+
+/* Klare Länderflaggen und eine sanfte Rückmeldung beim Sprachwechsel */
+.lang-flag{display:inline-flex;align-items:center;justify-content:center;flex:none;line-height:1}
+.lang-flag svg{display:block}
+.lang-flag.flag-ch svg{width:1.08rem;height:1.08rem}
+.lang-flag.flag-de svg{width:1.5rem;height:.9rem;border-radius:2px;box-shadow:0 0 0 1px rgba(43,33,28,.16)}
+.lang-switch{transition:transform .2s cubic-bezier(.2,.8,.2,1),background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease}
+.lang-switch:active{transform:scale(.96)}
+.lang-switch:not(.is-ch) .lang-de .lang-flag,
+.lang-switch.is-ch .lang-ch .lang-flag{animation:flagArrive .32s cubic-bezier(.2,1.35,.45,1) both}
+@keyframes flagArrive{
+  from{opacity:0;transform:translateY(3px) scale(.82) rotate(-8deg)}
+  to{opacity:1;transform:translateY(0) scale(1) rotate(0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .lang-switch{transition:none}
+  .lang-flag{animation:none!important}
+}
