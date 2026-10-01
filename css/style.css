@@ -1209,3 +1209,20 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
   .lang-switch{gap:2px;padding:3px}
   .lang-switch .lang-de,.lang-switch .lang-ch{gap:3px;padding:5px}
 }
+
+
+/* Der rote Akzent markiert nur die aktive Sprachwahl */
+.lang-switch.is-ch,.lang-switch.is-ch:hover{
+  background:#fffdf7!important;
+  border-color:#cbbb98!important;
+  color:#35251e!important
+}
+.lang-switch:not(.is-ch),.lang-switch:not(.is-ch):hover{
+  background:#fffdf7!important;
+  border-color:#cbbb98!important;
+  color:#35251e!important
+}
+.lang-switch:not(.is-ch) .lang-de,
+.lang-switch.is-ch .lang-ch{background:#b71320;color:#fff}
+.lang-switch:not(.is-ch) .lang-ch,
+.lang-switch.is-ch .lang-de{background:transparent;color:#51453b;box-shadow:none}
