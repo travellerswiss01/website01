@@ -2200,3 +2200,16 @@ footer .two{
 /* Die interaktive Süssmost-Geschichte erscheint nur im aktiven Süssmost-Reiter */
 .korb-story{display:none}
 .js body[data-current-view="suessmost"] .korb-story{display:block}
+
+/* Süssmost als kompakte Bildschirm-Story ohne Scrollbereich */
+@media (min-width: 900px){
+  body[data-current-view="suessmost"]{overflow:hidden}
+  body[data-current-view="suessmost"] main{height:calc(100vh - var(--nav-h, 72px));overflow:hidden}
+  body[data-current-view="suessmost"] #suessmost{height:100%;min-height:0;overflow:hidden}
+  body[data-current-view="suessmost"] .korb-story{height:100%;min-height:0;overflow:hidden}
+  body[data-current-view="suessmost"] .korb-story > .wrap{height:100%;min-height:0;display:flex;flex-direction:column;justify-content:center}
+  body[data-current-view="suessmost"] .story-head{flex:0 0 auto;margin-bottom:clamp(10px,2vh,24px)}
+  body[data-current-view="suessmost"] .hero-grid{flex:1 1 auto;min-height:0;max-height:calc(100% - 150px)}
+  body[data-current-view="suessmost"] .hero-grid .foto{height:100%;min-height:0}
+  body[data-current-view="suessmost"] .hero-grid .foto img{height:100%;max-height:100%;object-fit:cover}
+}
