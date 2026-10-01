@@ -5,7 +5,7 @@ var lang="de";
 var dict={
 "Startseite":"Start","Geschenkskörbe":"Gschänksharrass","Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus dem Thurgau.":"Gschänk us em Thurgau.",
-"eine kleine Geschichte aus Maischhuuse":"e chliini Gschicht us Maischhuuse",
+"eine kleine Geschichte aus Maischhuuse":"ä chlini Gschicht vo Maischhuse",
 "Wo fängt ein Geschenkskorb an?":"Wo fangt es Gschänksharrass aa?",
 "Bei uns daheim.":"Bi üs dehai.",
 "Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.":"Biottos Lädeli fangt nöd irgenwo - sondern bi üs dehai im Garte ah.",
