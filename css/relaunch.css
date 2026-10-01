@@ -112,3 +112,12 @@
 .order-confirm{margin:12px 0 0;padding:12px 14px;border:1px solid var(--line);background:var(--paper);font-size:.86rem;line-height:1.45}
 .order-confirm strong{display:block;margin-bottom:3px}
 .order-confirm:focus{outline:2px solid currentColor;outline-offset:3px}
+
+
+/* Larger orders / business contact */
+.contact-business{display:flex;align-items:center;justify-content:space-between;gap:28px;margin:28px 0 34px;padding:24px 26px;border:1px solid var(--line);background:var(--paper);border-radius:10px}
+.contact-business-kicker{display:block;margin-bottom:7px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.72}
+.contact-business h3{margin:0 0 7px;font-family:Young Serif,serif;font-size:1.45rem}
+.contact-business p{max-width:610px;margin:0;line-height:1.55;opacity:.82}
+.contact-business-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:700px){.contact-business{display:block;margin:22px 0 28px;padding:20px}.contact-business h3{font-size:1.25rem}.contact-business-btn{display:inline-flex;margin-top:16px;white-space:normal}}
