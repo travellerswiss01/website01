@@ -2,7 +2,7 @@
 (function(){
 var LANG_KEY="biottos-lang";
 var lang="de";
-var dict={"Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele darfs sii?","Bestellen":"Bstelle","Der grosse":"De grosse","Der mittlere":"De mittlere","Der kleine":"De chliine",
+var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksharass","Nächster Korb":"Nächste Gschänksharass","Wischen oder Pfeile antippen":"Wische oder Pfeil antippe","Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele darfs sii?","Bestellen":"Bstelle","Der grosse":"De grosse","Der mittlere":"De mittlere","Der kleine":"De chliine",
 "Geschenkskörbe":"Gschänksharass","Sprache":"Sproch","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt","Garten":"Garte","was bei uns wächst":"wo bi üs wachst","Küche":"Chuchi","was daraus entsteht":"was drus entstoht","Geschenk":"Gschänk","fertig zum Abholen":"fertig zum Abhole",
 "Traubensaft":"Truubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus Maischhausen.":"Maischhuser Gschänk",
@@ -103,8 +103,27 @@ var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.f
 function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
 var views=["start","koerbe","traubensaft","suessmost","ueber-uns","abholung","kontakt"];
-function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
+var siteNav=$("#siteNav"),menuToggle=$("#menuToggle");
+function setMenuOpen(open){if(!siteNav||!menuToggle)return;siteNav.classList.toggle("is-open",open);menuToggle.setAttribute("aria-expanded",String(open));menuToggle.setAttribute("aria-label",open?"Menü schliessen":"Menü öffnen")}
+if(menuToggle)menuToggle.addEventListener("click",function(){setMenuOpen(menuToggle.getAttribute("aria-expanded")!=="true")});
+if(siteNav)siteNav.addEventListener("click",function(e){if(e.target.closest("a"))setMenuOpen(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")setMenuOpen(false)});
+function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});document.querySelectorAll("#siteNav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});document.querySelector(".brand-tab").classList.toggle("on",h==="start");document.body.dataset.currentView=h;setMenuOpen(false);window.scrollTo(0,0)}
 window.addEventListener("hashchange",show);show();
+(function(){
+var track=document.querySelector("#koerbe .korb-picker-grid"),cards=track?Array.prototype.slice.call(track.querySelectorAll(".korb-card")):[],prev=$("#korbPrev"),next=$("#korbNext"),position=$("#korbPosition");
+if(!track||!cards.length||!prev||!next||!position)return;
+var current=0;
+function update(){
+ var tr=track.getBoundingClientRect(),pad=parseFloat(getComputedStyle(track).paddingLeft)||0,target=tr.left+pad,best=Infinity;
+ cards.forEach(function(card,i){var distance=Math.abs(card.getBoundingClientRect().left-target);if(distance<best){best=distance;current=i}});
+ position.textContent=(current+1)+" / "+cards.length;
+ prev.disabled=current===0;next.disabled=current===cards.length-1;
+}
+function move(delta){var i=Math.max(0,Math.min(cards.length-1,current+delta));track.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});current=i;update()}
+prev.addEventListener("click",function(){move(-1)});next.addEventListener("click",function(){move(1)});
+track.addEventListener("scroll",update,{passive:true});window.addEventListener("resize",update);update();
+})();
 function fmt(x){return "CHF "+x.toFixed(2)}
 function chips(el,name,items,cur){el.innerHTML=items.map(function(i){return '<label><input type="radio" name="'+name+'" value="'+i.v+'"'+(String(i.v)===String(cur)?" checked":"")+'><span>'+i.l+"</span></label>"}).join("")}
 var days=[];
@@ -283,7 +302,7 @@ $("#successClose").addEventListener("click",function(){
   button.disabled=false;
   button.textContent="Bestellung verbindlich senden";
 });
-document.addEventListener("keydown",function(e){var card=e.target.closest(".korb-card");if(card&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(card.dataset.open)}});
+
 document.addEventListener("click",function(e){
 if(e.target.closest(".korb-card-more"))return;
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
