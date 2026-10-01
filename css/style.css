@@ -1027,3 +1027,16 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
   .hero-seal-svg .seal-center{font-size:24px}
   .hero-seal-svg .seal-small{font-size:6.7px}
 }
+
+
+/* Klar lesbare Gravurschrift im Siegel */
+.hero-seal{width:216px;height:216px}
+.hero-seal-svg .seal-arc-text{font-size:11px;letter-spacing:.5px}
+.hero-seal-svg .seal-center{font-size:26px;letter-spacing:1.8px}
+.hero-seal-svg .seal-small{font-size:8.5px;letter-spacing:.2px}
+@media(max-width:720px){
+  .hero-seal{width:196px;height:196px}
+  .hero-seal-svg .seal-arc-text{font-size:10.5px}
+  .hero-seal-svg .seal-center{font-size:25px}
+  .hero-seal-svg .seal-small{font-size:8px}
+}
