@@ -1317,3 +1317,60 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
   #abholung .pickup-layout{grid-template-columns:minmax(260px,.85fr) minmax(420px,1.15fr);gap:38px;align-items:stretch}
   #abholung .pickup-map iframe{height:380px}
 }
+
+/* Korbauswahl als kompakter Bestellschirm */
+#koerbe{min-height:0!important}
+#koerbe .koerbe-intro{padding:14px 0 10px}
+#koerbe .koerbe-intro h2{font-size:clamp(2rem,3.2vw,3rem);margin:0 0 3px}
+#koerbe .koerbe-intro p{font-size:.9rem;line-height:1.35;margin:2px auto}
+#koerbe .korb-picker{padding:4px 0 10px}
+#koerbe .korb-picker .wrap{max-width:1120px}
+#koerbe .korb-picker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:none;margin:0 auto}
+#koerbe .korb-card{display:flex;flex-direction:column;align-items:stretch;gap:0;min-width:0;padding:8px;background:var(--white);border:1px solid var(--line);border-bottom:3px solid var(--line);border-radius:7px;box-shadow:0 3px 9px rgba(55,36,22,.06)}
+#koerbe .korb-card:hover,#koerbe .korb-card:focus-visible{transform:translateY(-2px);border-color:var(--red)}
+#koerbe .korb-card-photo{width:100%}
+#koerbe .korb-card .foto{padding:4px;border:0;box-shadow:none!important}
+#koerbe .korb-card-photo img{width:100%;height:clamp(82px,15vh,132px);aspect-ratio:16/9;object-fit:cover}
+#koerbe .korb-card-number{top:2px;left:2px;padding:3px 7px}
+#koerbe .korb-card-copy{padding:7px 4px 2px;text-align:center}
+#koerbe .korb-card-copy .hand{font-size:1rem;margin:0}
+#koerbe .korb-card-copy h3{font-size:clamp(1.25rem,2vw,1.75rem);margin:1px 0}
+#koerbe .korb-card-price{font-size:1rem;margin:2px 0 4px}
+#koerbe .korb-card-copy p{font-size:.8rem;line-height:1.25;margin:0 auto 6px}
+#koerbe .korb-card-link{display:flex;justify-content:center;align-items:center;min-height:38px;margin:2px auto 0;padding:6px 12px;border:0;border-radius:4px;background:var(--red);color:#fff;font-size:.85rem}
+#koerbe .korb-card-link b{display:none}
+#koerbe .korb-card-more{margin:4px 0 0;border:0}
+#koerbe .korb-card-more summary{min-height:32px;padding:4px 0;font-size:.76rem;justify-content:center}
+#koerbe .korb-card-detail{grid-template-columns:72px 1fr;gap:7px;padding:4px 0}
+#koerbe .korb-card-detail ul{font-size:.7rem;line-height:1.28}
+#koerbe .korb-picker-hint{margin:8px auto 0;font-size:.75rem}
+#koerbe .hero-grid{display:none}
+@media(max-width:820px){
+ #koerbe .koerbe-intro{padding:9px 0 6px}
+ #koerbe .koerbe-intro h2{font-size:1.8rem}
+ #koerbe .korb-picker-grid{gap:7px}
+ #koerbe .korb-card{padding:5px}
+ #koerbe .korb-card-photo img{height:clamp(52px,11vh,88px)}
+ #koerbe .korb-card-copy .hand{font-size:.8rem}
+ #koerbe .korb-card-copy h3{font-size:clamp(.86rem,3.2vw,1.25rem);white-space:normal}
+ #koerbe .korb-card-copy p{font-size:.68rem;line-height:1.2}
+ #koerbe .korb-card-link{min-height:34px;padding:5px 4px;font-size:.74rem}
+ #koerbe .korb-picker-hint{font-size:.68rem;margin-top:5px}
+}
+@media(max-width:600px){
+ #koerbe .korb-picker{padding:2px 0 8px}
+ #koerbe .korb-picker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ #koerbe .korb-card{display:flex;flex-direction:column;gap:0}
+ #koerbe .korb-card .foto{padding:3px}
+ #koerbe .korb-card-copy{text-align:center;padding:4px 1px 0}
+ #koerbe .korb-card-copy p{display:none}
+ #koerbe .korb-card-copy .hand{font-size:.68rem}
+ #koerbe .korb-card-copy h3{font-size:clamp(.78rem,3.4vw,1rem);line-height:1.12}
+ #koerbe .korb-card-price{font-size:.78rem}
+ #koerbe .korb-card-photo img{height:clamp(46px,9vh,68px)}
+ #koerbe .korb-card-link{font-size:.67rem;min-height:32px;padding:4px 2px}
+ #koerbe .korb-card-more summary{font-size:.66rem}
+ #koerbe .korb-picker-hint{max-width:30em;padding:0 8px}
+}
+@media(max-width:360px){#koerbe .korb-card-copy h3{font-size:.74rem}#koerbe .korb-card-link{font-size:.63rem}}
+@media(prefers-reduced-motion:reduce){#koerbe .korb-card{transition:none}}
