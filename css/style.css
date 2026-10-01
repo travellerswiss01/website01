@@ -2201,17 +2201,15 @@ footer .two{
 .korb-story{display:none}
 .js body[data-current-view="suessmost"] .korb-story{display:block}
 
-/* Süssmost als kompakte Bildschirm-Story ohne Scrollbereich */
-@media (min-width: 900px){
-  body[data-current-view="suessmost"]{overflow:hidden}
-  body[data-current-view="suessmost"] main{height:calc(100vh - var(--nav-h, 72px));overflow:hidden}
-  body[data-current-view="suessmost"] #suessmost{height:100%;min-height:0;overflow:hidden}
-  body[data-current-view="suessmost"] .korb-story{height:100%;min-height:0;overflow:hidden}
-  body[data-current-view="suessmost"] .korb-story > .wrap{height:100%;min-height:0;display:flex;flex-direction:column;justify-content:center}
-  body[data-current-view="suessmost"] .story-head{flex:0 0 auto;margin-bottom:clamp(10px,2vh,24px)}
-  body[data-current-view="suessmost"] .hero-grid{flex:1 1 auto;min-height:0;max-height:calc(100% - 150px)}
-  body[data-current-view="suessmost"] .hero-grid .foto{height:100%;min-height:0}
-  body[data-current-view="suessmost"] .hero-grid .foto img{height:100%;max-height:100%;object-fit:cover}
+/* Süssmost-Story: vollständig sichtbar und interaktiv */
+@media (min-width:900px){
+  body[data-current-view="suessmost"]{overflow-x:hidden}
+  body[data-current-view="suessmost"] #suessmost{overflow:visible}
+  body[data-current-view="suessmost"] .korb-story{overflow:visible}
+  body[data-current-view="suessmost"] .korb-story > .wrap{height:auto;min-height:0;display:flex;flex-direction:column;justify-content:center}
+  body[data-current-view="suessmost"] .hero-grid{flex:none;max-height:none}
+  body[data-current-view="suessmost"] .hero-grid>.foto{height:auto;max-height:430px}
+  body[data-current-view="suessmost"] .hero-grid>.foto img{height:auto;max-height:430px;object-fit:cover}
 }
 
 /* Aufgeräumte Startseite – Biottos Lädeli */
@@ -2233,6 +2231,23 @@ footer .two{
  #start .quick-order-grid{grid-template-columns:1fr;gap:9px}
  #start .quick-order-card{min-height:76px}
  #start .quick-order-card>img{width:50px;height:64px}
+}
+
+/* Süssmost-Story: Navigation und klare Interaktion */
+.hero-story-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 4px}
+.hero-story-arrow{width:44px;height:44px;border:2px solid var(--line);border-radius:50%;background:var(--white);color:var(--ink);font:700 1.15rem/1 system-ui,sans-serif;cursor:pointer}
+.hero-story-arrow:hover:not(:disabled){border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.hero-story-arrow:disabled{opacity:.35;cursor:default}
+.hero-story-position{min-width:70px;text-align:center;font:700 .78rem/1 system-ui,sans-serif;color:var(--red);letter-spacing:.08em}
+.hero-story-step:focus-visible,.hero-story-arrow:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+@media(max-width:899px){
+  body[data-current-view="suessmost"] #suessmost{overflow:visible}
+  body[data-current-view="suessmost"] .korb-story{overflow:visible}
+  body[data-current-view="suessmost"] .hero-grid{grid-template-columns:1fr;gap:18px}
+  body[data-current-view="suessmost"] .hero-grid>.foto{height:auto}
+  body[data-current-view="suessmost"] .hero-grid>.foto img{height:auto;max-height:52vh;object-fit:cover}
+  .hero-story-steps{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .hero-story-step:last-child{grid-column:auto}
 }
 
 /* Süssmost-Story: lesefreundliche Bildschirmaufteilung */
