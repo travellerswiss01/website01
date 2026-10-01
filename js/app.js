@@ -2,7 +2,7 @@
 (function(){
 var LANG_KEY="biottos-lang";
 var lang="de";
-var dict={
+var dict={"Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele darfs sii?","Bestellen":"Bstelle","Der grosse":"De grosse","Der mittlere":"De mittlere","Der kleine":"De chliine",
 "Geschenkskörbe":"Gschänksharass","Sprache":"Sproch","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt","Garten":"Garte","was bei uns wächst":"wo bi üs wachst","Küche":"Chuchi","was daraus entsteht":"was drus entstoht","Geschenk":"Gschänk","fertig zum Abholen":"fertig zum Abhole",
 "Traubensaft":"Truubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus Maischhausen.":"Maischhuser Gschänk",
