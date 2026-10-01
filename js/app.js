@@ -350,6 +350,7 @@ function resetOrderState(){
   st.d="";st.t="";st.n=1;st.step="k";dWeek=0;
   $("#successScene").hidden=true;
   $("#directConfirm").hidden=true;
+  $("#directOrder").hidden=false;
   $("#tot").parentElement.hidden=false;
   $("#msg").hidden=false;
   var form=$("#directForm");
