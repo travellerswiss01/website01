@@ -7,6 +7,8 @@ var dict={
 "Geschenke aus dem Thurgau.":"Gschänk us em Thurgau.",
 "eine kleine Geschichte aus Maischhuuse":"e chliini Gschicht us Maischhuuse",
 "Wo fängt ein Gschänksharrass an?":"Wo fangt es Gschänksharrass aa?",
+"Bei uns daheim.":"Bi üs dehai.",
+"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.":"Biottos Lädeli fangt nöd irgenwo - sondern dehai und im Garte ah.",
 "Bei uns ziemlich oft im Garten.":"Bi üs ziemlich oft im Garte.",
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
