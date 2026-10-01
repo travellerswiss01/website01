@@ -1829,3 +1829,29 @@ footer a:hover,footer a:focus-visible{color:var(--red)}
   footer{padding:8px 0 10px}
   footer .two{gap:4px 12px}
 }
+
+
+/* Kickstart: grössere Korbauswahl + Fusszeile am unteren Seitenrand */
+body{min-height:100vh;display:flex;flex-direction:column}
+main{flex:1 0 auto}
+footer{margin-top:auto}
+.quick-order-grid{gap:18px}
+.quick-order-card{min-height:190px;padding:16px;gap:18px}
+.quick-order-card>img{width:118px;height:150px}
+.quick-order-copy{gap:5px}
+.quick-order-size{font-size:.95rem}
+.quick-order-copy strong{font-size:1.35rem}
+.quick-order-price{font-size:1rem}
+.quick-order-cta{min-height:44px;padding:8px 12px;font-size:.9rem}
+@media(max-width:820px){
+  .quick-order-grid{gap:10px}
+  .quick-order-card{min-height:170px;padding:10px;gap:8px}
+  .quick-order-card>img{width:76px;height:108px}
+  .quick-order-copy strong{font-size:1.05rem}
+  .quick-order-cta{min-height:40px;font-size:.8rem}
+}
+@media(max-width:600px){
+  .quick-order-card{min-height:156px;padding:8px 6px}
+  .quick-order-card>img{width:68px;height:92px}
+  .quick-order-copy strong{font-size:.95rem}
+}
