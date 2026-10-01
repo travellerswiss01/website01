@@ -14,7 +14,6 @@ a{color:var(--red)}
 .hand{font-family:Caveat,"Segoe Script",cursive;font-size:1.5rem;color:var(--red);line-height:1.1}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:2px solid var(--red)}
 .bar{display:flex;align-items:center;gap:14px;row-gap:0;min-height:60px;flex-wrap:wrap}
-.logo{font-family:"Young Serif",Georgia,serif;color:var(--red);text-decoration:none;font-size:1.2rem;white-space:nowrap}
 nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
 nav a{color:var(--ink);text-decoration:none;font-size:.92rem;padding:12px 10px;white-space:nowrap}
 nav a:hover{color:var(--red);text-decoration:underline}
@@ -111,14 +110,13 @@ details ul{margin:0 0 12px!important}
 @media (min-width:821px){
   .wrap{max-width:1180px;padding-left:34px;padding-right:34px}
   .bar{min-height:76px;gap:28px}
-  .logo{font-size:1.38rem}
   nav{
     flex:1;
     display:flex;
     justify-content:space-between;
     align-items:stretch;
     gap:14px;
-    margin-left:24px;
+    margin-left:0;
   }
   nav a{
     position:relative;
@@ -556,3 +554,10 @@ details ul{margin:0 0 12px!important}
 .lang-sep{opacity:.5}
 @media(max-width:900px){.lang-switch{position:absolute;right:12px;top:9px}.bar{position:relative;padding-right:58px}}
 @media(max-width:600px){.lang-switch{top:7px;right:8px;padding:5px 8px;font-size:.68rem}}
+
+
+/* Prominent home tab replaces the separate wordmark */
+nav a.brand-tab{flex:1.15 1 190px;min-width:190px;min-height:70px;padding:16px 26px;border:2px solid var(--red);border-bottom-width:4px;border-radius:5px;background:var(--red);color:#fff;font-family:"Young Serif",Georgia,serif;font-size:1.35rem;font-weight:700;letter-spacing:.05em;line-height:1.1}
+nav a.brand-tab:hover{background:#fff;color:var(--red)}
+nav a.brand-tab.on{background:var(--red);color:#fff}
+@media(max-width:720px){nav a.brand-tab{flex:0 0 auto;min-width:175px;min-height:44px;padding:10px 14px;font-size:1.05rem}}
