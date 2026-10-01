@@ -2120,3 +2120,78 @@ footer{margin-top:auto}
   user-select:none;
   -webkit-user-drag:none;
 }
+
+
+/* Ruhiger und übersichtlicher: Seitentexte konsequent mittig */
+main,
+main section,
+main .wrap,
+main .quick-shop,
+main .quick-shop-copy,
+main .produce,
+main .produce > div,
+main .story-head,
+main .hero-story-copy,
+main .pickup-layout,
+main .pickup-details,
+main .pickup-detail,
+main #kontakt .wrap,
+footer,
+footer .wrap{
+  text-align:center;
+}
+
+main h1,
+main h2,
+main h3,
+main p,
+main .hand,
+main .hero-story-kicker,
+main .hero-story-mark{
+  text-align:center;
+}
+
+main p{
+  max-width:680px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+main .btn,
+main .korb-card-link,
+main .quick-order-cta{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+main .produce,
+main .pickup-layout{
+  align-items:center;
+}
+
+main .produce > div:last-child{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+main .pickup-details{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+main address{
+  text-align:center;
+}
+
+footer .two{
+  justify-items:center;
+}
+
+@media(max-width:720px){
+  main .produce > div:last-child,
+  main .pickup-details{
+    width:100%;
+  }
+}
