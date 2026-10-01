@@ -37,6 +37,7 @@ Die Website verwendet Formspree für das Bestellformular, Google Fonts, Google M
 ## SEO
 
 Die Startseite enthält Meta-Description, Open-Graph-Daten, Twitter-/X-Metadaten sowie strukturierte Store- und FAQ-Daten inklusive Adresse, Öffnungszeiten, Korb-Angeboten und sichtbaren FAQ-Inhalten.
+Zusätzlich liegt eine einfache `robots.txt` im Root und erlaubt das Crawling der öffentlichen Seiten.
 
 Eine Canonical-URL und eine Sitemap sollten erst mit der **tatsächlich verwendeten öffentlichen Domain** ergänzt werden; bis dahin werden keine Domain-Platzhalter als echte URLs eingetragen.
 
