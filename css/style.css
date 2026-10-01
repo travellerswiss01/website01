@@ -1129,3 +1129,7 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
 .hero-seal-svg .seal-small{fill:#f5d991;font-weight:800}
 .hero-seal-svg .seal-rule{stroke:#e5c06a}
 .hero-seal-svg .seal-diamond{fill:#f1ce78}
+
+
+/* Zentrierte Startseiten-Überschrift über dem Herkunftssiegel */
+#start .hero-title{text-align:center}
