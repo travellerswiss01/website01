@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Literata:opsz,wght@7..72,400;7..72,600&family=Young+Serif&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Biottos Lädeli","address":{"@type":"PostalAddress","streetAddress":"Hauptstrasse 90","postalCode":"8357","addressLocality":"Maischhausen","addressRegion":"TG","addressCountry":"CH"},"telephone":"+41762552256"}</script>
-<link rel="stylesheet" href="css/style.css?v=001d2f18cddd431c506c87bbde786c87412c0308">
+<link rel="stylesheet" href="css/style.css?v=0f4bd164e640ea1bc89609b05813b8e8081f5ad6">
 <script>document.documentElement.classList.add("js")</script>
 <noscript><style>
 .wa{display:none}
@@ -37,7 +37,7 @@
 
 <main>
 <section class="hero view" id="start"><div class="wrap">
-<h1 class="hero-title">Geschenke aus Maischhausen.</h1>
+<h1 class="hero-title">Maischhauserkorb</h1>
 <div class="hero-seal-wrap">
 <div class="hero-seal">
 <svg class="hero-seal-svg" viewBox="0 0 240 240" aria-hidden="true" focusable="false">
@@ -80,31 +80,19 @@
 </div>
 <img class="hero-mascot" src="img/wurm-apfel-biottos-laedeli.svg?v=6fba84ffa1f801fca71c0c7e2a2084bd8a870818" width="100" height="90" alt="" aria-hidden="true" fetchpriority="high">
 </div>
-<div class="hero-grid">
-<div class="foto tape"><img class="hero-photo-target" src="img/trauben.jpg" width="1100" height="1467" alt="Reife Trauben aus dem Garten" fetchpriority="high"></div>
-<div class="hero-story" id="heroStory">
-<div class="hero-story-top"><span class="hero-story-mark">01 / 04</span></div>
-<div class="hero-story-stage">
-<div class="hero-story-copy">
-<div class="hero-story-kicker" id="heroStoryKicker">Wo fängt ein Geschenkskorb an?</div>
-<h2 id="heroStoryTitle">Bei uns ziemlich oft im Garten.</h2>
-<p id="heroStoryText">Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.</p>
-</div>
-<div class="hero-story-note" id="heroStoryNote">Was bei uns wächst, kommt bei uns in die Küche.</div>
-</div>
-<div class="hero-story-steps" aria-label="Die Geschichte von Biottos Lädeli">
-<button type="button" class="hero-story-step active" data-hero-story="0"><span>01</span><b>Zuhause</b><small>wo alles beginnt</small></button>
-<button type="button" class="hero-story-step" data-hero-story="1"><span>02</span><b>Garten</b><small>was bei uns wächst</small></button>
-<button type="button" class="hero-story-step" data-hero-story="2"><span>03</span><b>Küche</b><small>was daraus entsteht</small></button>
-<button type="button" class="hero-story-step" data-hero-story="3"><span>04</span><b>Lädeli</b><small>hier wird ausgewählt</small></button>
-<button type="button" class="hero-story-step" data-hero-story="4"><span>05</span><b>Geschenk</b><small>fertig zum Abholen</small></button>
-</div>
-<div class="hero-story-bottom">
-<a class="btn" href="#koerbe">Unsere Geschenkskörbe entdecken</a>
-<span>oder <a href="#kontakt" data-open="gross">direkt bestellen</a></span>
-</div>
-</div>
-</div></div></section>
+
+<section class="quick-shop" id="quick-order" aria-labelledby="quickOrderTitle">
+  <div class="quick-shop-copy">
+    <p>Mit Hausgemachtem aus unserer Küche und Feinem aus der Region – in drei Grössen.</p>
+    <h2 id="quickOrderTitle">Welcher darf's sein?</h2>
+  </div>
+  <div class="quick-order-grid">
+    <button class="quick-order-card" type="button" data-open="gross"><img src="img/gross-vorne.jpg" width="1100" height="1467" alt="" aria-hidden="true"><span class="quick-order-copy"><span class="quick-order-size">Der grosse</span><strong>Gross &amp; Guet</strong><span class="quick-order-price">CHF 49.95</span><span class="quick-order-cta">Bestellen <b aria-hidden="true">→</b></span></span></button>
+    <button class="quick-order-card" type="button" data-open="fein"><img src="img/fein-vorne.jpg" width="1100" height="1467" alt="" aria-hidden="true"><span class="quick-order-copy"><span class="quick-order-size">Der mittlere</span><strong>Fein &amp; Guet</strong><span class="quick-order-price">CHF 29.95</span><span class="quick-order-cta">Bestellen <b aria-hidden="true">→</b></span></span></button>
+    <button class="quick-order-card" type="button" data-open="chili"><img src="img/chili-vorne.jpg" width="1100" height="1467" alt="" aria-hidden="true"><span class="quick-order-copy"><span class="quick-order-size">Der kleine</span><strong>Chli &amp; Fii</strong><span class="quick-order-price">CHF 19.95</span><span class="quick-order-cta">Bestellen <b aria-hidden="true">→</b></span></span></button>
+  </div>
+</section>
+</div></section>
 
 <div class="view" id="koerbe">
 <section class="koerbe-intro"><div class="wrap">
@@ -201,6 +189,31 @@
 <div class="korb-picker-hint"><span>Tippen</span> Sie auf einen Korb – dann geht's direkt zum Bestellzettel.</div>
 </div>
 </section>
+<div class="hero-grid">
+<div class="foto tape"><img class="hero-photo-target" src="img/trauben.jpg" width="1100" height="1467" alt="Reife Trauben aus dem Garten" fetchpriority="high"></div>
+<div class="hero-story" id="heroStory">
+<div class="hero-story-top"><span class="hero-story-mark">01 / 04</span></div>
+<div class="hero-story-stage">
+<div class="hero-story-copy">
+<div class="hero-story-kicker" id="heroStoryKicker">Wo fängt ein Geschenkskorb an?</div>
+<h2 id="heroStoryTitle">Bei uns ziemlich oft im Garten.</h2>
+<p id="heroStoryText">Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.</p>
+</div>
+<div class="hero-story-note" id="heroStoryNote">Was bei uns wächst, kommt bei uns in die Küche.</div>
+</div>
+<div class="hero-story-steps" aria-label="Die Geschichte von Biottos Lädeli">
+<button type="button" class="hero-story-step active" data-hero-story="0"><span>01</span><b>Zuhause</b><small>wo alles beginnt</small></button>
+<button type="button" class="hero-story-step" data-hero-story="1"><span>02</span><b>Garten</b><small>was bei uns wächst</small></button>
+<button type="button" class="hero-story-step" data-hero-story="2"><span>03</span><b>Küche</b><small>was daraus entsteht</small></button>
+<button type="button" class="hero-story-step" data-hero-story="3"><span>04</span><b>Lädeli</b><small>hier wird ausgewählt</small></button>
+<button type="button" class="hero-story-step" data-hero-story="4"><span>05</span><b>Geschenk</b><small>fertig zum Abholen</small></button>
+</div>
+<div class="hero-story-bottom">
+<a class="btn" href="#koerbe">Unsere Geschenkskörbe entdecken</a>
+<span>oder <a href="#kontakt" data-open="gross">direkt bestellen</a></span>
+</div>
+</div>
+</div>
 </div>
 
 <section class="blk view" id="traubensaft">
