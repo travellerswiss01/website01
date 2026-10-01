@@ -1191,3 +1191,10 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
 @media(prefers-reduced-motion:reduce){
   .lang-switch,.lang-switch .lang-de,.lang-switch .lang-ch{transition:none}
 }
+
+
+/* Den kleinen Apfel neben dem Siegel deutlicher zeigen */
+.hero-mascot{width:128px;height:115px;right:-100px;bottom:-8px}
+@media(max-width:720px){
+  .hero-mascot{width:104px;height:94px;right:-72px;bottom:-5px}
+}
