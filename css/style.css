@@ -681,3 +681,5 @@ nav a.brand-tab{
 .lang-ch{display:none}
 .lang-switch.is-ch .lang-de{display:none}
 .lang-switch.is-ch .lang-ch{display:inline-flex}
+
+.lang-sep{display:none}
