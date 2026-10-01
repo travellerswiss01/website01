@@ -753,3 +753,105 @@ nav a.basket-tab.on{
   52%{box-shadow:0 3px 0 rgba(143,17,22,.28),0 0 0 3px rgba(196,22,28,.14)}
 }
 @media(prefers-reduced-motion:reduce){nav a.basket-tab{animation:none}}
+
+
+/* Auffälliger Geschenk-Aufkleber für den Korb-Reiter */
+nav a.basket-tab{
+  z-index:1;
+  min-height:56px;
+  padding:9px 12px;
+  color:#352311;
+  background:linear-gradient(135deg,#fff0a3 0%,#ffd84d 52%,#f3b82d 100%);
+  border:2px solid #bd171d;
+  border-bottom:5px solid #941116;
+  border-radius:6px 6px 3px 3px;
+  box-shadow:0 3px 0 rgba(148,17,22,.24),inset 0 0 0 2px rgba(255,255,255,.58),0 0 0 0 rgba(255,205,51,0);
+  font-size:1rem;
+  font-weight:800;
+  letter-spacing:.015em;
+  animation:basketFeaturePulse 3.1s ease-in-out infinite;
+}
+nav a.basket-tab::before{
+  top:0;
+  right:auto;
+  bottom:0;
+  left:-125%;
+  width:42%;
+  height:auto;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.82),transparent);
+  transform:skewX(-18deg);
+  opacity:.8;
+  animation:basketShine 4.4s ease-in-out infinite;
+}
+nav a.basket-tab::after{
+  left:10%;
+  right:10%;
+  bottom:4px;
+  height:2px;
+  background:#bd171d;
+}
+nav a.basket-tab .nav-badge{
+  position:relative;
+  min-width:42px;
+  min-height:34px;
+  margin-left:8px;
+  padding:5px 5px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  border-radius:0;
+  clip-path:polygon(50% 0%,62% 20%,86% 10%,84% 34%,100% 50%,82% 65%,88% 90%,62% 82%,50% 100%,38% 82%,12% 90%,18% 65%,0% 50%,16% 34%,14% 10%,38% 20%);
+  background:#bd171d;
+  color:#fff;
+  font-size:.59rem;
+  letter-spacing:.045em;
+  line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,.16);
+  filter:drop-shadow(0 2px 1px rgba(75,24,12,.25));
+  transform:rotate(7deg);
+  animation:badgeWiggle 3.1s ease-in-out infinite;
+}
+nav a.basket-tab .nav-badge::before{
+  content:"✦";
+  margin-right:2px;
+  color:#ffe27a;
+  font-size:.58rem;
+}
+nav a.basket-tab:hover{
+  color:#2b211c;
+  background:linear-gradient(135deg,#fff7c9 0%,#ffe36b 52%,#ffca3a 100%);
+  border-color:#a90f15;
+  border-bottom-color:#850d12;
+  box-shadow:0 5px 0 rgba(148,17,22,.24),inset 0 0 0 2px rgba(255,255,255,.7),0 0 0 5px rgba(255,205,51,.28);
+  animation:none;
+}
+nav a.basket-tab:hover::before{animation:none;transform:translateX(0) skewX(-18deg);left:20%;opacity:.25}
+nav a.basket-tab:hover .nav-badge{animation:none;transform:rotate(0) scale(1.08)}
+nav a.basket-tab.on{
+  color:#2b211c;
+  background:linear-gradient(135deg,#fff0a3 0%,#ffd84d 52%,#f3b82d 100%);
+  border-color:#bd171d;
+  border-bottom-color:#941116;
+}
+@keyframes basketFeaturePulse{
+  0%,100%{box-shadow:0 3px 0 rgba(148,17,22,.24),inset 0 0 0 2px rgba(255,255,255,.58),0 0 0 0 rgba(255,205,51,0)}
+  48%{box-shadow:0 3px 0 rgba(148,17,22,.24),inset 0 0 0 2px rgba(255,255,255,.58),0 0 0 5px rgba(255,205,51,.42)}
+}
+@keyframes basketShine{
+  0%,28%,100%{left:-125%}
+  55%,72%{left:145%}
+}
+@keyframes badgeWiggle{
+  0%,82%,100%{transform:rotate(7deg) scale(1)}
+  87%{transform:rotate(-7deg) scale(1.08)}
+  92%{transform:rotate(9deg) scale(1.1)}
+  97%{transform:rotate(7deg) scale(1)}
+}
+@media(max-width:720px){
+  nav a.basket-tab{min-height:48px;padding:7px 9px;font-size:.84rem}
+  nav a.basket-tab .nav-badge{min-width:37px;min-height:30px;margin-left:5px;font-size:.53rem}
+}
+@media(prefers-reduced-motion:reduce){
+  nav a.basket-tab,nav a.basket-tab::before,nav a.basket-tab .nav-badge{animation:none}
+}
