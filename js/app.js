@@ -285,6 +285,7 @@ $("#successClose").addEventListener("click",function(){
   $("#successScene").hidden=true;
   var form=$("#directForm");
   form.reset();
+  syncContactMethod();
   form.hidden=true;
   $("#directOrder").hidden=false;
   var button=form.querySelector("button[type=submit]");
