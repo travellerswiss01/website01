@@ -161,7 +161,7 @@ var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.f
 function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
 var lastOrderTrigger=null;
-var views=["start","koerbe","traubensaft","suessmost","ueber-uns","abholung","kontakt"];
+var views=["start","koerbe","traubensaft","suessmost","ueber-uns","laedeli","abholung","faq","kontakt"];
 var siteNav=$("#siteNav"),menuToggle=$("#menuToggle");
 function setMenuOpen(open){if(!siteNav||!menuToggle)return;siteNav.classList.toggle("is-open",open);menuToggle.setAttribute("aria-expanded",String(open));menuToggle.setAttribute("aria-label",open?"Menü schliessen":"Menü öffnen")}
 if(menuToggle)menuToggle.addEventListener("click",function(){setMenuOpen(menuToggle.getAttribute("aria-expanded")!=="true")});
