@@ -2267,3 +2267,46 @@ footer .two{
   body[data-current-view="suessmost"] .hero-story-step b{font-size:.9rem}
   body[data-current-view="suessmost"] .hero-story-step small{font-size:.62rem}
 }
+
+/* Süssmost-Story: Bildschirmfüllendes Layout */
+@media (min-width:900px){
+  body[data-current-view="suessmost"]{overflow:hidden}
+  body[data-current-view="suessmost"] main{height:calc(100vh - 60px);overflow:hidden}
+  body[data-current-view="suessmost"] #suessmost{height:100%;min-height:0;padding:0;overflow:hidden}
+  body[data-current-view="suessmost"] .korb-story{height:100%;min-height:0;overflow:hidden}
+  body[data-current-view="suessmost"] .korb-story>.wrap{
+    height:100%;max-width:1120px;padding:14px 24px 18px;
+    display:flex;flex-direction:column;justify-content:center;gap:10px
+  }
+  body[data-current-view="suessmost"] .story-head{flex:0 0 auto;margin:0 auto 4px;max-width:900px}
+  body[data-current-view="suessmost"] .story-head .hand{font-size:1.15rem}
+  body[data-current-view="suessmost"] .story-head h2{font-size:clamp(1.55rem,2.4vw,2.15rem);margin:.02em 0 .08em}
+  body[data-current-view="suessmost"] .story-head p{font-size:.82rem;line-height:1.35;margin:0}
+  body[data-current-view="suessmost"] .hero-grid{
+    flex:1 1 auto;min-height:0;width:100%;margin:0;
+    grid-template-columns:minmax(320px,.92fr) minmax(440px,1.08fr);
+    gap:clamp(20px,3vw,38px);align-items:center
+  }
+  body[data-current-view="suessmost"] .hero-grid>.foto{
+    height:min(62vh,500px);max-height:500px;width:100%;padding:8px
+  }
+  body[data-current-view="suessmost"] .hero-grid>.foto img{
+    width:100%;height:100%;max-height:none;object-fit:cover
+  }
+  body[data-current-view="suessmost"] .hero-grid>div:last-child{
+    min-width:0;display:flex;flex-direction:column;justify-content:center
+  }
+  body[data-current-view="suessmost"] .hero-story-top{margin:0 0 6px}
+  body[data-current-view="suessmost"] .hero-story-stage{min-height:0;padding:18px 22px 20px}
+  body[data-current-view="suessmost"] .hero-story-stage h2{font-size:clamp(1.55rem,2.4vw,2.15rem);margin-bottom:.2em}
+  body[data-current-view="suessmost"] .hero-story-stage p{font-size:.92rem;line-height:1.4}
+  body[data-current-view="suessmost"] .hero-story-controls{margin:7px 0 3px}
+  body[data-current-view="suessmost"] .hero-story-arrow{width:38px;height:38px}
+  body[data-current-view="suessmost"] .hero-story-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin:8px 0 0}
+  body[data-current-view="suessmost"] .hero-story-step{
+    min-height:60px;padding:6px 5px;border-bottom-width:2px
+  }
+  body[data-current-view="suessmost"] .hero-story-step span{width:1.65rem;height:1.65rem;font-size:.7rem;margin-bottom:3px}
+  body[data-current-view="suessmost"] .hero-story-step b{font-size:.78rem}
+  body[data-current-view="suessmost"] .hero-story-step small{font-size:.56rem;line-height:1.1}
+}
