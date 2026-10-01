@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -150 500 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ein kleiner Wurm kommt aus einem ganzen Apfel – Biottos Lädeli</title>
+  <desc id="desc">Ein detailreicher, unangeschnittener roter Apfel. Ein kleiner Wurm schlüpft in einer ruhigen Endlosschleife aus einem winzigen Loch in der Schale.</desc>
+  <defs>
+    <radialGradient id="appleColor" cx=".29" cy=".2" r=".88"><stop stop-color="#ff8b70"/><stop offset=".25" stop-color="#eb5140"/><stop offset=".58" stop-color="#c92226"/><stop offset=".86" stop-color="#a71720"/><stop offset="1" stop-color="#76171d"/></radialGradient>
+    <linearGradient id="appleHighlight" x1="0" y1="0" x2="1" y2=".15"><stop stop-color="#fff" stop-opacity=".55"/><stop offset=".48" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <radialGradient id="appleEdge" cx=".72" cy=".73" r=".78"><stop offset=".5" stop-color="#501519" stop-opacity="0"/><stop offset="1" stop-color="#501519" stop-opacity=".36"/></radialGradient>
+    <linearGradient id="leafColor" x1=".15" y1="0" x2=".9" y2="1"><stop stop-color="#a8bd69"/><stop offset="1" stop-color="#405b32"/></linearGradient>
+    <linearGradient id="wormColor" x1="0" y1="0" x2="1" y2=".9"><stop stop-color="#e8e3ac"/><stop offset=".48" stop-color="#bec77e"/><stop offset="1" stop-color="#879657"/></linearGradient>
+    <filter id="appleShadow" x="-.24" y="-.2" width="1.5" height="1.55"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#48341f" flood-opacity=".2"/></filter>
+    <filter id="smallShadow" x="-.4" y="-.4" width="1.8" height="1.8"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#503522" flood-opacity=".2"/></filter>
+  </defs>
+  <style>
+    .scene{transform:translate(45px 17px) scale(.82)}
+    .worm{opacity:0;clip-path:inset(100% 0 0 0);transform-box:fill-box;transform-origin:50% 100%;animation:peek 7.2s cubic-bezier(.34,.02,.2,1) infinite}
+    .leaf{transform-box:fill-box;transform-origin:100% 100%;animation:leafSway 6s ease-in-out infinite}
+    .shine{transform-box:fill-box;transform-origin:center;animation:shine 3.6s ease-in-out infinite}
+    .apple-body{transform-box:fill-box;transform-origin:50% 55%}
+    .eyes{transform-box:fill-box;transform-origin:center;animation:look 7.2s ease-in-out infinite}
+    .tongue{transform-box:fill-box;transform-origin:top center;animation:raspberry 7.2s ease-in-out infinite}
+    @keyframes peek{
+      0%,28%{opacity:0;clip-path:inset(100% 0 0 0);transform:translateY(0) scale(.98)}
+      34%{opacity:1;clip-path:inset(94% 0 0 0);transform:translateY(0) scale(.98)}
+      49%{opacity:1;clip-path:inset(58% 0 0 0);transform:translateY(0) scale(.99)}
+      64%,74%{opacity:1;clip-path:inset(0 0 0 0);transform:translateY(0) scale(1)}
+      78%{opacity:1;clip-path:inset(8% 0 0 0);transform:translateY(2px) scale(.99)}
+      86%{opacity:1;clip-path:inset(58% 0 0 0);transform:translateY(0) scale(.99)}
+      93%,100%{opacity:0;clip-path:inset(100% 0 0 0);transform:translateY(0) scale(.98)}
+    }
+    @keyframes look{0%,49%{transform:translateX(0)}54%,61%{transform:translateX(3px)}68%,74%{transform:translateX(-2px)}100%{transform:translateX(0)}}
+    @keyframes raspberry{0%,73%,100%{transform:scaleY(.1);opacity:0}77%,82%{transform:scaleY(1);opacity:1}86%{transform:scaleY(.1);opacity:0}}
+    @keyframes leafSway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2deg)}}
+    @keyframes shine{0%,100%{opacity:.25}50%{opacity:.7}}
+    @media(prefers-reduced-motion:reduce){.worm,.leaf,.shine,.apple-body,.eyes,.tongue{animation:none}.worm{opacity:1;clip-path:none;transform:none}}
+  </style>
+
+  <ellipse cx="250" cy="378" rx="119" ry="13" fill="#4b3522" opacity=".1"/>
+  <g class="scene">
+    <!-- Stiel und Blätter -->
+    <path d="M250 150c-4-24-2-42 9-62" fill="none" stroke="#68482e" stroke-width="11" stroke-linecap="round"/>
+    <g class="leaf">
+      <path d="M256 106c23-31 60-35 81-19-14 34-45 49-79 34z" fill="url(#leafColor)"/>
+      <path d="M261 119c24-15 46-26 67-31m-45 22-4-18m25 9 7-15m-39 31-14-11" fill="none" stroke="#d0d69a" stroke-width="1.8" stroke-linecap="round" opacity=".82"/>
+    </g>
+
+    <!-- Ein ganzer, leicht asymmetrischer Apfel -->
+    <g class="apple-body" filter="url(#appleShadow)">
+      <path d="M251 151c-29-25-67-32-102-20-48 16-73 60-70 114 3 57 31 116 74 140 30 17 61 14 83 4 7-3 12-6 17-6s10 3 17 6c22 10 53 13 83-4 43-24 71-83 74-140 3-54-22-98-70-114-35-12-73-5-106 20z" fill="url(#appleColor)"/>
+      <path d="M251 151c-29-25-67-32-102-20-48 16-73 60-70 114 3 57 31 116 74 140 30 17 61 14 83 4 7-3 12-6 17-6s10 3 17 6c22 10 53 13 83-4 43-24 71-83 74-140 3-54-22-98-70-114-35-12-73-5-106 20z" fill="url(#appleEdge)"/>
+
+      <!-- Feine natürliche Farbstreifen und Licht -->
+      <path d="M112 236c7-39 30-72 62-88 17-9 36-12 55-9-29 15-49 39-61 70-11 29-15 59-11 89-24-16-39-38-45-62z" fill="url(#appleHighlight)" opacity=".78"/>
+      <path d="M117 254c-3 37 8 69 28 95m217-150c23 27 33 63 28 98" fill="none" stroke="#ff9b89" stroke-width="3.2" stroke-linecap="round" opacity=".24"/>
+      <path d="M148 159c22-17 50-23 75-19m93-1c24-1 45 6 62 20" fill="none" stroke="#ffd1aa" stroke-width="2" stroke-linecap="round" opacity=".2"/>
+
+      <!-- Stielgrube mit feinem Ring -->
+      <ellipse cx="251" cy="151" rx="17" ry="7" fill="#8b3826" opacity=".38"/>
+      <ellipse cx="251" cy="150" rx="10" ry="4" fill="#6b3827" opacity=".65"/>
+      <path d="M238 149c5-5 20-7 27-1" fill="none" stroke="#f7a17d" stroke-width="1.4" opacity=".5"/>
+
+      <!-- Schalenpunkte, fein und unregelmässig verteilt -->
+      <g fill="#ffd9ae" opacity=".43">
+        <circle cx="142" cy="206" r="1.1"/><circle cx="164" cy="190" r=".8"/><circle cx="188" cy="215" r="1.2"/><circle cx="212" cy="184" r=".9"/><circle cx="125" cy="279" r="1.1"/><circle cx="151" cy="302" r=".8"/><circle cx="180" cy="331" r="1.1"/><circle cx="214" cy="291" r=".8"/><circle cx="195" cy="355" r="1"/><circle cx="230" cy="322" r=".7"/>
+        <circle cx="300" cy="182" r=".9"/><circle cx="329" cy="204" r="1.1"/><circle cx="365" cy="220" r=".8"/><circle cx="385" cy="268" r="1"/><circle cx="350" cy="281" r=".8"/><circle cx="377" cy="315" r="1.2"/><circle cx="338" cy="339" r=".9"/><circle cx="306" cy="364" r=".8"/><circle cx="278" cy="316" r="1"/>
+      </g>
+      <g fill="#7b2c27" opacity=".2"><circle cx="136" cy="322" r="1.1"/><circle cx="144" cy="329" r=".8"/><circle cx="139" cy="338" r=".9"/><circle cx="358" cy="180" r=".8"/><circle cx="365" cy="185" r=".7"/><circle cx="356" cy="190" r=".8"/></g>
+
+      <!-- Kelch mit fünf kleinen Kelchblättern am Blütenende -->
+      <g transform="translate(250 380)" fill="#702c25" opacity=".78">
+        <path d="M0 0c-8-8-7-14-3-16 5 3 6 8 3 16z"/>
+        <path d="M0 0c2-10 7-13 11-10 0 6-4 10-11 10z"/>
+        <path d="M0 0c9-4 14-2 14 3-5 4-10 3-14-3z"/>
+        <path d="M0 0c6 8 4 13-1 14-4-4-3-9 1-14z"/>
+        <path d="M0 0c-8 6-13 4-13-1 4-4 9-3 13 1z"/>
+        <circle r="3" fill="#4e2923"/>
+      </g>
+    </g>
+
+    <!-- Winziger natürlicher Wurmausgang, ohne Biss oder Schnitt -->
+    <ellipse cx="357" cy="216" rx="7.5" ry="4.3" fill="#741b1c" transform="rotate(-25 357 216)"/>
+    <ellipse cx="356" cy="215" rx="4.1" ry="2.1" fill="#401817" opacity=".82" transform="rotate(-25 356 215)"/>
+    <path d="M352 216c3-2 7-4 11-4" fill="none" stroke="#ffad98" stroke-width="1.2" stroke-linecap="round" opacity=".65"/>
+
+    <!-- Kleiner Wurm: schlanker Körper, sanfte Segmentringe, dezente Kopfkapsel -->
+    <g transform="translate(-1428 -864) scale(5)">
+    <g class="worm">
+      <path d="M357 216c-4-8-7-15-5-21 2-7 8-11 11-16 3-5 3-9 1-13" fill="none" stroke="#76834e" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M357 216c-4-8-7-15-5-21 2-7 8-11 11-16 3-5 3-9 1-13" fill="none" stroke="url(#wormColor)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M350 197c3 1.5 6 2 9 .6m-5-8.8c2.8 1.3 5.8 1.2 8.5-.3m-3-8.6c2.4 .8 4.7 .4 6.7-1" fill="none" stroke="#869456" stroke-width="1.15" stroke-linecap="round" opacity=".75"/>
+      <path d="M352 194c1-5 4-9 8-12" fill="none" stroke="#f4edc0" stroke-width="1.15" stroke-linecap="round" opacity=".82"/>
+      <!-- schiefe Kulleraugen und ein freches Grinsen -->
+      <ellipse cx="364" cy="163" rx="8.8" ry="7.7" fill="#b6bd7c" stroke="#78844f" stroke-width=".8"/>
+      <path d="M357 160c3-3 7-4 11-3" fill="none" stroke="#f0edbd" stroke-width="1.3" stroke-linecap="round" opacity=".8"/>
+      <g class="eyes">
+        <ellipse cx="359" cy="160" rx="4.1" ry="5.2" fill="#fffdf2" stroke="#7f8d5b" stroke-width=".55"/>
+        <ellipse cx="369" cy="158.5" rx="3.7" ry="4.8" fill="#fffdf2" stroke="#7f8d5b" stroke-width=".55"/>
+        <circle cx="360.5" cy="162" r="1.5" fill="#2e3028"/><circle cx="368" cy="160" r="1.35" fill="#2e3028"/>
+        <circle cx="361" cy="161.4" r=".45" fill="#fff"/><circle cx="368.5" cy="159.5" r=".4" fill="#fff"/>
+      </g>
+      <path d="M360 168q4 4 8-1" fill="none" stroke="#53643b" stroke-width="1.4" stroke-linecap="round"/>
+      <path class="tongue" d="M364 170c1 1 3 1 4 0 1 4-1 6-2 6s-3-2-2-6z" fill="#d96668" stroke="#a9474b" stroke-width=".6"/>
+      <ellipse cx="355" cy="166" rx="2" ry="1.2" fill="#e28c77" opacity=".55"/>
+      <!-- schräges Blatthütchen -->
+      <path d="M357 153c-2-7 3-12 11-13 5 0 8 2 10 5-7 0-13 3-18 8z" fill="#6f934d" stroke="#4f713c" stroke-width=".7"/>
+      <path d="M359 151c5-4 10-6 16-6" fill="none" stroke="#cbd99a" stroke-width=".8" stroke-linecap="round"/>
+    </g>
+    </g>
+  </g>
+
+  <g class="shine" fill="#d4aa52"><path d="M411 173l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g>
+  <path d="M175 412h150" stroke="#ddcfb4" stroke-width="1"/>
+  <text x="250" y="431" text-anchor="middle" fill="#9e171b" font-family="Georgia,serif" font-size="13" letter-spacing="2.4" font-weight="700">BIOTTOS LÄDELI</text>
+</svg>
+
+
+
+
