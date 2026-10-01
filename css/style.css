@@ -1040,3 +1040,50 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
   .hero-seal-svg .seal-center{font-size:25px}
   .hero-seal-svg .seal-small{font-size:8px}
 }
+
+
+/* Siegel: sorgfältig gesetztes, fühlbar gedrucktes Herkunftszeichen */
+.hero-title{margin-bottom:10px}
+.hero-seal{
+  width:232px;
+  height:232px;
+  margin:0 auto 28px;
+  transform:rotate(-1deg);
+}
+.hero-seal-svg{filter:drop-shadow(0 5px 5px rgba(57,35,17,.13))}
+.hero-seal-svg .seal-ink{opacity:.96;filter:url(#seal-press)}
+.hero-seal-svg .seal-disc{fill:url(#sealPaper);stroke:#9c2026;stroke-width:1}
+.hero-seal-svg .seal-outer{fill:none;stroke:#9c2026;stroke-width:2.25}
+.hero-seal-svg .seal-inner{fill:none;stroke:#a52a2c;stroke-width:.85}
+.hero-seal-svg .seal-gold{fill:none;stroke:#b08a4b;stroke-width:1.15}
+.hero-seal-svg .seal-arc-text{
+  fill:#8f1f24;stroke:none;font-family:system-ui,sans-serif;
+  font-size:10.5px;font-weight:750;letter-spacing:1.25px
+}
+.hero-seal-svg .seal-rule{fill:none;stroke:#b08a4b;stroke-width:1.05;stroke-linecap:round}
+.hero-seal-svg .seal-diamond{fill:#b08a4b;stroke:none}
+.hero-seal-svg .seal-von{
+  fill:#8f1f24;stroke:none;font:700 10px/1 system-ui,sans-serif;
+  letter-spacing:3.8px
+}
+.hero-seal-svg .seal-center{
+  fill:#74191d;stroke:none;font:400 29px/1 "Young Serif",Georgia,serif;
+  letter-spacing:1px
+}
+.hero-seal-svg .seal-ladeli{
+  fill:#74191d;stroke:none;font:400 19px/1 "Young Serif",Georgia,serif;
+  letter-spacing:3px
+}
+.hero-seal-svg .seal-rule-bottom{stroke-width:.8;opacity:.88}
+.hero-seal-svg .seal-diamond-bottom{opacity:.88}
+.hero-seal-svg .seal-small{
+  fill:#8f1f24;stroke:none;font:700 8px/1 system-ui,sans-serif;
+  letter-spacing:.65px
+}
+@media(max-width:720px){
+  .hero-seal{width:212px;height:212px;margin-bottom:24px}
+  .hero-seal-svg .seal-arc-text{font-size:10px}
+  .hero-seal-svg .seal-center{font-size:27px}
+  .hero-seal-svg .seal-small{font-size:7.5px}
+}
+@media(prefers-reduced-motion:reduce){.hero-seal{transform:none}}
