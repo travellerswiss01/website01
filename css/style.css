@@ -449,7 +449,7 @@ details ul{margin:0 0 12px!important}
 @media(max-width:700px){.hero-story-steps{grid-template-columns:1fr 1fr}.hero-story-step:last-child{grid-column:1/-1}}
 
 
-/* Geschenksharras: bewusst kleiner und ruhiger proportioniert */
+/* Geschenkskörbe: bewusst kleiner und ruhiger proportioniert */
 .korb-main-photo{max-width:560px;margin:24px auto 16px}
 .korb-main-photo .foto{padding:10px;box-shadow:0 3px 0 var(--line)}
 .korb-main-photo img{max-height:600px;object-fit:contain}
@@ -465,7 +465,7 @@ details ul{margin:0 0 12px!important}
 }
 
 
-/* Geschenksharras: interaktives Schaufenster statt klassischer Shop-Karten */
+/* Geschenkskörbe: interaktives Schaufenster statt klassischer Shop-Karten */
 .korb-picker{padding:8px 0 72px}
 .korb-picker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
 .korb-card{position:relative;cursor:pointer;outline:none;transition:transform .2s ease}
