@@ -74,7 +74,6 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Morgen abholbereit":"Morn abholbereit",
 "im Lädeli":"im Lädeli",
 "Mo–Sa · 8–18 Uhr":"Mo–Sa · 8–18 Uhr",
-,
 "Bar oder TWINT":"Bar oder TWINT",
 "bei Abholung":"bi de Abholig",
 "Drei Grössen · drei Budgets":"Drü Grössene · drü Budgets",
