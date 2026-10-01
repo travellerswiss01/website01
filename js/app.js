@@ -232,7 +232,7 @@ function showPickConfirmation(label){
   requestAnimationFrame(function(){toast.classList.add("show")});
   setTimeout(function(){toast.classList.remove("show");setTimeout(function(){toast.remove()},220)},850);
 }
-$("#cT").addEventListener("click",function(e){var b=e.target.closest(".time-chip");if(!b)return;e.preventDefault();st.t=b.dataset.time;st.step="n";render()});
+$("#cT").addEventListener("click",function(e){var b=e.target.closest(".time-chip");if(!b)return;e.preventDefault();st.t=b.dataset.time;st.step="n";render();requestAnimationFrame(function(){var q=document.querySelector("#cN input[name='n']:checked");if(q){q.focus()}})});
 $("#cN").addEventListener("click",function(e){var label=e.target.closest("label"),input=label&&label.querySelector("input[name='n']");if(!input)return;e.preventDefault();st.n=Number(input.value);st.step="done";render();var nameField=$("#customerName");if(nameField){nameField.focus()}});
 $("#cK").addEventListener("click",function(e){
   var label=e.target.closest("label"),input=label&&label.querySelector("input[name='k']");
@@ -244,6 +244,7 @@ $("#cK").addEventListener("click",function(e){
   var picked=K.filter(function(x){return x.id===st.k})[0];
   showPickConfirmation(picked.n);
   render();
+  requestAnimationFrame(function(){var firstDay=document.querySelector("#cD input[name='d']");if(firstDay){firstDay.focus()}});
   var active=document.querySelector('.order-step[data-step="d"]');
   if(active){active.classList.remove("step-arrive");void active.offsetWidth;active.classList.add("step-arrive");setTimeout(function(){active.classList.remove("step-arrive")},500)}
 });
@@ -255,6 +256,8 @@ else if(n==="d"){st.step="t"}
 else if(n==="t"){st.step="n"}
 else if(n==="n"){st.step="done"}
 render();
+if(n==="d"){requestAnimationFrame(function(){var times=document.querySelector(".time-chip");if(times){times.focus()}})}
+else if(n==="t"){requestAnimationFrame(function(){var qty=document.querySelector("#cN input[name='n']:checked");if(qty){qty.focus()}})};
 });
 function syncContactMethod(){
   var method=document.querySelector('input[name="contactMethod"]:checked');
