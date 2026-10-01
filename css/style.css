@@ -1133,3 +1133,28 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
 
 /* Zentrierte Startseiten-Überschrift über dem Herkunftssiegel */
 #start .hero-title{text-align:center}
+
+
+/* Kleiner animierter Biottos-Maskottchen-Akzent neben dem Siegel */
+.hero-seal-wrap{
+  position:relative;
+  width:232px;
+  margin:0 auto 28px;
+}
+.hero-seal-wrap .hero-seal{margin:0}
+.hero-mascot{
+  position:absolute;
+  z-index:1;
+  width:96px;
+  height:86px;
+  right:-76px;
+  bottom:-8px;
+  object-fit:contain;
+  filter:drop-shadow(0 3px 3px rgba(64,37,22,.13));
+  pointer-events:none;
+}
+@media(max-width:720px){
+  .hero-seal-wrap{width:212px;margin-bottom:24px}
+  .hero-seal-wrap .hero-seal{width:212px;height:212px}
+  .hero-mascot{width:78px;height:70px;right:-54px;bottom:-5px}
+}
