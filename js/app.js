@@ -3,7 +3,7 @@
 var LANG_KEY="biottos-lang";
 var lang="de";
 var dict={
-"Geschenkskörbe":"Gschänksharass","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt","Garten":"Garte","was bei uns wächst":"wo bi üs wachst","Küche":"Chuchi","was daraus entsteht":"was drus entstoht","Geschenk":"Gschänk","fertig zum Abholen":"fertig zum Abhole",
+"Geschenkskörbe":"Gschänksharass","Sprache":"Sproch","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt","Garten":"Garte","was bei uns wächst":"wo bi üs wachst","Küche":"Chuchi","was daraus entsteht":"was drus entstoht","Geschenk":"Gschänk","fertig zum Abholen":"fertig zum Abhole",
 "Traubensaft":"Truubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus Maischhausen.":"Maischhuser Gschänk",
 "BIOTTOS LÄDELI · MAISCHHAUSEN":"BIOTTOS LÄDELI · MAISCHHUSE","MAISCHHAUSEN · THURGAU":"MAISCHHUSE · THURGAU","MIT SORGFALT ZUSAMMENGESTELLT":"MIT SORGFALT ZÄMEGSTELLT",
@@ -65,7 +65,7 @@ var dict={
 };
 var reverse={};Object.keys(dict).forEach(function(k){reverse[dict[k]]=k});
 function translateTextNode(n,on){var v=n.nodeValue;if(!v||!v.trim())return;var map=on?dict:reverse;if(map[v.trim()])n.nodeValue=v.replace(v.trim(),map[v.trim()])}
-function applyLang(){var on=lang==="ch";document.documentElement.lang=on?"gsw-CH":"de";document.querySelectorAll("*").forEach(function(el){if(el.id==="langSwitch")return;el.childNodes.forEach(function(n){if(n.nodeType===3)translateTextNode(n,on)});["aria-label","placeholder","alt","title"].forEach(function(a){if(el.hasAttribute(a)){var v=el.getAttribute(a);var map=on?dict:reverse;if(map[v])el.setAttribute(a,map[v])}})});var b=document.getElementById("langSwitch");if(b){b.classList.toggle("is-ch",on);b.setAttribute("aria-pressed",String(on));b.setAttribute("aria-label",on?"Uf Dütsch wechsle":"Uf Schwiizerdütsch wechsle")}}
+function applyLang(){var on=lang==="ch";document.documentElement.lang=on?"gsw-CH":"de";document.querySelectorAll("*").forEach(function(el){if(el.id==="langSwitch")return;el.childNodes.forEach(function(n){if(n.nodeType===3)translateTextNode(n,on)});["aria-label","placeholder","alt","title"].forEach(function(a){if(el.hasAttribute(a)){var v=el.getAttribute(a);var map=on?dict:reverse;if(map[v])el.setAttribute(a,map[v])}})});var b=document.getElementById("langSwitch");if(b){b.classList.toggle("is-ch",on);b.setAttribute("aria-pressed",String(on));b.setAttribute("aria-label",on?"Sproch wechsle – aktuell Schwiizerdütsch, Deutsch aazeige":"Sprache wechseln – aktuell Deutsch, Schwiizerdütsch anzeigen")}}
 try{lang=localStorage.getItem(LANG_KEY)||"de"}catch(e){}
 document.addEventListener("click",function(e){var b=e.target.closest("#langSwitch");if(!b)return;lang=lang==="de"?"ch":"de";try{localStorage.setItem(LANG_KEY,lang)}catch(e){}applyLang()});
 window.applyBiottosLanguage=applyLang;
