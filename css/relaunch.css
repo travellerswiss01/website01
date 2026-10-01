@@ -147,5 +147,5 @@
 /* Responsive image rendering */
 img{max-width:100%;height:auto}
 @media(max-width:700px){
-  .hero-photo-target,.trust-photo img,.foto img{content-visibility:auto}
+  .hero-photo-target,.trust-photo,.foto{content-visibility:auto}
 }
