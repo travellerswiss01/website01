@@ -76,11 +76,11 @@ setTimeout(applyLang,0);
 })();
 (function(){
 var heroStoryData=[
-{img:"img/aepfel-ernte.jpg",alt:"Von Hand aufgelesene Äpfel bei Biottos",kicker:"Apfelbaum",title:"Wo alles beginnt.",text:"Im Herbst beginnt unsere Süssmost-Geschichte im Obstgarten – mit reifen Äpfeln, die wir von Hand auflesen."},
+{img:"img/obstbäume.jpeg",alt:"Obstbäume im Garten bei Biottos",kicker:"Apfelbaum",title:"Wo alles beginnt.",text:"Im Herbst beginnt unsere Süssmost-Geschichte im Obstgarten – mit reifen Äpfeln, die wir von Hand auflesen."},
 {img:"img/aepfel-ernte.jpg",alt:"Geerntete Äpfel bei Biottos",kicker:"Ernte",title:"Von Hand aufgelesen.",text:"Wir sammeln die Äpfel sorgfältig ein und achten darauf, dass nur schöne, reife Früchte in die Ernte kommen."},
-{img:"img/aepfel-ernte.jpg",alt:"Äpfel aus dem Obstgarten",kicker:"33 Sorten",title:"Jede Sorte bringt ihren Charakter mit.",text:"Süsse, milde, säuerliche und würzige Äpfel kommen zusammen – diese Mischung macht unseren Süssmost besonders."},
-{img:"img/aepfel-ernte.jpg",alt:"Äpfel für den Süssmost",kicker:"Pressen",title:"Aus Äpfeln wird Süssmost.",text:"Wir pressen die Äpfel naturtrüb und ohne Zusätze. So bleibt der Geschmack der Ernte direkt im Saft erhalten."},
-{img:"img/aepfel-ernte.jpg",alt:"Äpfel als Grundlage für Süssmost",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
+{img:"img/laden-fruechte.jpg",alt:"Früchte aus dem Obstgarten bei Biottos",kicker:"33 Sorten",title:"Jede Sorte bringt ihren Charakter mit.",text:"Süsse, milde, säuerliche und würzige Äpfel kommen zusammen – diese Mischung macht unseren Süssmost besonders."},
+{img:"img/laedeli-angebot.jpg",alt:"Auswahl aus dem Lädeli bei Biottos",kicker:"Pressen",title:"Aus Äpfeln wird Süssmost.",text:"Wir pressen die Äpfel naturtrüb und ohne Zusätze. So bleibt der Geschmack der Ernte direkt im Saft erhalten."},
+{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
