@@ -1943,3 +1943,67 @@ footer{margin-top:auto}
   }
   #koerbe .korb-card-photo img{min-height:210px}
 }
+
+
+/* Finale Grösse der drei Geschenksharass-Kacheln – gross, gleichmässig und passend */
+#koerbe .korb-picker-grid{
+  width:100%;
+  max-width:1280px;
+  margin-inline:auto;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  align-items:stretch;
+}
+#koerbe .korb-card{
+  width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+#koerbe .korb-card-photo,#koerbe .korb-card-photo .foto{width:100%}
+#koerbe .korb-card-photo img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+}
+#koerbe .korb-card-copy{
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:column;
+  padding:8px 6px 4px;
+}
+#koerbe .korb-card-copy h3{font-size:clamp(1.35rem,2vw,1.8rem)}
+#koerbe .korb-card-copy p{font-size:clamp(.9rem,1.1vw,1rem)}
+#koerbe .korb-card-link{margin-top:auto}
+
+@media(max-width:900px){
+  #koerbe .korb-picker-grid{gap:16px}
+}
+@media(max-width:720px){
+  #koerbe .korb-picker-grid{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    padding:8px 12px 14px;
+    scroll-snap-type:x mandatory;
+  }
+  #koerbe .korb-card{
+    flex:0 0 min(88vw,460px);
+    scroll-snap-align:center;
+    padding:14px;
+  }
+  #koerbe .korb-card-photo img{
+    width:100%;
+    height:auto !important;
+    min-height:0 !important;
+  }
+}
+@media(max-width:430px){
+  #koerbe .korb-card{flex-basis:92vw;padding:12px}
+}
