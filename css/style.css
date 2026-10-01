@@ -1629,3 +1629,30 @@ header{
 @media(prefers-reduced-motion:reduce){
   nav a,.lang-switch{transition:none!important}
 }
+
+
+/* Marketing: sichtbare Produktwahl und vollständig lesbarer Einstieg */
+.quick-order-card{gap:14px}
+.quick-order-card>img{width:84px;height:108px;object-fit:cover;border:1px solid var(--line);box-shadow:0 2px 5px rgba(44,28,15,.12)}
+.quick-shop-copy p{color:var(--ink);font-size:.92rem}
+@media(max-width:820px){
+  .quick-order-card>img{width:62px;height:74px}
+}
+@media(max-width:410px){
+  .quick-order-card>img{width:54px;height:64px}
+}
+@supports selector(body:has(#start.on)){
+  .js body:has(#start.on){overflow-x:hidden;overflow-y:auto}
+  .js body:has(#start.on) footer{display:block}
+  .js body:has(#start.on) #start.hero.on{
+    height:auto;
+    min-height:0;
+    padding:16px 0 30px;
+    overflow:visible;
+    display:block;
+    align-items:initial;
+  }
+  @media(max-height:560px){
+    .js body:has(#start.on) #start .quick-order-card>img{width:62px;height:74px}
+  }
+}
