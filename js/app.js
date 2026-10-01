@@ -97,7 +97,7 @@ renderHeroStory(0);
 })();
 (function(){
 var NR="41762552256",$=function(x){return document.querySelector(x)};
-var K=[{id:"gross",n:"Gross & Guet",p:49.95},{id:"fein",n:"Fein & Guet",p:29.95},{id:"chili",n:"Chili & Fii",p:19.95}];
+var K=[{id:"gross",n:"Gross & Guet",p:49.95},{id:"fein",n:"Fein & Guet",p:29.95},{id:"chili",n:"Chli & Fii",p:19.95}];
 var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
 function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
@@ -301,7 +301,7 @@ var storyData=[
  {img:"img/gross-oben.jpg",alt:"Ausgewählte Produkte aus dem Gross & Guet Geschenkskorb",title:"Aus unserem Garten",text:"Goldmelisse, Früchte und weitere Zutaten aus der Region bilden den Anfang.",note:"Was bei uns wächst, kommt bei uns in die Küche."},
  {img:"img/fein-oben.jpg",alt:"Hausgemachte Produkte im Fein & Guet Geschenkskorb",title:"Mit Liebe gemacht",text:"Aus den Zutaten entstehen Sirup, Saucen, Essig und Dörrfrüchte – sorgfältig und in kleinen Mengen.",note:"Aus vielen guten Zutaten wird etwas Eigenes."},
  {img:"img/gross-vorne.jpg",alt:"Fertig zusammengestellter Geschenkskorb Gross & Guet",title:"Schön zusammengestellt",text:"Wir wählen die Sachen aus und packen sie so zusammen, dass daraus ein stimmiger Geschenkskorb wird.",note:""},
- {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chili & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
+ {img:"img/chili-vorne.jpg",alt:"Fertiger Geschenkskorb Chli & Fii",title:"Fertig zum Verschenken",text:"Am Ende ist der Korb bereit – zum Verschenken, Danke sagen oder einfach selber Geniessen.",note:"Ein kleines Stück Thurgau zum Mitnehmen."},
  {img:"img/familie.jpg",alt:"Familie von Biottos Lädeli",title:"Bei uns im Lädeli",text:"Bestellt wird online und abgeholt wird bei uns an der Hauptstrasse 90 in Maischhuuse.",note:""}
 ];
 var storyIndex=0,storyTouchX=null;
