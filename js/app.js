@@ -19,7 +19,7 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Drei Geschenkkörbe – von den Zehnders für dich.":"Drü Harass – vos Zehnders für dich.",
 "Wir stellen jeden Geschenkkorb mit viel Sorgfalt zusammen – mit Selbstgemachtem, feinen Sachen von uns und allem, was uns selbst Freude macht.":"Mir stelled jedi Harass mit viel Sorgfalt zäme – mit Huusgmachtem, feine Sache vo üs und allem, was üs selber Freude macht.",
 "Welcher darf es sein?":"Welä dörfs sii?",
-"Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele darfs sii?","Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
+"Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
 "ausgewählt & hausgemacht":"uusglese & hausgmacht",
 "der grosse":"de grosse","der mittlere":"de mittlere","der kleine":"de chliine",
 "Wenn's etwas Besonderes sein darf.":"Wenn's öppis Bsunders derf sii.",
