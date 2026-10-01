@@ -343,9 +343,9 @@ $("#successClose").addEventListener("click",function(){
 document.addEventListener("click",function(e){
 if(e.target.closest(".korb-card-more"))return;
 var a=e.target.closest("[data-open]");if(a){e.preventDefault();lastOrderTrigger=a;open(a.dataset.open);return}
-var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();return}
-if(e.target.id==="weekNext"){dWeek++;render()}
-if(e.target.id==="weekPrev"){dWeek--;render()}
+var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();requestAnimationFrame(function(){var target=st.step==="k"?"#cK input[name='k']":st.step==="d"?"#cD input[name='d']":st.step==="t"?".time-chip":"#cN input[name='n']:checked";var el=document.querySelector(target);if(el){el.focus()}});return}
+if(e.target.id==="weekNext"){dWeek++;render();requestAnimationFrame(function(){var el=document.querySelector("#cD input[name='d']");if(el){el.focus()}})}
+if(e.target.id==="weekPrev"){dWeek--;render();requestAnimationFrame(function(){var el=document.querySelector("#cD input[name='d']");if(el){el.focus()}})}
 });
 function resetOrderState(){
   st.d="";st.t="";st.n=1;st.step="k";dWeek=0;
