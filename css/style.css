@@ -1763,3 +1763,15 @@ header{
   object-position:center;
   background:var(--white);
 }
+
+@media(max-width:720px){
+  html,body{overflow-x:hidden}
+  header .bar{grid-template-columns:minmax(0,1fr) 44px 128px}
+  .menu-toggle{grid-column:2}
+  #langSwitch{grid-column:3;width:128px;max-width:128px;min-width:0;justify-content:space-between;overflow:hidden}
+}
+@media(max-width:360px){
+  header .bar{grid-template-columns:minmax(0,1fr) 42px 128px}
+  #langSwitch{width:128px;max-width:128px}
+  .brand-tab{font-size:.66rem!important;padding-inline:5px!important}
+}
