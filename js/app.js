@@ -257,13 +257,6 @@ else if(n==="t"){st.step="n"}
 else if(n==="n"){st.step="done"}
 render();
 });
-$("#directOrder").addEventListener("click",function(){
-  if(!(st.d&&st.t)) return;
-  $("#directForm").hidden=false;
-  $("#directOrder").hidden=true;
-  $("#directConfirm").hidden=true;
-  $("#customerName").focus();
-});
 function syncContactMethod(){
   var method=document.querySelector('input[name="contactMethod"]:checked');
   var email=method&&method.value==="email";
