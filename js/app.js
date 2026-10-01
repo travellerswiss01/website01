@@ -206,13 +206,14 @@ var progressLabels=["Korb","Termin","Zeit","Anzahl"];
 if(title)title.textContent=titles[st.step]||"Ihre Bestellung";
 var prog=document.querySelector(".order-progress");if(prog){prog.querySelectorAll("span").forEach(function(el,i){el.classList.toggle("active",i<=(progress[st.step]||1)-1);el.setAttribute("aria-current",i===(progress[st.step]||1)-1?"step":"false")})}
 var sel=document.getElementById("orderSelection");if(sel){var so=K.filter(function(x){return x.id===st.k})[0];var parts=[];if(so)parts.push(so.n);if(st.d)parts.push(st.d);if(st.t)parts.push(st.t+" Uhr");if(st.n)parts.push("Anzahl: "+st.n);sel.textContent=parts.join(" · ");}
-if(sub)sub.textContent=st.step==="d"?"Nur die nächsten Tage werden angezeigt. Sie können zur nächsten Woche blättern.":"";
+if(sub)sub.textContent=st.step==="d"?"Ab morgen verfügbar · Mo–Sa, 08:00–18:00 Uhr.":"";
 var contactForm=$("#directForm"),directOrder=$("#directOrder");
 if(contactForm&&directOrder){contactForm.hidden=st.step!=="done";directOrder.hidden=st.step==="done"}
 var prev=$("#weekPrev"),next=$("#weekNext"),weekLabel=$("#weekLabel");
 if(prev)prev.hidden=dWeek===0;
 if(next)next.hidden=dWeek>=weekBuckets.length-1;
 if(weekLabel){var first=wi[0],last=wi[wi.length-1];weekLabel.textContent=first&&last?first.l.split("<br>")[0]+" – "+last.l.replace("<br>"," "):""}
+var weekNav=document.querySelector(".week-nav");if(weekNav){weekNav.setAttribute("aria-label","Abholwoche "+(weekLabel?weekLabel.textContent:""))}
 upd();if(window.applyBiottosLanguage)window.applyBiottosLanguage()
 }
 function upd(){
