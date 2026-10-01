@@ -87,6 +87,7 @@ document.getElementById("heroStoryText").textContent=d.text;
 document.getElementById("heroStoryNote").textContent=d.note;
 document.querySelectorAll(".hero-story-step").forEach(function(b,n){b.classList.toggle("active",n===heroStoryIndex);b.setAttribute("aria-current",n===heroStoryIndex?"step":"false")});
 var mark=root.querySelector(".hero-story-mark");if(mark)mark.textContent=("0"+(heroStoryIndex+1)).slice(-2)+" / 05";
+if(window.applyBiottosLanguage)window.applyBiottosLanguage();
 }
 document.querySelectorAll(".hero-story-step").forEach(function(b){b.addEventListener("click",function(){renderHeroStory(Number(b.dataset.heroStory))})});
 renderHeroStory(0);
@@ -123,7 +124,7 @@ var prev=$("#weekPrev"),next=$("#weekNext"),weekLabel=$("#weekLabel");
 if(prev)prev.hidden=dWeek===0;
 if(next)next.hidden=dWeek>=weekBuckets.length-1;
 if(weekLabel){var first=wi[0],last=wi[wi.length-1];weekLabel.textContent=first&&last?first.l.split("<br>")[0]+" – "+last.l.replace("<br>"," "):""}
-upd()
+upd();if(window.applyBiottosLanguage)window.applyBiottosLanguage()
 }
 function upd(){
 var o=K.filter(function(x){return x.id===st.k})[0],tot=o.p*st.n;
