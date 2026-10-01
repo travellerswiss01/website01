@@ -674,3 +674,10 @@ nav a.brand-tab{
 @media(max-width:420px){
   .lang-switch{min-height:38px;padding:6px 6px;font-size:.66rem;gap:4px}
 }
+
+
+/* Der Sprachschalter zeigt die aktive Sprache kompakt an */
+.lang-de{display:inline-flex}
+.lang-ch{display:none}
+.lang-switch.is-ch .lang-de{display:none}
+.lang-switch.is-ch .lang-ch{display:inline-flex}
