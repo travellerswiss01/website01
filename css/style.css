@@ -2213,3 +2213,24 @@ footer .two{
   body[data-current-view="suessmost"] .hero-grid .foto{height:100%;min-height:0}
   body[data-current-view="suessmost"] .hero-grid .foto img{height:100%;max-height:100%;object-fit:cover}
 }
+
+/* Aufgeräumte Startseite – Biottos Lädeli */
+#start .wrap{display:flex;flex-direction:column;align-items:center;gap:clamp(12px,2.2vh,24px);padding-top:clamp(20px,4vh,48px);padding-bottom:clamp(20px,4vh,48px)}
+#start .hero-title{margin:0;line-height:.95;font-size:clamp(2.4rem,5vw,4.5rem)}
+#start .hero-seal-wrap{display:flex;align-items:center;justify-content:center;gap:10px}
+#start .hero-seal{width:clamp(150px,19vw,220px)}
+#start .hero-mascot{width:clamp(62px,8vw,90px)}
+#start .quick-shop{width:min(100%,980px);margin:0}
+#start .quick-shop-copy{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+#start .quick-shop-copy p{font-size:.92rem}
+#start .quick-shop-copy h2{font-size:1.45rem;margin-top:3px}
+#start .quick-order-grid{gap:14px}
+#start .quick-order-card{min-height:96px;padding:10px 12px}
+@media(max-width:720px){
+ #start .wrap{gap:14px;padding-top:18px;padding-bottom:24px}
+ #start .hero-seal{width:150px}
+ #start .hero-mascot{width:62px}
+ #start .quick-order-grid{grid-template-columns:1fr;gap:9px}
+ #start .quick-order-card{min-height:76px}
+ #start .quick-order-card>img{width:50px;height:64px}
+}
