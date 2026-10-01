@@ -101,3 +101,9 @@
   .direct-form input{min-height:48px}
   .direct-form .btn{min-height:50px}
 }
+
+
+/* Mobile basket list: cards are stacked, so horizontal carousel controls are unnecessary */
+@media(max-width:600px){
+  .korb-picker-controls{display:none}
+}
