@@ -137,7 +137,7 @@ var heroStoryData=[
 {img:"img/aepfel-ernte.jpg",alt:"Geerntete Äpfel bei Biottos",kicker:"Ernte",title:"Von Hand aufgelesen.",text:"Wir sammeln die Äpfel sorgfältig ein und achten darauf, dass nur schöne, reife Früchte in die Ernte kommen."},
 {img:"img/laden-fruechte.jpg",alt:"Früchte aus dem Obstgarten bei Biottos",kicker:"33 Sorten",title:"Jede Sorte bringt ihren Charakter mit.",text:"Süsse, milde, säuerliche und würzige Äpfel kommen zusammen – diese Mischung macht unseren Süssmost besonders."},
 {img:"img/laedeli-angebot.jpg",alt:"Auswahl aus dem Lädeli bei Biottos",kicker:"Pressen",title:"Aus Äpfeln wird Süssmost.",text:"Wir pressen die Äpfel naturtrüb und ohne Zusätze. So bleibt der Geschmack der Ernte direkt im Saft erhalten."},
-{img:"img/Most.jpeg",alt:"Süssmost in Glasflaschen bei Biottos",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
+{img:"img/Mostaufstuhl.jpeg",alt:"Süssmost in Glasflaschen bei Biottos",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
