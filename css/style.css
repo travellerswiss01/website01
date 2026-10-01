@@ -2092,3 +2092,27 @@ footer{margin-top:auto}
   #koerbe .korb-card-copy p{font-size:.58rem}
   #koerbe .korb-card-link{min-height:30px;font-size:.58rem}
 }
+
+
+/* Wischbare zweite Harass-Ansicht im Bestellfenster */
+.basket-photo-swipe{
+  display:flex;
+  width:84px;
+  height:112px;
+  overflow:hidden;
+  flex:0 0 84px;
+  border-radius:10px;
+  background:var(--white);
+  box-shadow:0 1px 5px rgba(0,0,0,.08);
+  touch-action:pan-y;
+  cursor:grab;
+}
+.basket-photo-swipe img{
+  width:84px;
+  height:112px;
+  flex:0 0 84px;
+  object-fit:contain;
+  background:var(--white);
+  user-select:none;
+  -webkit-user-drag:none;
+}
