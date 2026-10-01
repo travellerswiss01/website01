@@ -1010,3 +1010,20 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
   .hero-seal-svg .seal-small{font-size:5.8px}
 }
 @media(prefers-reduced-motion:reduce){.hero-seal{transform:none}}
+
+
+/* Lesbarer, hochwertiger Druckstempel */
+.hero-seal{width:204px;height:204px;margin-bottom:27px}
+.hero-seal-svg .seal-ink{filter:none;opacity:.94}
+.hero-seal-svg .seal-outer{stroke-width:1.8}
+.hero-seal-svg .seal-inner{stroke-width:1}
+.hero-seal-svg .seal-gold{stroke-width:.9;opacity:.95}
+.hero-seal-svg .seal-arc-text{font-size:8.5px;letter-spacing:.8px}
+.hero-seal-svg .seal-center{font-size:25px;letter-spacing:2.1px}
+.hero-seal-svg .seal-small{font-size:7px;letter-spacing:.45px}
+@media(max-width:720px){
+  .hero-seal{width:184px;height:184px;margin-bottom:23px}
+  .hero-seal-svg .seal-arc-text{font-size:8px}
+  .hero-seal-svg .seal-center{font-size:24px}
+  .hero-seal-svg .seal-small{font-size:6.7px}
+}
