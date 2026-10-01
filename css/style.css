@@ -557,10 +557,10 @@ details ul{margin:0 0 12px!important}
 
 
 /* Prominent home tab replaces the separate wordmark */
-nav a.brand-tab{flex:0 0 max-content;min-width:max-content;min-height:70px;padding:16px 20px;border:2px solid var(--red);border-bottom-width:4px;border-radius:5px;background:var(--red);color:#fff;font-family:"Young Serif",Georgia,serif;font-size:1.25rem;font-weight:700;letter-spacing:.04em;line-height:1.1}
+nav a.brand-tab{flex:0 0 250px;width:250px;min-width:250px;min-height:70px;padding:16px 16px;border:2px solid var(--red);border-bottom-width:4px;border-radius:5px;background:var(--red);color:#fff;font-family:"Young Serif",Georgia,serif;font-size:1.2rem;font-weight:700;letter-spacing:.03em;line-height:1.1}
 nav a.brand-tab:hover{background:#fff;color:var(--red)}
 nav a.brand-tab.on{background:var(--red);color:#fff}
-@media(max-width:720px){nav a.brand-tab{flex:0 0 max-content;min-width:max-content;min-height:44px;padding:10px 12px;font-size:1rem}}
+@media(max-width:720px){nav a.brand-tab{flex:0 0 auto;width:auto;min-width:0;min-height:44px;padding:10px 12px;font-size:1rem}}
 
 
 /* Navigation wraps instead of clipping; the basket tab calls out its new section */
