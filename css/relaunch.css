@@ -121,3 +121,18 @@
 .contact-business p{max-width:610px;margin:0;line-height:1.55;opacity:.82}
 .contact-business-btn{flex:0 0 auto;white-space:nowrap}
 @media(max-width:700px){.contact-business{display:block;margin:22px 0 28px;padding:20px}.contact-business h3{font-size:1.25rem}.contact-business-btn{display:inline-flex;margin-top:16px;white-space:normal}}
+
+
+/* Basket choice: make price, quantity and highlights scan as one unit */
+#koerbe .korb-card-copy .korb-count{margin:-1px 0 6px;font-size:.68rem;line-height:1.2;font-weight:700;letter-spacing:.02em;color:var(--mute);text-transform:uppercase}
+#koerbe .korb-highlights{margin:7px 0 10px;padding:8px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#koerbe .korb-highlights li{padding-left:15px}
+#koerbe .korb-card-link{width:100%;margin-top:2px}
+@media(max-width:700px){
+  #koerbe .korb-card-copy .korb-count{font-size:.62rem;margin-bottom:5px}
+  #koerbe .korb-highlights{font-size:.72rem;margin:5px 0 7px;padding:6px 0}
+  #koerbe .korb-card-link{min-height:44px;font-size:.84rem}
+}
+@media(max-width:600px){
+  #koerbe .korb-highlights{font-size:.7rem}
+}
