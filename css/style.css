@@ -1800,3 +1800,14 @@ header{
   #koerbe .korb-picker-hint{font-size:.52rem;opacity:.16;margin-top:2px}
   #koerbe .korb-picker-hint span{font-size:.62rem}
 }
+
+/* Preserve the wordmark on one line outside the navigation container */
+.brand-tab{white-space:nowrap}
+@media(max-width:720px){
+  .quick-order-card>img{width:48px;height:56px}
+  .quick-order-cta{width:100%;min-height:36px;justify-content:center;font-size:.72rem}
+}
+@media(max-width:410px){
+  .quick-order-card>img{width:44px;height:52px}
+  .quick-order-cta{min-height:34px;font-size:.67rem}
+}
