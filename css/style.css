@@ -1811,3 +1811,21 @@ header{
   .quick-order-card>img{width:44px;height:52px}
   .quick-order-cta{min-height:34px;font-size:.67rem}
 }
+
+
+/* Dezente, flache Fusszeile */
+footer{
+  border-top:1px solid color-mix(in srgb,var(--line) 82%,var(--paper));
+  padding:9px 0 12px;
+  color:color-mix(in srgb,var(--mute) 72%,var(--paper));
+  font-size:.72rem;
+  line-height:1.35;
+}
+footer .two{gap:8px 18px;align-items:center}
+footer h3{margin:0 0 2px;font-size:.78rem;color:color-mix(in srgb,var(--ink) 66%,var(--paper))}
+footer a{padding:2px 0;color:color-mix(in srgb,var(--mute) 76%,var(--paper));font-size:.7rem}
+footer a:hover,footer a:focus-visible{color:var(--red)}
+@media(max-width:819px){
+  footer{padding:8px 0 10px}
+  footer .two{gap:4px 12px}
+}
