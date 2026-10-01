@@ -107,3 +107,8 @@
 @media(max-width:600px){
   .korb-picker-controls{display:none}
 }
+
+/* Checkout feedback */
+.order-confirm{margin:12px 0 0;padding:12px 14px;border:1px solid var(--line);background:var(--paper);font-size:.86rem;line-height:1.45}
+.order-confirm strong{display:block;margin-bottom:3px}
+.order-confirm:focus{outline:2px solid currentColor;outline-offset:3px}
