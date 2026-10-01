@@ -367,7 +367,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"){close();return}
   if(e.key!=="Tab"||!$("#ov").classList.contains("on"))return;
   var dialog=$("#ov .sheet");if(!dialog)return;
-  var focusable=dialog.querySelectorAll("button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href]");
+  var focusable=dialog.querySelectorAll('button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])');
   if(!focusable.length)return;
   var first=focusable[0],last=focusable[focusable.length-1];
   if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
