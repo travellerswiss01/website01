@@ -544,3 +544,15 @@ details ul{margin:0 0 12px!important}
 }
 .order-step.step-arrive{animation:stepArrive .42s ease both}
 @media(max-width:600px){.pick-confirm{bottom:18px;font-size:.8rem}}
+
+
+/* Sprachschalter Deutsch / Schweizerdeutsch */
+.lang-switch{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--mute);font:600 .72rem/1 inherit;letter-spacing:.04em;cursor:pointer;white-space:nowrap;transition:.18s ease}
+.lang-switch:hover{border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.lang-switch .lang-ch{color:var(--red)}
+.lang-switch.is-ch{background:var(--red);border-color:var(--red);color:#fff}
+.lang-switch.is-ch .lang-ch{color:#fff}
+.lang-switch.is-ch .lang-de{opacity:.72}
+.lang-sep{opacity:.5}
+@media(max-width:900px){.lang-switch{position:absolute;right:12px;top:9px}.bar{position:relative;padding-right:58px}}
+@media(max-width:600px){.lang-switch{top:7px;right:8px;padding:5px 8px;font-size:.68rem}}
