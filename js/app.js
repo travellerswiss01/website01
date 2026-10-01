@@ -16,10 +16,10 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Etwas Feines aus unserem Garten – zum Verschenken oder selber Geniessen.":"Öppis Feins us üsere Garte – zum Verschenke oder sälber Gnüsse.",
 "Was bei uns wächst, kommt bei uns in die Küche.":"Was bi üs wachst, chunnt bi üs i d Chuchi.",
 "Drei Grössen, sorgfältig zusammengestellt mit Hausgemachtem und Feinem aus der Region.":"Drü Grössene, sorgfälig zämegstellt mit Huusgmachtem und Feinem vo do.",
-"Drei Geschenkkörbe – von den Zehnders für dich.":"Drü Harass – vos Zehnders für dich.",
+"Drei Geschenkkörbe – von den Zehnders für dich.":"Drü Harass – vo de Zehnders für dich.",
 "Wir stellen jeden Geschenkkorb mit viel Sorgfalt zusammen – mit Selbstgemachtem, feinen Sachen von uns und allem, was uns selbst Freude macht.":"Mir stelled jedi Harass mit viel Sorgfalt zäme – mit Huusgmachtem, feine Sache vo üs und allem, was üs selber Freude macht.",
 "Welcher darf es sein?":"Welä dörfs sii?",
-"Maischhauserkorb":"Maischhuserharass","Welcher darf's sein?":"Wele darfs sii?","Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
+"Unsere Geschenkskörbe entdecken":"Üsi Gschenkschörb entdecke",
 "ausgewählt & hausgemacht":"uusglese & hausgmacht",
 "der grosse":"de grosse","der mittlere":"de mittlere","der kleine":"de chliine",
 "Wenn's etwas Besonderes sein darf.":"Wenn's öppis Bsunders derf sii.",
@@ -39,7 +39,6 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Wir pressen ihn naturtrüb und ohne Zusätze – einfach so, wie er vom Baum kommt. Fein zum Zmorge, zum Znüni oder als kleines Stück Herbst im Glas.":"Mir pressed ihn ide Chundemoschti z Munchwile. Fein zum Zmorge, zum Znüni oder als chliises Stück Herbscht im Glas.",
 "Schreiben Sie uns einfach per WhatsApp, ob gerade Süssmost im Lädeli bereitsteht.":"Schriebed üs eifach per WhatsApp, öb grad Süessmost im Lädeli parat isch.",
 "Nach Süssmost fragen":"Nach Süessmost fröge",
-"Über uns":"Über üs",
 "Was bei uns im Garten wächst, kommt bei uns in die Küche. Daraus machen wir Goldmelissensirup, Tomatensauce, feine Essige und Balsamicos sowie verschiedene Dörrfrüchte.":"Was bi üs im Garte wachst, chunnt bi üs i d Chuchi. Usdem mached mir Goldmelissensirup, Tomatesauce, feini Essig und Balsamicos sowie verschideni Dörrfrücht.",
 "Daraus entstehen unsere drei Geschenkskörbe – mit hausgemachten Sachen und einem kleinen Stück von unserem Zuhause.":"So entstönd üsi Geschenkskörb – mit huusgmachte Sache und emne chline Stuck vo üsem Dihai.",
 "Abholung im Lädeli":"Abholig im Lädeli","Standort":"Standort","Bezahlung":"Zahlig",
@@ -52,11 +51,11 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Bestellzettel":"Bestellzettel","Welchen Korb möchten Sie?":"Welene Gschänksharass möchted Sie?","Wann möchten Sie ihn abholen?":"Wänn möchted Sie en abhole?","Um welche Uhrzeit?":"Um weli Ziit?","Wie viele?":"Wie vieli?",
 "Nächste Woche →":"Nächsti Wuche →","← Korb ändern":"← Gschänksharass ändere","← Tag ändern":"← Tag ändere","← Zeit ändern":"← Ziit ändere","Fast geschafft.":"Fast gschafft.",
 "Ihre Auswahl steht. Sagen Sie uns nur noch, wie wir Sie erreichen dürfen.":"D Uuswahl isch parat. Säge Sie üs nur no, wie mir Sie erreiche dörfed.",
-"Bestellung abschliessen":"Bestellig abschliesse","Ihr Name":"De Name","Wie können wir dich erreichen?":"Wie chönd mir dich erreiche?",
+"Bestellung abschliessen":"Bestellig abschliesse","Ihr Name":"De Name","Wie dürfen wir Sie erreichen?":"Wie dörfed mir Sie erreiche?",
 "Telefon / WhatsApp":"Telefon / WhatsApp","Ihre E-Mail-Adresse":"Eui E-Mail-Adresse","Ihre Nummer":"Eui Nummer",
 "Bestellung verbindlich senden":"Bestellig verbindlich absände","Die Bestellung wird direkt an Biottos Lädeli übermittelt.":"D Bestellig wird direkt a s Biottos Lädeli übermittelt.",
 "ist angekommen!":"isch acho!","Bestellung angekommen.":"Bestellig acho.","Danke – wir bereiten Ihren Korb mit Sorgfalt für Sie vor.":"Danke – mir bereited de Gschänksharass sorgfältig für Sie vor.",
-"Korb":"Gschänksharass","Abholung":"Abholig","Anzahl":"Aazahl","Danke für Ihre Bestellung.":"Danke für eui Bestellig.",
+"Korb":"Gschänksharass","Anzahl":"Aazahl","Danke für Ihre Bestellung.":"Danke für eui Bestellig.",
 "Wir legen Ihren Korb für Sie bereit – bis bald im Lädeli.":"Mir leged de Gschänksharass für Sie parat – bis bald im Lädeli.",
 "Bestellung in WhatsApp öffnen":"Bestellig i WhatsApp öffne","Zurück zum Lädeli":"Zrugg zum Lädeli",
 "Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir behandeln Ihre Daten vertraulich und geben sie nicht an Dritte weiter, soweit dies nicht für die Abwicklung Ihrer Bestellung notwendig ist.":"De Schutz vo eune persönliche Date isch üs wichtig. Mir behandled eui Date vertraulich und gebed sie nöd a Dritti wiiter, usser wenn das für d Abwicklig vo eune Bestellig nötig isch.",
@@ -65,6 +64,64 @@ var dict={"Jetzt bestellen":"Jetzt bstelle","Vorheriger Korb":"Vorige Gschänksh
 "Wir speichern persönliche Daten nur so lange, wie dies für die Bearbeitung der Bestellung oder aufgrund gesetzlicher Pflichten erforderlich ist.":"Mir speichered persönligi Date nur so lang, wie das für d Bearbeitig vo de Bestellig oder us gesetzliche Pflicht nötig isch.",
 "Bei Fragen zum Datenschutz können Sie uns über die angegebene Telefonnummer kontaktieren.":"Bi Frage zum Datenschutz chönd Sie üs über d agäh Telefonnummer kontaktiere.",
 "Biottos Lädeli":"Biottos Lädeli","Hauptstrasse 90, 8357 Maischhuuse TG":"Hauptstrasse 90, 8357 Maischhuuse TG"
+,
+"Hausgemacht in Maischhausen · Thurgau":"Huusgmacht z Maischhuse · Thurgau",
+"Der Geschenkkorb,":"De Gschänksharass,",
+"in dem alles selbst gemacht ist.":"wo alles sälber gmacht isch.",
+"Sirup, Saucen, Essig und Dörrfrüchte aus unserem Garten – von uns gemacht und von Hand zum Geschenkkorb gepackt.":"Sirup, Saucen, Essig und Dörrfrücht us üsem Garte – vo üs gmacht und vo Hand i de Gschänksharass packt.",
+"Korb auswählen →":"Gschänksharass ussueche →",
+"Wer dahintersteckt":"Wer dahintersteckt",
+"Morgen abholbereit":"Morn abholbereit",
+"im Lädeli":"im Lädeli",
+"Mo–Sa · 8–18 Uhr":"Mo–Sa · 8–18 Uhr",
+"Bar oder TWINT":"Bar oder TWINT",
+"bei Abholung":"bi de Abholig",
+"Drei Grössen · drei Budgets":"Drü Grössene · drü Budgets",
+"Ein Geschenk, das nach Thurgau schmeckt.":"Es Gschänk, wo nach Thurgau schmeckt.",
+"Für deinen Anlass":"Für din Anlass",
+"Geburtstag · Dankeschön · Weihnachten · Einfach so":"Geburtstag · Dankeschön · Wiehnachte · Eifach so",
+"Geschenk auswählen →":"Gschänk ussueche →",
+"Für besondere Geschenke":"Für bsunderi Gschänk",
+"Unser Klassiker":"Üse Klassiker",
+"Goldmelissensirup":"Goldmelissensirup",
+"Tomatensauce":"Tomatesauce",
+"Birnenweggen":"Biirewegge",
+"+ 3 weitere Spezialitäten":"+ 3 wiiteri Spezialitäte",
+"Birnenessig":"Biireessig",
+"Kirschenbalsamico":"Chriesi-Balsamico",
+"+ 2 weitere Spezialitäten":"+ 2 wiiteri Spezialitäte",
+"gedörrte Zwetschgen":"dörrti Zwetschge",
+"Birnen-Balsamico":"Biire-Balsamico",
+"Von unserer Familie · aus unserem Garten":"Vo üsere Familie · us üsem Garte",
+"Wer hinter dem Korb steckt.":"Wer hinde am Gschänksharass steckt.",
+"Selber gemacht":"Sälber gmacht",
+"Aus unserem Garten":"Us üsem Garte",
+"Von Hand zusammengestellt":"Vo Hand zämegstellt",
+"Bestellt · gepackt · abholbereit":"Bstellt · packt · abholbereit",
+"Dein Korb wartet im Lädeli.":"Din Gschänksharass wartet im Lädeli.",
+"Hier findest du uns":"Da findsch üs",
+"Du wählst den Termin":"Du wählsch de Termin",
+"Du bezahlst vor Ort":"Du bezahlsch vor Ort",
+"Die wichtigsten Fragen.":"Die wichtigschte Frage.",
+"Noch etwas unklar?":"No öppis unklar?",
+"Wann kann ich meinen Korb abholen?":"Wänn cha ich min Gschänksharass abhole?",
+"Bei der Onlinebestellung wählen Sie Abholdatum und Uhrzeit. Ihr Korb steht am vereinbarten Termin im Biottos Lädeli bereit.":"Bi de Onlinebestellig wähled Sie Abholdatum und Uhrziit. De Gschänksharass staht am abgmachte Termin im Biottos Lädeli parat.",
+"Kann ich auch mehrere Körbe bestellen?":"Cha ich au mehri Gschänksharass bstelle?",
+"Ja. Im Bestellzettel können Sie bis zu 10 Körbe auswählen. Bei grösseren Mengen oder Firmenbestellungen melden Sie sich am besten direkt bei uns.":"Ja. Im Bestellzettel chönd Sie bis zu 10 Gschänksharass ussueche. Bi grössere Menge oder Firmabstellige melded Sie sich am beschte direkt bi üs.",
+"Wie bezahle ich?":"Wie bezahl ich?",
+"Sie bezahlen bei der Abholung vor Ort – bar oder mit TWINT.":"Sie bezahled bi de Abholig vor Ort – bar oder mit TWINT.",
+"Ist Versand möglich?":"Isch Versand möglich?",
+"Nein. Die Geschenkskörbe werden im Biottos Lädeli zur Abholung bereitgestellt.":"Nei. D Gschänksharass werde im Biottos Lädeli zur Abholig parat gstellt.",
+"Was ist in den Körben?":"Was isch i de Gschänksharass?",
+"Eine Frage, die hier nicht beantwortet ist?":"E Frag, wo da nöd beantwortet isch?",
+"Kontakt aufnehmen →":"Kontakt ufneh →",
+"Wir helfen gern.":"Mir hälfed gern.",
+"Fragen zu einem Korb, einer grösseren Bestellung oder einem passenden Geschenk? Schreiben Sie uns direkt.":"Frage zu eme Gschänksharass, ere grössere Bestellig oder eme passende Gschänk? Schriibed üs direkt.",
+"Auf WhatsApp schreiben":"Uf WhatsApp schriibe",
+"anrufen →":"aalüte →",
+"Öffnungszeiten":"Öffnigsziite",
+"Für grössere Mengen":"Für grössere Menge",
+"Bis 10 Körbe online · grössere Bestellungen gern direkt anfragen":"Bis 10 Gschänksharass online · grössere Bestellige gern direkt aafrage"
 };
 var reverse={};Object.keys(dict).forEach(function(k){reverse[dict[k]]=k});
 function translateTextNode(n,on){var v=n.nodeValue;if(!v||!v.trim())return;var map=on?dict:reverse;if(map[v.trim()])n.nodeValue=v.replace(v.trim(),map[v.trim()])}
@@ -80,7 +137,7 @@ var heroStoryData=[
 {img:"img/aepfel-ernte.jpg",alt:"Geerntete Äpfel bei Biottos",kicker:"Ernte",title:"Von Hand aufgelesen.",text:"Wir sammeln die Äpfel sorgfältig ein und achten darauf, dass nur schöne, reife Früchte in die Ernte kommen."},
 {img:"img/laden-fruechte.jpg",alt:"Früchte aus dem Obstgarten bei Biottos",kicker:"33 Sorten",title:"Jede Sorte bringt ihren Charakter mit.",text:"Süsse, milde, säuerliche und würzige Äpfel kommen zusammen – diese Mischung macht unseren Süssmost besonders."},
 {img:"img/laedeli-angebot.jpg",alt:"Auswahl aus dem Lädeli bei Biottos",kicker:"Pressen",title:"Aus Äpfeln wird Süssmost.",text:"Wir pressen die Äpfel naturtrüb und ohne Zusätze. So bleibt der Geschmack der Ernte direkt im Saft erhalten."},
-{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
+{img:"img/Mostaufstuhl.jpeg",alt:"Süssmost in Glasflaschen bei Biottos",kicker:"Süssmost",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – die Ernte kommt direkt ins Glas."}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
@@ -103,6 +160,7 @@ var K=[{id:"gross",n:"Gross & Guet",p:49.95},{id:"fein",n:"Fein & Guet",p:29.95}
 var ZEITEN=[];(function(){for(var m=8*60;m<=18*60;m+=30){ZEITEN.push(("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2))}})();
 function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)/30)*30;if(m<8*60||m>18*60)m=8*60;return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
+var lastOrderTrigger=null;
 var views=["start","koerbe","traubensaft","suessmost","ueber-uns","abholung","kontakt"];
 var siteNav=$("#siteNav"),menuToggle=$("#menuToggle");
 function setMenuOpen(open){if(!siteNav||!menuToggle)return;siteNav.classList.toggle("is-open",open);menuToggle.setAttribute("aria-expanded",String(open));menuToggle.setAttribute("aria-label",open?"Menü schliessen":"Menü öffnen")}
@@ -135,19 +193,26 @@ function weekItems(){return weekBuckets[dWeek]||[]}
 function setStep(s){st.step=s;render()}
 function render(){
 chips($("#cK"),"k",K.map(function(o){return{v:o.id,l:"<b style='font-weight:600'>"+o.n.replace("&","&amp;")+"</b><b style='font-weight:600;color:inherit'>"+fmt(o.p)+"</b>"}}),st.k);
-chips($("#cN"),"n",[1,2,3,4,5].map(function(i){return{v:i,l:i}}),st.n);
+chips($("#cN"),"n",Array.from({length:10},function(_,i){var n=i+1;return{v:n,l:n}}),st.n);
 var wi=weekItems();
 chips($("#cD"),"d",wi,st.d);
 $("#cT").innerHTML=ZEITEN.map(function(z){return "<button type=\"button\" class=\"time-chip"+(z===st.t?" selected":"")+"\" data-time=\""+z+"\">"+z+"</button>"}).join("");
 document.querySelectorAll(".order-step").forEach(function(el){el.classList.toggle("active",el.dataset.step===st.step)});
 var title=$("#orderTitle"),sub=$("#orderSub");
 var titles={k:"Welchen Korb möchten Sie?",d:"Wann möchten Sie ihn abholen?",t:"Um welche Uhrzeit?",n:"Wie viele möchten Sie?"};
+var progress={k:1,d:2,t:3,n:4,done:4};
+var progressLabels=["Korb","Termin","Zeit","Anzahl"];
 if(title)title.textContent=titles[st.step]||"Ihre Bestellung";
-if(sub)sub.textContent=st.step==="d"?"Nur die nächsten Tage werden angezeigt. Sie können zur nächsten Woche blättern.":"";
+var prog=document.querySelector(".order-progress");if(prog){prog.querySelectorAll("span").forEach(function(el,i){el.classList.toggle("active",i<=(progress[st.step]||1)-1);el.setAttribute("aria-current",i===(progress[st.step]||1)-1?"step":"false")})}
+var sel=document.getElementById("orderSelection");if(sel){var so=K.filter(function(x){return x.id===st.k})[0];var parts=[];if(so)parts.push(so.n);if(st.d)parts.push(st.d);if(st.t)parts.push(st.t+" Uhr");if(st.n)parts.push("Anzahl: "+st.n);sel.textContent=parts.join(" · ");}
+if(sub)sub.textContent=st.step==="d"?"Ab morgen verfügbar · Mo–Sa, 08:00–18:00 Uhr.":"";
+var contactForm=$("#directForm");
+if(contactForm){contactForm.hidden=st.step!=="done"}
 var prev=$("#weekPrev"),next=$("#weekNext"),weekLabel=$("#weekLabel");
 if(prev)prev.hidden=dWeek===0;
 if(next)next.hidden=dWeek>=weekBuckets.length-1;
 if(weekLabel){var first=wi[0],last=wi[wi.length-1];weekLabel.textContent=first&&last?first.l.split("<br>")[0]+" – "+last.l.replace("<br>"," "):""}
+var weekNav=document.querySelector(".week-nav");if(weekNav){weekNav.setAttribute("aria-label","Abholwoche "+(weekLabel?weekLabel.textContent:""))}
 upd();if(window.applyBiottosLanguage)window.applyBiottosLanguage()
 }
 function upd(){
@@ -167,8 +232,8 @@ function showPickConfirmation(label){
   requestAnimationFrame(function(){toast.classList.add("show")});
   setTimeout(function(){toast.classList.remove("show");setTimeout(function(){toast.remove()},220)},850);
 }
-$("#cT").addEventListener("click",function(e){var b=e.target.closest(".time-chip");if(!b)return;e.preventDefault();st.t=b.dataset.time;st.step="n";render()});
-$("#cN").addEventListener("click",function(e){var label=e.target.closest("label"),input=label&&label.querySelector("input[name='n']");if(!input)return;e.preventDefault();st.n=Number(input.value);st.step="done";render()});
+$("#cT").addEventListener("click",function(e){var b=e.target.closest(".time-chip");if(!b)return;e.preventDefault();st.t=b.dataset.time;st.step="n";render();requestAnimationFrame(function(){var q=document.querySelector("#cN input[name='n']:checked");if(q){q.focus()}})});
+$("#cN").addEventListener("click",function(e){var label=e.target.closest("label"),input=label&&label.querySelector("input[name='n']");if(!input)return;e.preventDefault();st.n=Number(input.value);st.step="done";render();var nameField=$("#customerName");if(nameField){nameField.focus()}});
 $("#cK").addEventListener("click",function(e){
   var label=e.target.closest("label"),input=label&&label.querySelector("input[name='k']");
   if(!input)return;
@@ -179,6 +244,7 @@ $("#cK").addEventListener("click",function(e){
   var picked=K.filter(function(x){return x.id===st.k})[0];
   showPickConfirmation(picked.n);
   render();
+  requestAnimationFrame(function(){var firstDay=document.querySelector("#cD input[name='d']");if(firstDay){firstDay.focus()}});
   var active=document.querySelector('.order-step[data-step="d"]');
   if(active){active.classList.remove("step-arrive");void active.offsetWidth;active.classList.add("step-arrive");setTimeout(function(){active.classList.remove("step-arrive")},500)}
 });
@@ -190,13 +256,8 @@ else if(n==="d"){st.step="t"}
 else if(n==="t"){st.step="n"}
 else if(n==="n"){st.step="done"}
 render();
-});
-$("#directOrder").addEventListener("click",function(){
-  if(!(st.d&&st.t)) return;
-  $("#directForm").hidden=false;
-  $("#directOrder").hidden=true;
-  $("#directConfirm").hidden=true;
-  $("#customerName").focus();
+if(n==="d"){requestAnimationFrame(function(){var times=document.querySelector(".time-chip");if(times){times.focus()}})}
+else if(n==="t"){requestAnimationFrame(function(){var qty=document.querySelector("#cN input[name='n']:checked");if(qty){qty.focus()}})};
 });
 function syncContactMethod(){
   var method=document.querySelector('input[name="contactMethod"]:checked');
@@ -229,40 +290,24 @@ $("#directForm").addEventListener("submit",function(e){
   var button=form.querySelector("button[type=submit]");
   button.disabled=true;
   button.textContent="Wird übermittelt …";
-  var waWindow=null;
-  try{waWindow=window.open("about:blank","_blank");}catch(_){waWindow=null}
   fetch(form.action,{
     method:"POST",
     body:new FormData(form),
     headers:{Accept:"application/json"}
   }).then(function(res){
     if(!res.ok) throw new Error("submit");
-    var waUrl=openWhatsAppConfirmation(o,contact,method);
-    if(waWindow && !waWindow.closed) waWindow.location.href=waUrl;
     showSuccess(o,contact,method);
   }).catch(function(){
-    if(waWindow && !waWindow.closed) waWindow.close();
     button.disabled=false;
     button.textContent="Bestellung verbindlich senden";
     $("#directConfirm").hidden=false;
     $("#directConfirm").innerHTML="<strong>Die Bestellung konnte gerade nicht übermittelt werden.</strong><p>Bitte versuchen Sie es nochmals. Ihre Angaben bleiben hier erhalten.</p>";
+    $("#directConfirm").focus();
   });
 });
-function openWhatsAppConfirmation(o,contact,method){
-  var total=fmt(o.p*st.n);
-  var msg="Hallo Biottos Lädeli,\n\nmeine Bestellung wurde soeben online aufgegeben:\n\n"+
-    "🧺 "+st.n+" x Geschenkskorb "+o.n+" ("+total+")\n"+
-    "📅 Abholung: "+st.d+", "+st.t+" Uhr\n"+
-    "👤 Name: "+$("#customerName").value.trim()+"\n"+
-    "📞 Kontakt: "+contact+"\n\n"+
-    "Danke!";
-  var url="https://wa.me/"+NR+"?text="+encodeURIComponent(msg);
-  return url;
-}
 function showSuccess(o,contact,method){
   $("#directForm").hidden=true;
   $("#directConfirm").hidden=true;
-  $("#directOrder").hidden=true;
   document.querySelector("[data-step-back='n']").hidden=true;
   $("#tot").parentElement.hidden=true;
   $("#msg").hidden=true;
@@ -291,31 +336,43 @@ function showSuccess(o,contact,method){
 $("#successClose").addEventListener("click",function(){
   location.hash="#start";
   close();
-  document.querySelector("[data-step-back='n']").hidden=false;
-  $("#tot").parentElement.hidden=false;
-  $("#msg").hidden=false;
-  $("#successScene").hidden=true;
-  var form=$("#directForm");
-  form.reset();
-  form.hidden=true;
-  $("#directOrder").hidden=false;
-  var button=form.querySelector("button[type=submit]");
-  button.disabled=false;
-  button.textContent="Bestellung verbindlich senden";
 });
 
 document.addEventListener("click",function(e){
 if(e.target.closest(".korb-card-more"))return;
-var a=e.target.closest("[data-open]");if(a){e.preventDefault();open(a.dataset.open);return}
-var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();return}
-if(e.target.id==="weekNext"){dWeek++;render()}
-if(e.target.id==="weekPrev"){dWeek--;render()}
+var a=e.target.closest("[data-open]");if(a){e.preventDefault();lastOrderTrigger=a;open(a.dataset.open);return}
+var b=e.target.closest("[data-step-back]");if(b){e.preventDefault();st.step=b.dataset.stepBack;render();requestAnimationFrame(function(){var target=st.step==="k"?"#cK input[name='k']":st.step==="d"?"#cD input[name='d']":st.step==="t"?".time-chip":"#cN input[name='n']:checked";var el=document.querySelector(target);if(el){el.focus()}});return}
+if(e.target.id==="weekNext"){dWeek++;render();requestAnimationFrame(function(){var el=document.querySelector("#cD input[name='d']");if(el){el.focus()}})}
+if(e.target.id==="weekPrev"){dWeek--;render();requestAnimationFrame(function(){var el=document.querySelector("#cD input[name='d']");if(el){el.focus()}})}
 });
-function open(k){st.k=k||st.k;var photoMap={gross:["img/gross-vorne.jpg","img/gross-oben.jpg"],fein:["img/fein-vorne.jpg","img/fein-oben.jpg"],chili:["img/chili-vorne.jpg","img/chili-oben.jpg"]};var pm=photoMap[st.k]||photoMap.gross;var sp=document.getElementById("sp"),sp2=document.getElementById("sp2");if(sp){sp.src=pm[0];sp.alt=K.find(function(o){return o.id===st.k}).n}if(sp2){sp2.src=pm[1];sp2.alt=K.find(function(o){return o.id===st.k}).n+" – zweite Ansicht";sp2.hidden=false}st.step="d";dWeek=0;render();$("#ov").classList.add("on");$("#ov").setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
-function close(){$("#ov").classList.remove("on");$("#ov").setAttribute("aria-hidden","true");document.body.style.overflow=""}
+function resetOrderState(){
+  st.d="";st.t="";st.n=1;st.step="k";dWeek=0;
+  $("#successScene").hidden=true;
+  $("#directConfirm").hidden=true;
+  $("#tot").parentElement.hidden=false;
+  $("#msg").hidden=false;
+  var form=$("#directForm");
+  if(form){form.reset();syncContactMethod();form.hidden=true;var button=form.querySelector("button[type=submit]");if(button){button.disabled=false;button.textContent="Bestellung verbindlich senden"}}
+  var back=document.querySelector("[data-step-back='n']");if(back)back.hidden=false;
+}
+function open(k){st.k=k||st.k;resetOrderState();var photoMap={gross:["img/gross-vorne.jpg","img/gross-oben.jpg"],fein:["img/fein-vorne.jpg","img/fein-oben.jpg"],chili:["img/chili-vorne.jpg","img/chili-oben.jpg"]};var pm=photoMap[st.k]||photoMap.gross;var sp=document.getElementById("sp"),sp2=document.getElementById("sp2");if(sp){sp.src=pm[0];sp.alt=K.find(function(o){return o.id===st.k}).n}if(sp2){sp2.src=pm[1];sp2.alt=K.find(function(o){return o.id===st.k}).n+" – zweite Ansicht";sp2.hidden=false}st.step="d";dWeek=0;render();$("#ov").classList.add("on");$("#ov").setAttribute("aria-hidden","false");document.body.style.overflow="hidden";requestAnimationFrame(function(){$("#x").focus()})}
+function close(){
+  $("#ov").classList.remove("on");$("#ov").setAttribute("aria-hidden","true");document.body.style.overflow="";
+  resetOrderState();render();
+  if(lastOrderTrigger&&document.contains(lastOrderTrigger)){lastOrderTrigger.focus()}
+}
 $("#x").addEventListener("click",close);
 $("#ov").addEventListener("click",function(e){if(e.target.id==="ov")close()});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"){close();return}
+  if(e.key!=="Tab"||!$("#ov").classList.contains("on"))return;
+  var dialog=$("#ov .sheet");if(!dialog)return;
+  var focusable=dialog.querySelectorAll('button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])');
+  if(!focusable.length)return;
+  var first=focusable[0],last=focusable[focusable.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+});
 })();
 (function(){
 var storyData=[
