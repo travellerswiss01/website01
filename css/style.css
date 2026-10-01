@@ -1198,3 +1198,14 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
 @media(max-width:720px){
   .hero-mascot{width:104px;height:94px;right:-72px;bottom:-5px}
 }
+
+
+/* Sprachwechsel kompakt halten: beide Optionen bleiben sichtbar */
+.lang-switch .lang-caption{display:none}
+.lang-switch{gap:3px;padding:3px 4px}
+.lang-switch .lang-de,.lang-switch .lang-ch{gap:4px;padding:5px 6px}
+.lang-switch .lang-exchange{font-size:.82rem}
+@media(max-width:720px){
+  .lang-switch{gap:2px;padding:3px}
+  .lang-switch .lang-de,.lang-switch .lang-ch{gap:3px;padding:5px}
+}
