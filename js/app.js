@@ -73,11 +73,11 @@ setTimeout(applyLang,0);
 })();
 (function(){
 var heroStoryData=[
-{img:"img/Zuhause.jpeg",alt:"Zuhause bei Biottos",kicker:"Wo fängt das alles an?",title:"Bei uns daheim.",text:"Biottos Lädeli beginnt nicht irgendwo – sondern zuhause, in Maischhuuse und im Garten.",note:""},
-{img:"img/obstbäume.jpeg",alt:"Obstbäume bei Biottos",kicker:"Dann geht es nach draussen.",title:"Was bei uns wächst, gehört zur Geschichte.",text:"Obst, Früchte und Gemüse aus unserer Umgebung sind der Anfang vieler Sachen, die später im Lädeli landen.",note:""},
-{img:"img/Tomaten.jpeg",alt:"Tomaten bei Biottos",kicker:"In der Küche wird daraus etwas.",title:"Aus Tomaten wird unsere Tomatensauce.",text:"Wir verarbeiten unsere Zutaten zu Sirup, Saucen, Essig und Dörrfrüchten – sorgfältig und in kleinen Mengen.",note:""},
-{img:"img/laedeli-angebot.jpg",alt:"Angebot im Biottos Lädeli",kicker:"Dann kommt alles ins Lädeli.",title:"Hier wird ausgesucht und zusammengestellt.",text:"Zwischen all den feinen Sachen entstehen unsere drei Geschenkskörbe – nicht einfach zusammengestellt, sondern mit Gefühl für das Ganze.",note:""},
-{img:"img/laden-fruechte.jpg",alt:"Früchte im Biottos Lädeli",kicker:"Und am Ende wird daraus ein Geschenk.",title:"Ein kleines Stück Thurgau zum Mitnehmen.",text:"Korb auswählen, online bestellen und bei uns in Maischhuuse abholen.",note:""}
+{img:"img/aepfel-ernte.jpg",alt:"Von Hand aufgelesene Äpfel bei Biottos",kicker:"Wo fängt alles an?",title:"Beim Apfelbaum.",text:"Im Herbst beginnt unsere Süssmost-Geschichte im Obstgarten – mit reifen Äpfeln, die wir von Hand auflesen.",note:""},
+{img:"img/aepfel-ernte.jpg",alt:"Geerntete Äpfel bei Biottos",kicker:"Dann wird geerntet.",title:"Jeder Apfel kommt von Hand in den Korb.",text:"Wir sammeln die Äpfel sorgfältig ein und achten darauf, dass nur schöne, reife Früchte in die Ernte kommen.",note:""},
+{img:"img/aepfel-ernte.jpg",alt:"Äpfel aus dem Obstgarten",kicker:"33 verschiedene Sorten.",title:"Jede Sorte bringt ihren eigenen Charakter mit.",text:"Süsse, milde, säuerliche und würzige Äpfel kommen zusammen – genau diese Mischung macht unseren Süssmost besonders.",note:""},
+{img:"img/aepfel-ernte.jpg",alt:"Äpfel aus der Ernte für den Süssmost",kicker:"Jetzt wird gepresst.",title:"Aus Äpfeln wird naturtrüber Süssmost.",text:"Wir pressen die Äpfel ohne Zusätze. So bleibt der Geschmack der Ernte direkt im Saft erhalten.",note:""},
+{img:"img/aepfel-ernte.jpg",alt:"Äpfel als Grundlage für Biottos Süssmost",kicker:"Vom Apfel zum Süssmost.",title:"Ein Stück Herbst im Glas.",text:"Frisch gepresst, naturtrüb und bereit zum Geniessen – unser Süssmost bringt die Ernte direkt zu Ihnen ins Glas.",note:""}
 ];
 var heroStoryIndex=0;
 function renderHeroStory(i){
