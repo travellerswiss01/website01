@@ -3,7 +3,8 @@
 var LANG_KEY="biottos-lang";
 var lang="de";
 var dict={
-"Startseite":"Start","Geschenkskörbe":"Gschänksharrass","Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
+"Startseite":"Start","Geschenkskörbe":"Gschänksharrass","Zuhause":"Dehai","wo alles beginnt":"wo alles afangt",
+"Traubensaft":"Traubesaft","Süssmost":"Süessmost","Über uns":"Über üs","Abholung":"Abholig","Kontakt":"Kontakt",
 "Geschenke aus dem Thurgau.":"Gschänk us em Thurgau.",
 "eine kleine Geschichte aus Maischhuuse":"ä chlini Gschicht vo Maischhuse",
 "Wo fängt ein Geschenkskorb an?":"Wo fangt es Gschänksharrass aa?",
