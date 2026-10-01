@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Literata:opsz,wght@7..72,400;7..72,600&family=Young+Serif&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Biottos Lädeli","address":{"@type":"PostalAddress","streetAddress":"Hauptstrasse 90","postalCode":"8357","addressLocality":"Maischhausen","addressRegion":"TG","addressCountry":"CH"},"telephone":"+41762552256"}</script>
-<link rel="stylesheet" href="css/style.css?v=10cfb98777f5d074dc3e2793471ce6a026b87836">
+<link rel="stylesheet" href="css/style.css?v=473a374b85484bf89a19ae7f2f0d103f8e00b0f3">
 <script>document.documentElement.classList.add("js")</script>
 <noscript><style>
 .wa{display:none}
@@ -34,27 +34,39 @@
 <section class="hero view" id="start"><div class="wrap">
 <h1 class="hero-title">Geschenke aus Maischhausen.</h1>
 <div class="hero-seal">
-<svg class="hero-seal-svg" viewBox="0 0 220 220" aria-hidden="true" focusable="false">
+<svg class="hero-seal-svg" viewBox="0 0 240 240" aria-hidden="true" focusable="false">
 <defs>
-<path id="sealBrandArc" d="M 25 110 A 85 85 0 0 1 195 110"/>
-<path id="sealMottoArc" d="M 25 110 A 85 85 0 0 0 195 110"/>
-<filter id="seal-print-texture" x="-8%" y="-8%" width="116%" height="116%">
-<feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="1" seed="7" result="inkNoise"/>
-<feDisplacementMap in="SourceGraphic" in2="inkNoise" scale=".35" xChannelSelector="R" yChannelSelector="G"/>
+<linearGradient id="sealPaper" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#fffdf7"/>
+<stop offset=".52" stop-color="#f4ecd9"/>
+<stop offset="1" stop-color="#e8dbc0"/>
+</linearGradient>
+<path id="sealOriginArc" d="M 29 120 A 91 91 0 0 1 211 120"/>
+<path id="sealCareArc" d="M 29 120 A 91 91 0 0 0 211 120"/>
+<filter id="seal-press" x="-12%" y="-12%" width="124%" height="124%">
+<feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="1" seed="9" result="grain"/>
+<feDisplacementMap in="SourceGraphic" in2="grain" scale=".16" xChannelSelector="R" yChannelSelector="G"/>
 </filter>
 </defs>
 <g class="seal-ink">
-<circle class="seal-outer" cx="110" cy="110" r="96"/>
-<circle class="seal-inner" cx="110" cy="110" r="88"/>
-<circle class="seal-gold" cx="110" cy="110" r="82"/>
-<text class="seal-arc-text"><textPath href="#sealBrandArc" startOffset="50%" text-anchor="middle">BIOTTOS LÄDELI · MAISCHHAUSEN</textPath></text>
-<text class="seal-center" x="110" y="117" text-anchor="middle">VON HIER</text>
-<text class="seal-small"><textPath href="#sealMottoArc" startOffset="50%" text-anchor="middle">MIT SORGFALT ZUSAMMENGESTELLT</textPath></text>
+<circle class="seal-disc" cx="120" cy="120" r="109"/>
+<circle class="seal-outer" cx="120" cy="120" r="108"/>
+<circle class="seal-inner" cx="120" cy="120" r="101"/>
+<circle class="seal-gold" cx="120" cy="120" r="94"/>
+<text class="seal-arc-text"><textPath href="#sealOriginArc" startOffset="50%" text-anchor="middle">MAISCHHAUSEN · THURGAU</textPath></text>
+<path class="seal-rule" d="M83 95h24m26 0h24"/>
+<path class="seal-diamond" d="M120 91l4 4-4 4-4-4z"/>
+<text class="seal-von" x="120" y="117" text-anchor="middle">VON</text>
+<text class="seal-center" x="120" y="146" text-anchor="middle">BIOTTOS</text>
+<text class="seal-ladeli" x="120" y="169" text-anchor="middle">LÄDELI</text>
+<path class="seal-rule seal-rule-bottom" d="M82 181h27m22 0h27"/>
+<path class="seal-diamond seal-diamond-bottom" d="M120 178l3 3-3 3-3-3z"/>
+<text class="seal-small"><textPath href="#sealCareArc" startOffset="50%" text-anchor="middle">MIT SORGFALT ZUSAMMENGESTELLT</textPath></text>
 </g>
 </svg>
 <span class="seal-accessible">
-<span>BIOTTOS LÄDELI · MAISCHHAUSEN</span>
-<span>VON HIER</span>
+<span>MAISCHHAUSEN · THURGAU</span>
+<span>VON BIOTTOS LÄDELI</span>
 <span>MIT SORGFALT ZUSAMMENGESTELLT</span>
 </span>
 </div>
