@@ -1111,3 +1111,21 @@ nav a.basket-tab .nav-badge::before{font-size:.66rem}
 @media(max-width:720px){
   .hero-seal-svg .seal-center{font-size:29px}
 }
+
+
+/* Kontrastreiche, burgunderrote Premium-Ausführung des Siegels */
+.hero-seal-svg .seal-disc{
+  fill:url(#sealEnamel);
+  stroke:#f0d18a;
+  stroke-width:1.5
+}
+.hero-seal-svg .seal-outer{stroke:#d9b45e;stroke-width:3.2}
+.hero-seal-svg .seal-inner{stroke:#f6e8c7;stroke-width:1.15}
+.hero-seal-svg .seal-gold{stroke:#e5c06a;stroke-width:1.45}
+.hero-seal-svg .seal-arc-text{fill:#fff5df;font-weight:800}
+.hero-seal-svg .seal-von{fill:#f1ce78}
+.hero-seal-svg .seal-center{fill:#fff9eb;font-weight:600}
+.hero-seal-svg .seal-ladeli{fill:#f4d58e;font-weight:600}
+.hero-seal-svg .seal-small{fill:#f5d991;font-weight:800}
+.hero-seal-svg .seal-rule{stroke:#e5c06a}
+.hero-seal-svg .seal-diamond{fill:#f1ce78}
