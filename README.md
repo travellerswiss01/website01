@@ -4,7 +4,7 @@ Statische Website (HTML, CSS, JavaScript), ohne Build-Schritt und ohne Framework
 
 ## Branch für die aktuelle Überarbeitung
 
-Die aktuelle Überarbeitung liegt auf dem Branch `website02`.
+Die aktuelle Überarbeitung liegt auf dem Branch `design/cleanup-ruhiges-redesign`.
 
 ## Wo ändere ich was?
 
