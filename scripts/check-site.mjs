@@ -41,14 +41,15 @@ const htmlInfo = new Map();
 for (const file of htmlFiles) {
   const source = read(file);
   const ids = new Set();
-  const idPattern = /\b(?:id|name)\s*=\s*(["'])(.*?)\1/gi;
+  const idPattern = /\bid\s*=\s*(["'])(.*?)\1/gi;
+  const namePattern = /\bname\s*=\s*(["'])(.*?)\1/gi;
+
   for (const match of source.matchAll(idPattern)) {
     const id = match[2];
-    if (ids.has(id) && /\bid\s*=\s*(["'])/i.test(match[0])) {
-      errors.push(`${file}: duplicate id/name "${id}"`);
-    }
+    if (ids.has(id)) errors.push(`${file}: duplicate id "${id}"`);
     ids.add(id);
   }
+  for (const match of source.matchAll(namePattern)) ids.add(match[2]);
   htmlInfo.set(file, { source, ids });
 }
 
@@ -70,7 +71,7 @@ for (const file of htmlFiles) {
 
     let target;
     if (!pathname) {
-      target = file;
+      target = path.resolve(root, file);
     } else if (pathname.startsWith("/")) {
       target = path.join(root, pathname.slice(1));
     } else {
