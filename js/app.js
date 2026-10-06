@@ -189,8 +189,14 @@ function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
 var lastOrderTrigger=null;
 var views=["start","koerbe","gartenprodukte","traubensaft","suessmost","essig","doerrfruechte","tee","ueber-uns","laedeli","lucia-kocht","otto-garten","abholung","faq","kontakt"];
-var siteNav=$("#siteNav"),menuToggle=$("#menuToggle");
-function setMenuOpen(open){if(!siteNav||!menuToggle)return;siteNav.classList.toggle("is-open",open);menuToggle.setAttribute("aria-expanded",String(open));menuToggle.setAttribute("aria-label",open?"Menü schliessen":"Menü öffnen")}
+var siteNav=$("#siteNav"),menuToggle=$("#menuToggle"),lastMenuTrigger=null;
+function setMenuOpen(open){
+  if(!siteNav||!menuToggle)return;
+  siteNav.classList.toggle("is-open",open);
+  menuToggle.setAttribute("aria-expanded",String(open));
+  menuToggle.setAttribute("aria-label",open?"Menü schliessen":"Menü öffnen");
+  if(!open&&lastMenuTrigger&&document.contains(lastMenuTrigger)){lastMenuTrigger.focus();lastMenuTrigger=null}
+}
 function setNavGroupOpen(group,open){
   if(!group)return;
   group.classList.toggle("is-open",open);
@@ -198,7 +204,11 @@ function setNavGroupOpen(group,open){
   if(trigger)trigger.setAttribute("aria-expanded",String(open));
 }
 function closeNavGroups(){if(siteNav)siteNav.querySelectorAll(".nav-group.is-open").forEach(function(group){setNavGroupOpen(group,false)})}
-if(menuToggle)menuToggle.addEventListener("click",function(){setMenuOpen(menuToggle.getAttribute("aria-expanded")!=="true")});
+if(menuToggle)menuToggle.addEventListener("click",function(){
+  var open=menuToggle.getAttribute("aria-expanded")!=="true";
+  if(open)lastMenuTrigger=menuToggle;
+  setMenuOpen(open);
+});
 if(siteNav)siteNav.addEventListener("click",function(e){
   var trigger=e.target.closest(".nav-products");
   if(trigger){
@@ -211,7 +221,24 @@ if(siteNav)siteNav.addEventListener("click",function(e){
   }
   if(e.target.closest("a")){closeNavGroups();setMenuOpen(false)}
 });
-document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeNavGroups();setMenuOpen(false)}});
+document.addEventListener("click",function(e){
+  if(!siteNav||!menuToggle)return;
+  if(menuToggle.getAttribute("aria-expanded")!=="true")return;
+  if(e.target.closest("#siteNav,#menuToggle"))return;
+  closeNavGroups();
+  setMenuOpen(false);
+});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"){
+    if(menuToggle&&menuToggle.getAttribute("aria-expanded")==="true"){
+      e.preventDefault();
+      closeNavGroups();
+      setMenuOpen(false);
+    }else{
+      closeNavGroups();
+    }
+  }
+});
 function show(){var h=(location.hash||"#start").slice(1);if(views.indexOf(h)<0)h="start";views.forEach(function(v){$("#"+v).classList.toggle("on",v===h)});document.querySelectorAll("#siteNav a").forEach(function(a){var active=a.getAttribute("href")==="#"+h;a.classList.toggle("on",active);if(active)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});document.querySelectorAll("#siteNav .nav-group").forEach(function(group){var trigger=group.querySelector(".nav-products");if(trigger)trigger.classList.toggle("on",!!group.querySelector('.nav-submenu a[href="#'+h+'"]'))});document.querySelector(".brand-tab").classList.toggle("on",h==="start");document.body.dataset.currentView=h;closeNavGroups();setMenuOpen(false);window.scrollTo(0,0);var main=document.getElementById("main-content");if(main&&location.hash==="#start")main.focus({preventScroll:true})}
 window.addEventListener("hashchange",show);show();
 (function(){
