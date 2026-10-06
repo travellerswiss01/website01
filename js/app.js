@@ -219,7 +219,7 @@ if(siteNav)siteNav.addEventListener("click",function(e){
     setNavGroupOpen(group,open);
     return;
   }
-  if(e.target.closest("a")){closeNavGroups();setMenuOpen(false)}
+  if(e.target.closest("a")){closeNavGroups();lastMenuTrigger=null;setMenuOpen(false)}
 });
 document.addEventListener("click",function(e){
   if(!siteNav||!menuToggle)return;
