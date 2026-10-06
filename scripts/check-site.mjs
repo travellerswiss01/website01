@@ -85,6 +85,9 @@ for (const file of htmlFiles) {
     const pathname = decode(raw.slice(0, end));
     const hash = hashIndex === -1 ? "" : decode(raw.slice(hashIndex + 1).split("?")[0]);
 
+    // Vercel injects these runtime assets at deployment time; they are not repository files.
+    if (pathname.startsWith("/_vercel/")) continue;
+
     let target;
     if (!pathname) {
       target = path.resolve(root, file);
