@@ -59,6 +59,14 @@ for (const file of htmlFiles) {
   if (!/<meta\b[^>]*name\s*=\s*(["'])viewport\1/i.test(source)) {
     errors.push(`${file}: missing viewport meta tag`);
   }
+  const robotsMatch = source.match(/<meta\b[^>]*name\s*=\s*(["'])robots\1[^>]*content\s*=\s*(["'])(.*?)\2/i);
+  const isNoindex = robotsMatch && /\bnoindex\b/i.test(robotsMatch[3]);
+  if (!isNoindex && !/<meta\b[^>]*name\s*=\s*(["'])description\1[^>]*content\s*=\s*(["'])(.*?)\2/i.test(source)) {
+    errors.push(`${file}: missing meta description`);
+  }
+  if (!isNoindex && !/<link\b[^>]*rel\s*=\s*(["'])canonical\1[^>]*href\s*=\s*(["'])(.*?)\2/i.test(source)) {
+    errors.push(`${file}: missing canonical link`);
+  }
   const h1Count = (source.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) errors.push(`${file}: expected exactly one h1, found ${h1Count}`);
   for (const image of source.matchAll(/<img\b([^>]*)>/gi)) {
