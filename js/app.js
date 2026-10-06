@@ -189,7 +189,7 @@ function nextT(){var n=new Date(),m=Math.ceil((n.getHours()*60+n.getMinutes()+1)
 var st={k:K[0].id,n:1,d:"",t:nextT(),step:"k",week:0};
 var lastOrderTrigger=null;
 var views=["start","koerbe","gartenprodukte","traubensaft","suessmost","essig","doerrfruechte","tee","ueber-uns","laedeli","lucia-kocht","otto-garten","abholung","faq","kontakt"];
-var siteNav=$("#siteNav"),menuToggle=$("#menuToggle"),lastMenuTrigger=null;
+var siteNav=$("#siteNav"),menuToggle=$("#menuToggle"),lastMenuTrigger=null,lastNavGroupTrigger=null;
 function setMenuOpen(open){
   if(!siteNav||!menuToggle)return;
   siteNav.classList.toggle("is-open",open);
@@ -202,8 +202,13 @@ function setNavGroupOpen(group,open){
   group.classList.toggle("is-open",open);
   var trigger=group.querySelector(".nav-products");
   if(trigger)trigger.setAttribute("aria-expanded",String(open));
+  if(!open&&lastNavGroupTrigger===trigger)lastNavGroupTrigger=null;
 }
-function closeNavGroups(){if(siteNav)siteNav.querySelectorAll(".nav-group.is-open").forEach(function(group){setNavGroupOpen(group,false)})}
+function closeNavGroups(restoreFocus){
+  if(!siteNav)return;
+  siteNav.querySelectorAll(".nav-group.is-open").forEach(function(group){setNavGroupOpen(group,false)});
+  if(restoreFocus&&lastNavGroupTrigger&&document.contains(lastNavGroupTrigger)){lastNavGroupTrigger.focus();lastNavGroupTrigger=null}
+}
 if(menuToggle)menuToggle.addEventListener("click",function(){
   var open=menuToggle.getAttribute("aria-expanded")!=="true";
   if(open)lastMenuTrigger=menuToggle;
@@ -216,6 +221,7 @@ if(siteNav)siteNav.addEventListener("click",function(e){
     var group=trigger.closest(".nav-group");
     var open=!group.classList.contains("is-open");
     closeNavGroups();
+    if(open)lastNavGroupTrigger=trigger;
     setNavGroupOpen(group,open);
     return;
   }
@@ -235,7 +241,7 @@ document.addEventListener("keydown",function(e){
       closeNavGroups();
       setMenuOpen(false);
     }else{
-      closeNavGroups();
+      closeNavGroups(true);
     }
   }
 });
