@@ -206,6 +206,39 @@ var auditDict={
 "Verantwortlich für den Inhalt":"Verantwortlich für de Inhalt",
 "Tippen zum Vergrössern":"Tippe zum Vergrössere"
 };
+Object.assign(auditDict,{
+"Geschenkskorb Gross & Guet":"Gschänksharass Gross & Guet",
+"Zweite Ansicht des Geschenkskorbs Gross & Guet":"Zweiti Ansicht vom Gschänksharass Gross & Guet",
+"Geschenkskorb Fein & Guet":"Gschänksharass Fein & Guet",
+"Zweite Ansicht des Geschenkskorbs Fein & Guet":"Zweiti Ansicht vom Gschänksharass Fein & Guet",
+"Geschenkskorb Chli & Fii":"Gschänksharass Chli & Fii",
+"Zweite Ansicht des Geschenkskorbs Chli & Fii":"Zweiti Ansicht vom Gschänksharass Chli & Fii",
+"Reife blaue Trauben im Garten in Maischhausen":"Riifi blaui Truube im Garte z Maischhuse",
+"Apfelernte bei Biottos":"Öpfelärnte bi Biottos",
+"Auswahl an hausgemachten Produkten im Biottos Lädeli":"Uswahl a huusgmachte Produkt im Biottos Lädeli",
+"Dörrfrüchte aus dem Biottos Lädeli":"Dörrfrücht us em Biottos Lädeli",
+"Tee aus dem eigenen Garten im Biottos Lädeli":"Tee us em eigene Garte im Biottos Lädeli",
+"Die Familie hinter Biottos Lädeli":"D Familie hinder em Biottos Lädeli",
+"Otto arbeitet im Garten und pflegt Obstbäume":"Otto arbeitet im Garte und pflegt Öpfelbäum",
+"Lucia kocht als Privatköchin":"Lucia choche als Privatköchin",
+"Beispiel 1 aus Lucias Küche":"Biispiel 1 us de Chuchi vo de Lucia",
+"Beispiel 2 aus Lucias Küche":"Biispiel 2 us de Chuchi vo de Lucia",
+"Beispiel 3 aus Lucias Küche":"Biispiel 3 us de Chuchi vo de Lucia",
+"Beispiel 4 aus Lucias Küche":"Biispiel 4 us de Chuchi vo de Lucia",
+"Beispiel 5 aus Lucias Küche":"Biispiel 5 us de Chuchi vo de Lucia",
+"Beispiel 6 aus Lucias Küche":"Biispiel 6 us de Chuchi vo de Lucia",
+"Beispiel 7 aus Lucias Küche":"Biispiel 7 us de Chuchi vo de Lucia",
+"Salate aus Lucias Küche":"Salat us de Chuchi vo de Lucia",
+"Kühlschrank mit Produkten im Biottos Lädeli":"Chüelschrank mit Produkt im Biottos Lädeli",
+"Produkte aus unserem Garten":"Produkt us üsem Garte",
+"Die fünf Schritte vom Apfel zum Süssmost":"Die füf Schritt vom Öpfel zum Süessmoscht",
+"Beispiele von Lucias Menüs":"Biispiel us de Menüs vo de Lucia",
+"Korb-Fotos zum Wischen":"Harass-Fotos zum Wische",
+"Bestellfortschritt":"Bestellfortschritt",
+"Abholzeit":"Abholziit",
+"Zusammenfassung Ihrer Bestellung":"Zämefassig vo Ihrer Bestellig",
+"Bevorzugte Kontaktart":"Bevorzugti Kontaktart"
+});
 Object.keys(auditDict).forEach(function(k){dict[k]=auditDict[k]});
 var reverse={};
 Object.keys(dict).forEach(function(k){reverse[dict[k]]=k});
